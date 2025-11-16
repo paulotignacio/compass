@@ -1,0 +1,342 @@
+{
+  "economic": [
+    {
+      "id": "EC1",
+      "text": "O governo deve aumentar impostos sobre os mais ricos para financiar serviços públicos essenciais, como saúde e educação.",
+      "axes": [
+        {
+          "name": "economic",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "EC2",
+      "text": "É responsabilidade do governo regular fortemente os mercados para proteger os consumidores e o meio ambiente.",
+      "axes": [
+        {
+          "name": "economic",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "EC3",
+      "text": "O governo deve garantir um salário mínimo que permita um padrão de vida digno a todos os trabalhadores.",
+      "axes": [
+        {
+          "name": "economic",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "EC4",
+      "text": "Impostos mais baixos para empresas e indivíduos são a melhor forma de estimular o crescimento econômico.",
+      "axes": [
+        {
+          "name": "economic",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "EC5",
+      "text": "Empresas privadas gerenciam serviços de forma mais eficiente do que o setor público.",
+      "axes": [
+        {
+          "name": "economic",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "EC6",
+      "text": "O comércio totalmente livre com outros países é benéfico, mesmo que algumas empresas locais não consigam competir.",
+      "axes": [
+        {
+          "name": "economic",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    }
+  ],
+  "social": [
+    {
+      "id": "SO1",
+      "text": "O que adultos fazem consensualmente em suas vidas privadas não deve ser regulado pelo governo.",
+      "axes": [
+        {
+          "name": "social",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "SO2",
+      "text": "A liberdade de expressão deve ser protegida, mesmo que inclua ideias que a maioria das pessoas ache ofensivas.",
+      "axes": [
+        {
+          "name": "social",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "SO3",
+      "text": "O governo deve ter o poder de proibir discursos que possam incitar o ódio ou causar desordem social.",
+      "axes": [
+        {
+          "name": "social",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "SO4",
+      "text": "A polícia precisa de mais poderes para manter a ordem nas cidades.",
+      "axes": [
+        {
+          "name": "social",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "SO5",
+      "text": "O foco do sistema de justiça deve ser a reabilitação dos infratores, não apenas a punição.",
+      "axes": [
+        {
+          "name": "social",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "SO6",
+      "text": "O governo deve proibir o uso de certas drogas para proteger a saúde pública.",
+      "axes": [
+        {
+          "name": "social",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    }
+  ],
+  "community": [
+    {
+      "id": "CM1",
+      "text": "Interagir com culturas estrangeiras enriquece a vida individual.",
+      "axes": [
+        {
+          "name": "community",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "CM2",
+      "text": "Temos deveres e obrigações para com nossa comunidade que são tão importantes quanto nossos direitos individuais.",
+      "axes": [
+        {
+          "name": "community",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "CM3",
+      "text": "A imigração deve ser rigorosamente controlada para preservar a identidade cultural do país.",
+      "axes": [
+        {
+          "name": "community",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "CM4",
+      "text": "Cada indivíduo deve priorizar suas próprias escolhas acima das expectativas da sociedade.",
+      "axes": [
+        {
+          "name": "community",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "CM5",
+      "text": "Explorar novas perspectivas além das fronteiras nacionais é valioso.",
+      "axes": [
+        {
+          "name": "community",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "CM6",
+      "text": "O patriotismo fortalece o senso de pertencimento a um país.",
+      "axes": [
+        {
+          "name": "community",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "id": "ME1",
+      "text": "Especialistas podem projetar sistemas sociais melhores do que os que surgem naturalmente.",
+      "axes": [
+        {
+          "name": "method",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "ME2",
+      "text": "Reformas funcionam melhor quando começam localmente e se espalham se derem certo.",
+      "axes": [
+        {
+          "name": "method",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "ME3",
+      "text": "É possível planejar reformas completas na sociedade para resolver problemas de forma rápida.",
+      "axes": [
+        {
+          "name": "method",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "ME4",
+      "text": "Melhorias no sistema de saúde devem vir de ajustes graduais baseados na experiência real.",
+      "axes": [
+        {
+          "name": "method",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "ME5",
+      "text": "É melhor introduzir mudanças em etapas pequenas e observar os resultados antes de expandir.",
+      "axes": [
+        {
+          "name": "method",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "ME6",
+      "text": "Não devemos nos apegar a \"como as coisas sempre foram\"; a lógica e a ciência são guias melhores que a tradição.",
+      "axes": [
+        {
+          "name": "method",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    }
+  ],
+  "pragmatism": [
+    {
+      "id": "PR1",
+      "text": "A crença em um mundo mais justo impulsiona melhorias reais na sociedade.",
+      "axes": [
+        {
+          "name": "pragmatism",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "PR2",
+      "text": "Resultados concretos são mais importantes do que planos grandiosos.",
+      "axes": [
+        {
+          "name": "pragmatism",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "PR3",
+      "text": "Melhor avançar passo a passo com ganhos reais do que arriscar tudo por uma visão.",
+      "axes": [
+        {
+          "name": "pragmatism",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "PR4",
+      "text": "Uma sociedade perfeita é possível se todos trabalharem juntos por ela.",
+      "axes": [
+        {
+          "name": "pragmatism",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "PR5",
+      "text": "Sonhar com um futuro ideal motiva as pessoas a superarem obstáculos.",
+      "axes": [
+        {
+          "name": "pragmatism",
+          "direction": -1,
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "PR6",
+      "text": "Acordos práticos entre grupos diferentes resolvem problemas mais rápido.",
+      "axes": [
+        {
+          "name": "pragmatism",
+          "direction": 1,
+          "weight": 1.0
+        }
+      ]
+    }
+  ]
+}

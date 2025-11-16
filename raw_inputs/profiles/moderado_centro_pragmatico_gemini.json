@@ -1,0 +1,42 @@
+{
+  "label": "Moderado de Centro Pragmatista",
+  "description_short": "Um perfil focado no equilíbrio e em evitar extremos ideológicos. Prioriza soluções práticas, baseadas em evidências e no diálogo, acreditando que o mercado e o Estado devem trabalhar juntos para garantir estabilidade e bem-estar.",
+  "description_long": "Na economia, busca um caminho do meio, defendendo a livre iniciativa e a responsabilidade fiscal, mas reconhecendo o papel do Estado em corrigir falhas de mercado e manter uma rede de proteção social (saúde, educação). Em leis e costumes, valoriza as liberdades individuais e os direitos civis, mas entende que a convivência exige regras, apoiando regulações baseadas no bom senso para garantir a segurança e a ordem. Sobre identidade, é equilibrado: valoriza a cultura local e o pertencimento, mas é aberto à cooperação internacional e ao comércio global, rejeitando tanto o nacionalismo isolacionista quanto o cosmopolitismo desenraizado. Desconfia de mudanças radicais. Acredita que o progresso social deve ser gradual, baseado em reformas testadas, evidências e no fortalecimento das instituições. Na política, é a personificação do pragmatismo: prioriza a governabilidade, o diálogo entre opostos, a formação de alianças e a busca por resultados concretos, mesmo que exijam concessões.",
+  "axis_tendencies": {
+    "economic": "Busca um equilíbrio entre o mercado e uma rede de proteção social, focando na responsabilidade fiscal.",
+    "social": "Valoriza as liberdades individuais, mas aceita regulações baseadas no bom senso para garantir a segurança e a ordem.",
+    "community": "Equilibra o pertencimento local com a abertura à cooperação global, evitando extremos nacionalistas ou cosmopolitas.",
+    "method": "Prefere reformas graduais, testadas e baseadas em evidências, desconfiando de rupturas ou imobilismo.",
+    "pragmatism": "Fortemente realista; prioriza a estabilidade, o diálogo, a negociação e as soluções que funcionam na prática."
+  },
+  "authors_classic": [
+    "Aristóteles",
+    "Montesquieu",
+    "Alexis de Tocqueville",
+    "Max Weber",
+    "John Stuart Mill"
+  ],
+  "figures_modern_international": [
+    "The Economist (A revista, como linha editorial)",
+    "Fareed Zakaria (Comentarista e autor)",
+    "Anne Applebaum (Historiadora e jornalista)",
+    "Steven Pinker (Psicólogo cognitivo e autor)",
+    "Cass Sunstein (Acadêmico)"
+  ],
+  "figures_modern_national": [
+    "Fernando Henrique Cardoso (Sociólogo)",
+    "Persio Arida (Economista)",
+    "Arminio Fraga (Economista)",
+    "Marcos Lisboa (Economista)",
+    "Celso Rocha de Barros (Sociólogo e colunista)",
+    "Bolívar Lamounier (Cientista político)"
+  ],
+  "examples_practical": [
+    "Defender uma reforma tributária que simplifique impostos (pró-mercado) mas aumente a taxação sobre super-ricos (pró-Estado).",
+    "Apoiar a privatização de uma estatal ineficiente, mas defender o fortalecimento de outra estatal em um setor estratégico.",
+    "Ser a favor de um debate sobre a legalização de drogas focado em saúde pública e estatísticas de segurança, em vez de moralidade.",
+    "Defender que seu grupo político forme uma aliança com um adversário moderado para garantir a aprovação do orçamento e a estabilidade.",
+    "Apoiar acordos comerciais internacionais, mas com cláusulas que protejam setores-chave da indústria local por um período de transição.",
+    "Defender um projeto-piloto de 'escolas charter' (gestão privada de escola pública) em algumas cidades antes de expandir para o país."
+  ]
+}

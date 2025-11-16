@@ -1,0 +1,64 @@
+{
+  "pragmatism": [
+    {
+      "id": "P1",
+      "text": "Devemos sempre lutar por nossos ideais e princípios, mesmo que os resultados práticos sejam difíceis de alcançar.",
+      "lean": "idealism"
+    },
+    {
+      "id": "P2",
+      "text": "Um bom governo é aquele que foca em soluções práticas que funcionam, mesmo que não sejam ideologicamente puras.",
+      "lean": "realism"
+    },
+    {
+      "id": "P3",
+      "text": "Nenhuma consideração prática, como o crescimento econômico, justifica tomar uma decisão moralmente errada.",
+      "lean": "idealism"
+    },
+    {
+      "id": "P4",
+      "text": "Na política, é mais importante conseguir pequenas melhorias reais agora do que sonhar com uma sociedade perfeita no futuro.",
+      "lean": "realism"
+    },
+    {
+      "id": "P5",
+      "text": "Acredito que é possível criar um sistema onde todos possam viver em harmonia, sem conflitos ou grande pobreza.",
+      "lean": "idealism"
+    },
+    {
+      "id": "P6",
+      "text": "A natureza humana tem falhas permanentes, por isso a ideia de uma sociedade perfeita é uma ilusão perigosa.",
+      "lean": "realism"
+    },
+    {
+      "id": "P7",
+      "text": "As decisões políticas devem ser baseadas no que é moralmente certo, acima de tudo.",
+      "lean": "idealism"
+    },
+    {
+      "id": "P8",
+      "text": "A política externa deve focar nos interesses práticos do país, não em tentar espalhar nossos valores pelo mundo.",
+      "lean": "realism"
+    },
+    {
+      "id": "P9",
+      "text": "É dever da política imaginar um mundo muito melhor e tentar construí-lo, não apenas administrar o presente.",
+      "lean": "idealism"
+    },
+    {
+      "id": "P10",
+      "text": "Para manter a estabilidade, às vezes é necessário fazer acordos ou alianças com líderes de quem não gostamos.",
+      "lean": "realism"
+    },
+    {
+      "id": "P11",
+      "text": "Não devemos comprometer nossos valores fundamentais em troca de ganhos políticos ou econômicos de curto prazo.",
+      "lean": "idealism"
+    },
+    {
+      "id": "P12",
+      "text": "Conflitos e desigualdades sempre existirão; o melhor que podemos fazer é tentar gerenciá-los e reduzi-los.",
+      "lean": "realism"
+    }
+  ]
+}

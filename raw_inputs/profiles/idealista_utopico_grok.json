@@ -1,0 +1,41 @@
+{
+  "label": "Idealista Utópico",
+  "description_short": "Guia suas posições por uma visão grandiosa de como a sociedade deveria ser, priorizando princípios morais ou filosóficos acima de soluções imediatas. Aceita mudanças profundas na economia, costumes e estruturas sociais para alcançar um ideal de justiça ou harmonia.",
+  "description_long": "Na economia, escolhe modelos que reflitam um ideal maior, como igualdade total ou ordem moral, mesmo que exijam transformações radicais no sistema atual. Sobre leis e costumes, avalia regras e comportamentos pela coerência com princípios elevados, apoiando reformas que alinhem a sociedade a esses valores. Na comunidade e identidade, sonha com uma coletividade perfeita, seja global unida por direitos humanos ou local baseada em virtudes compartilhadas. Quanto a mudanças sociais, defende projetos amplos de reestruturação planejados para realizar a visão desejada, sem medo de rupturas. Nas negociações políticas, insiste em acordos que respeitem os princípios centrais, preferindo manter a pureza da ideia a compromissos que a diluam.",
+  "axis_tendencies": {
+    "economic": "Qualquer ponto alinhado a um ideal de justiça ou ordem superior.",
+    "social": "Avalia costumes por princípios morais ou humanistas fortes.",
+    "community": "Guiado por noção de comunidade ou sociedade ideal.",
+    "method": "Fortemente racionalista, com grandes reformas transformadoras.",
+    "pragmatism": "Fortemente idealista, priorizando coerência moral sobre praticidade."
+  },
+  "authors_classic": [
+    "Platão",
+    "Thomas More",
+    "Jean-Jacques Rousseau",
+    "Karl Marx",
+    "Immanuel Kant"
+  ],
+  "figures_modern_international": [
+    "Slavoj Žižek (Filósofo)",
+    "Cornel West (Filósofo)",
+    "Judith Butler (Filósofa)",
+    "Peter Singer (Filósofo)",
+    "Naomi Klein (Jornalista)"
+  ],
+  "figures_modern_national": [
+    "Vladimir Safatle (Filósofo)",
+    "Marilena Chaui (Filósofa)",
+    "Paulo Arantes (Filósofo)",
+    "Jessé Souza (Sociólogo)",
+    "Renato Janine Ribeiro (Filósofo)"
+  ],
+  "examples_practical": [
+    "Defender uma reestruturação completa do sistema educacional para formar cidadãos conforme um modelo ético ideal.",
+    "Apoiar abolição de fronteiras nacionais em nome de uma humanidade unida sem divisões.",
+    "Propor economia planejada centralmente para eliminar desigualdades de forma definitiva.",
+    "Ser a favor de leis que imponham padrões morais elevados na mídia e na cultura popular.",
+    "Aceitar rupturas institucionais para instaurar uma nova ordem social baseada em princípios filosóficos.",
+    "Criticar acordos políticos que comprometam a visão pura de justiça ou igualdade absoluta."
+  ]
+}

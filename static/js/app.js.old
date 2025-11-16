@@ -1,0 +1,312 @@
+const axisOrder = ["economic", "social", "community", "method", "pragmatism"];
+
+const axisLabels = {
+  economic: "Eixo Econômico (Estado ↔ Mercado)",
+  social: "Eixo Social / Liberdades (Autoridade ↔ Liberdade)",
+  community: "Eixo Comunidade / Pertencimento",
+  method: "Eixo Método (Racionalismo ↔ Experiência)",
+  pragmatism: "Eixo Estilo Político (Idealismo ↔ Pragmatismo)",
+};
+
+const axisDescriptions = {
+  economic:
+    "Afirmações sobre impostos, intervenção do Estado na economia, serviços públicos e livre mercado.",
+  social:
+    "Afirmações sobre leis penais, liberdade de expressão, drogas e o papel do Estado na vida privada.",
+  community:
+    "Afirmações sobre comunidade local, identidade nacional, cosmopolitismo e deveres com o coletivo.",
+  method:
+    "Afirmações sobre mudança social gradual ou planejada, papel de especialistas e respeito à tradição.",
+  pragmatism:
+    "Afirmações sobre sonhos de sociedade ideal, acordos práticos e foco em resultados concretos.",
+};
+
+// 🔹 GARANTE QUE EXISTE UM CONTAINER #app
+const appEl =
+  document.getElementById("app") ||
+  (function () {
+    const div = document.createElement("div");
+    div.id = "app";
+    document.body.appendChild(div);
+    return div;
+  })();
+
+let questionsByAxis = {};
+let flatQuestions = [];
+let currentAxisIndex = 0;
+let answers = {}; // { "EC1": 2, "SO3": -1, ... }
+let resultData = null;
+
+async function loadQuestions() {
+  const res = await fetch("/api/questions");
+  if (!res.ok) {
+    throw new Error("Falha ao carregar perguntas");
+  }
+  const data = await res.json();
+  questionsByAxis = data.by_axis || {};
+  flatQuestions = data.questions || [];
+}
+
+function getCurrentAxis() {
+  return axisOrder[currentAxisIndex];
+}
+
+function render() {
+  const axisKey = getCurrentAxis();
+  const axisQs = questionsByAxis[axisKey] || [];
+
+  const totalPages = axisOrder.length;
+  const currentPage = currentAxisIndex + 1;
+
+  const headerHtml = `
+    <div class="page-header">
+      <div>
+        <div class="axis-title">${axisLabels[axisKey]}</div>
+        <div class="axis-description">${axisDescriptions[axisKey]}</div>
+      </div>
+      <div class="progress">
+        Página ${currentPage} de ${totalPages}
+      </div>
+    </div>
+  `;
+
+  const questionsHtml = axisQs
+    .map((q) => {
+      const currentValue = answers[q.id] ?? null;
+
+      // escala -2 a +2
+      const options = [
+        { value: -2, label: "Discordo totalmente" },
+        { value: -1, label: "Discordo" },
+        { value: 0, label: "Neutro / não sei" },
+        { value: 1, label: "Concordo" },
+        { value: 2, label: "Concordo totalmente" },
+      ];
+
+      const radios = options
+        .map((opt) => {
+          const inputId = `${q.id}_${opt.value}`;
+          const checked = currentValue === opt.value ? "checked" : "";
+          return `
+            <label class="scale-option" for="${inputId}">
+              <input
+                type="radio"
+                id="${inputId}"
+                name="${q.id}"
+                value="${opt.value}"
+                ${checked}
+              />
+              <span>${opt.label}</span>
+            </label>
+          `;
+        })
+        .join("");
+
+      return `
+        <div class="question-card">
+          <div class="badge">${q.id}</div>
+          <div class="question-text">${q.text}</div>
+          <div class="scale-options">
+            ${radios}
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+
+  const atFirstPage = currentAxisIndex === 0;
+  const atLastPage = currentAxisIndex === axisOrder.length - 1;
+
+  const navHtml = `
+    <div class="nav-buttons">
+      <div>
+        <button
+          type="button"
+          class="btn-secondary"
+          id="prev-btn"
+          ${atFirstPage ? "disabled" : ""}
+        >
+          Anterior
+        </button>
+      </div>
+      <div class="nav-buttons-right">
+        <button
+          type="button"
+          class="btn-secondary"
+          id="clear-axis-btn"
+        >
+          Limpar respostas deste eixo
+        </button>
+        ${
+          atLastPage
+            ? `<button type="button" class="btn-primary" id="submit-btn">
+                 Ver meu resultado
+               </button>`
+            : `<button type="button" class="btn-primary" id="next-btn">
+                 Próximo eixo
+               </button>`
+        }
+      </div>
+    </div>
+    <div id="error-box" class="error hidden"></div>
+  `;
+
+  const resultHtml = resultData ? renderResult(resultData) : "";
+
+  appEl.innerHTML = `
+    ${headerHtml}
+    <form id="questions-form">
+      ${questionsHtml}
+      ${navHtml}
+    </form>
+    ${resultHtml}
+  `;
+
+  attachEventHandlers();
+}
+
+function renderResult(result) {
+  const axes = result.axes || {};
+  const profile = result.profile || {};
+
+  const profileLabel = profile.label || "Perfil";
+  const profileDesc =
+    profile.description_short ||
+    "Seu perfil foi identificado com base nas respostas aos cinco eixos.";
+
+  const axisNames = ["economic", "social", "community", "method", "pragmatism"];
+
+  const axisPretty = {
+    economic: "Econômico",
+    social: "Social / Liberdades",
+    community: "Comunidade",
+    method: "Método",
+    pragmatism: "Estilo Político",
+  };
+
+  const axesHtml = axisNames
+    .map((name) => {
+      const val = axes[name];
+      if (typeof val !== "number") return "";
+      const rounded = Math.round(val * 10) / 10;
+      return `
+        <div class="axis-pill">
+          <strong>${axisPretty[name]}:</strong> ${rounded}
+        </div>
+      `;
+    })
+    .join("");
+
+  return `
+    <div class="result">
+      <div class="result-title">${profileLabel}</div>
+      <div class="result-subtitle">${profileDesc}</div>
+      <div class="axes-grid">
+        ${axesHtml}
+      </div>
+    </div>
+  `;
+}
+
+function attachEventHandlers() {
+  const form = document.getElementById("questions-form");
+  if (!form) return;
+
+  // escuta mudanças dos rádios
+  form.addEventListener("change", (e) => {
+    const target = e.target;
+    if (target && target.name && target.type === "radio") {
+      const qid = target.name;
+      const value = parseInt(target.value, 10);
+      answers[qid] = value;
+    }
+  });
+
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  const clearAxisBtn = document.getElementById("clear-axis-btn");
+  const submitBtn = document.getElementById("submit-btn");
+  const errorBox = document.getElementById("error-box");
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      if (currentAxisIndex > 0) {
+        currentAxisIndex -= 1;
+        render();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      // opcional: exigir pelo menos uma resposta no eixo antes de avançar
+      render();
+      if (errorBox) {
+        errorBox.classList.add("hidden");
+      }
+      if (currentAxisIndex < axisOrder.length - 1) {
+        currentAxisIndex += 1;
+        render();
+      }
+    });
+  }
+
+  if (clearAxisBtn) {
+    clearAxisBtn.addEventListener("click", () => {
+      const axisKey = getCurrentAxis();
+      const axisQs = questionsByAxis[axisKey] || [];
+      axisQs.forEach((q) => {
+        delete answers[q.id];
+      });
+      render();
+    });
+  }
+
+  if (submitBtn) {
+    submitBtn.addEventListener("click", async () => {
+      if (errorBox) {
+        errorBox.classList.add("hidden");
+        errorBox.textContent = "";
+      }
+
+      try {
+        const payload = { answers };
+        const res = await fetch("/api/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) {
+          throw new Error("Erro ao enviar respostas");
+        }
+
+        const data = await res.json();
+        resultData = data;
+        render();
+      } catch (err) {
+        if (errorBox) {
+          errorBox.textContent =
+            "Ocorreu um erro ao calcular seu perfil. Tente novamente.";
+          errorBox.classList.remove("hidden");
+        }
+        console.error(err);
+      }
+    });
+  }
+}
+
+(async function init() {
+  try {
+    await loadQuestions();
+    render();
+  } catch (err) {
+    console.error("Erro ao inicializar aplicação:", err);
+    if (appEl) {
+      appEl.innerHTML =
+        "<p>Erro ao carregar o teste. Verifique o servidor e tente novamente.</p>";
+    }
+  }
+})();

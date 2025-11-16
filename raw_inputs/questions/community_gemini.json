@@ -1,0 +1,64 @@
+{
+  "community": [
+    {
+      "id": "C1",
+      "text": "Pessoas de diferentes culturas que vêm morar aqui enriquecem nossa sociedade.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "C2",
+      "text": "A imigração deve ser rigorosamente controlada para preservar a identidade cultural do país.",
+      "lean": "communitarian"
+    },
+    {
+      "id": "C3",
+      "text": "As tradições e os valores familiares são a base de uma sociedade saudável e devem ser protegidos.",
+      "lean": "communitarian"
+    },
+    {
+      "id": "C4",
+      "text": "Cada indivíduo deve ser livre para escolher seu próprio estilo de vida, mesmo que isso vá contra as tradições locais.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "C5",
+      "text": "Eu me sinto mais um 'cidadão do mundo' do que um cidadão do meu país.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "C6",
+      "text": "O patriotismo e o orgulho pela história do nosso país são virtudes importantes a serem ensinadas.",
+      "lean": "communitarian"
+    },
+    {
+      "id": "C7",
+      "text": "É esperado que os recém-chegados adotem a língua e os costumes do país que os acolhe.",
+      "lean": "communitarian"
+    },
+    {
+      "id": "C8",
+      "text": "A cooperação internacional é mais importante do que colocar os interesses do nosso país sempre em primeiro lugar.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "C9",
+      "text": "O que é melhor para o indivíduo é, em última análise, o que é melhor para a sociedade.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "C10",
+      "text": "Temos deveres e obrigações para com nossa comunidade que são tão importantes quanto nossos direitos individuais.",
+      "lean": "communitarian"
+    },
+    {
+      "id": "C11",
+      "text": "A globalização muitas vezes ameaça as culturas locais e o modo de vida tradicional.",
+      "lean": "communitarian"
+    },
+    {
+      "id": "C12",
+      "text": "Leis e normas universais de direitos humanos devem sempre ter prioridade sobre as culturas ou tradições nacionais.",
+      "lean": "cosmopolitan"
+    }
+  ]
+}

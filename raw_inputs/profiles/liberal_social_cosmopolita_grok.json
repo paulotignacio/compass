@@ -1,0 +1,41 @@
+{
+  "label": "Liberal Social Cosmopolita",
+  "description_short": "Defende uma economia aberta com redes de proteção social, valoriza ao máximo as liberdades individuais e a diversidade global. Prioriza políticas baseadas em evidências e acordos internacionais para avanços progressivos.",
+  "description_long": "Na economia, apoia mercados livres e inovação, mas defende redes de segurança como educação acessível e auxílio a quem precisa para garantir oportunidades iguais. Sobre leis e costumes, protege fortemente a autonomia pessoal, direitos de minorias, expressão livre e pluralismo, rejeitando controles sobre comportamentos privados. Na comunidade e identidade, celebra a diversidade cultural, cooperação entre nações e circulação de ideias, vendo o mundo como interconectado. Quanto a mudanças sociais, favorece planejamento com dados e instituições sólidas, ajustando com base em resultados reais. Nas negociações políticas, busca coalizões globais e acordos práticos que promovam inclusão e progresso, mantendo ideais de um mundo mais justo e aberto.",
+  "axis_tendencies": {
+    "economic": "Pró-mercado com proteção social e igualdade de oportunidades.",
+    "social": "Fortemente favorável a liberdades civis e direitos individuais.",
+    "community": "Marcadamente cosmopolita, com ênfase em diversidade e cooperação global.",
+    "method": "Racionalista moderado, com políticas baseadas em evidências e ajustes práticos.",
+    "pragmatism": "Moderadamente pragmático, com soluções negociadas e visão progressista."
+  },
+  "authors_classic": [
+    "John Stuart Mill",
+    "Immanuel Kant",
+    "Adam Smith",
+    "Voltaire",
+    "Mary Wollstonecraft"
+  ],
+  "figures_modern_international": [
+    "Amartya Sen (Economista)",
+    "Martha Nussbaum (Filósofa)",
+    "Yuval Noah Harari (Historiador)",
+    "Steven Pinker (Psicólogo)",
+    "Kwame Anthony Appiah (Filósofo)"
+  ],
+  "figures_modern_national": [
+    "Contardo Calligaris (Psicanalista)",
+    "Leila Pinheiro (não, erro; melhor: Leandro Karnal (Historiador)",
+    "Vladimir Safatle (Filósofo, em aspectos liberais)",
+    "Conrado Hübner Mendes (Jurista)",
+    "Marcos Nobre (Filósofo)"
+  ],
+  "examples_practical": [
+    "Apoiar programas de bolsa de estudos para acesso universal à universidade, financiados por impostos progressivos moderados.",
+    "Defender a legalização do casamento entre pessoas do mesmo sexo e direitos de adoção sem restrições.",
+    "Ser a favor de acordos internacionais para combate às mudanças climáticas com metas realistas.",
+    "Propor vistos humanitários e caminhos para cidadania a imigrantes qualificados ou refugiados.",
+    "Aceitar regulação de redes sociais para combater desinformação, mas com salvaguardas à liberdade de expressão.",
+    "Criticar barreiras comerciais, preferindo integração econômica regional com padrões trabalhistas."
+  ]
+}

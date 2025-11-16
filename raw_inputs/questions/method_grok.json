@@ -1,0 +1,64 @@
+{
+  "method": [
+    {
+      "id": "E1",
+      "text": "É possível planejar reformas completas na sociedade para resolver problemas de forma rápida.",
+      "lean": "rationalism"
+    },
+    {
+      "id": "E2",
+      "text": "Mudanças na sociedade devem ser feitas aos poucos, testando o que funciona na prática.",
+      "lean": "empiricism"
+    },
+    {
+      "id": "E3",
+      "text": "Especialistas podem projetar sistemas sociais melhores do que os que surgem naturalmente.",
+      "lean": "rationalism"
+    },
+    {
+      "id": "E4",
+      "text": "Instituições que duram há muito tempo geralmente funcionam porque já foram testadas pelo tempo.",
+      "lean": "empiricism"
+    },
+    {
+      "id": "E5",
+      "text": "Novas leis devem ser aplicadas em todo o país de uma vez para garantir igualdade.",
+      "lean": "rationalism"
+    },
+    {
+      "id": "E6",
+      "text": "É melhor introduzir mudanças em etapas pequenas e observar os resultados antes de expandir.",
+      "lean": "empiricism"
+    },
+    {
+      "id": "E7",
+      "text": "A sociedade pode ser reorganizada com base em princípios racionais para alcançar justiça total.",
+      "lean": "rationalism"
+    },
+    {
+      "id": "E8",
+      "text": "Costumes antigos merecem respeito porque ajudaram as pessoas a sobreviverem por gerações.",
+      "lean": "empiricism"
+    },
+    {
+      "id": "E9",
+      "text": "Programas governamentais amplos são necessários para corrigir desigualdades de maneira estrutural.",
+      "lean": "rationalism"
+    },
+    {
+      "id": "E10",
+      "text": "Reformas funcionam melhor quando começam localmente e se espalham se derem certo.",
+      "lean": "empiricism"
+    },
+    {
+      "id": "E11",
+      "text": "A educação deve ser redesenhada do zero para atender às necessidades do futuro.",
+      "lean": "rationalism"
+    },
+    {
+      "id": "E12",
+      "text": "Melhorias no sistema de saúde devem vir de ajustes graduais baseados na experiência real.",
+      "lean": "empiricism"
+    }
+  ]
+}

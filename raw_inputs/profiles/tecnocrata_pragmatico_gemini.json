@@ -1,0 +1,42 @@
+{
+  "label": "Tecnocrata Pragmaticista",
+  "description_short": "Rejeita ideologias rígidas em favor de soluções baseadas em dados, expertise técnica e eficiência. Para este perfil, a boa política é a que apresenta resultados mensuráveis, usando o mercado ou o Estado como ferramentas, não como fins em si mesmos.",
+  "description_long": "Este perfil acredita que a gestão pública deve ser tratada como uma ciência, não como um debate de paixões. Na economia, é híbrido: vê o mercado como uma ferramenta eficiente para alocar recursos, mas defende a intervenção estatal estratégica, baseada em dados, para corrigir falhas (como poluição ou monopólios) e otimizar o bem-estar coletivo. Em leis e costumes, tende a ser liberal, mas sua defesa da liberdade (ex: legalização de drogas) se baseia mais na ineficiência da proibição do que em um princípio moral absoluto. Sobre comunidade, valoriza a cooperação internacional e instituições globais (como a OMS ou a OMC) quando elas se provam úteis e eficientes, mas foca na administração local baseada em métricas. É um forte racionalista, acreditando em planejamento, estudos de impacto e na liderança de especialistas (técnicos). É, acima de tudo, pragmático: a melhor política é simplesmente 'aquela que funciona' e pode ser comprovada com números.",
+  "axis_tendencies": {
+    "economic": "Vê o Estado e o Mercado como ferramentas, usando intervenções estratégicas e baseadas em dados para maximizar a eficiência.",
+    "social": "Prefere a liberdade individual regulada, onde as leis são baseadas em evidências (ex: saúde pública, segurança) e não em moralidade.",
+    "community": "Aberto à cooperação global se for eficiente, mas foca em soluções de gestão pública adaptadas ao contexto local.",
+    "method": "Fortemente racionalista; acredita que a política é planejamento, gestão por métricas e expertise técnica.",
+    "pragmatism": "Totalmente focado em resultados; a melhor solução é aquela que os dados comprovam funcionar, independente da ideologia."
+  },
+  "authors_classic": [
+    "Max Weber (pela teoria da burocracia racional)",
+    "Jeremy Bentham (pelo utilitarismo calculista)",
+    "Platão (pela ideia do 'Rei-Filósofo' ou governante-especialista)",
+    "Saint-Simon (pelo planejamento industrial e social por especialistas)",
+    "Francis Bacon (pela aplicação do método científico à sociedade)"
+  ],
+  "figures_modern_international": [
+    "Esther Duflo (Economista, foco em avaliação de impacto - RCTs)",
+    "Abhijit Banerjee (Economista, foco em avaliação de impacto - RCTs)",
+    "Mariana Mazzucato (Economista, sobre o 'Estado Empreendedor' estratégico)",
+    "Cass Sunstein (Acadêmico, sobre 'Nudge' e economia comportamental aplicada a políticas)",
+    "Michael Bloomberg (Gestor, foco em administração baseada em dados)",
+    "Bill Gates (Foco em soluções técnicas e métricas para problemas globais)"
+  ],
+  "figures_modern_national": [
+    "Ricardo Paes de Barros (Economista, especialista em avaliação de impacto de políticas sociais)",
+    "Arminio Fraga (Economista, foco técnico em gestão macroeconômica)",
+    "Persio Arida (Economista, foco em design de instituições)",
+    "Marcos Lisboa (Economista, foco em avaliação de políticas públicas)",
+    "Claudia Costin (Especialista em gestão educacional baseada em evidências)"
+  ],
+  "examples_practical": [
+    "Defender a legalização de drogas ou do aborto, não por uma questão moral, mas sim porque os dados mostram que a proibição é ineficiente e cara para a saúde pública.",
+    "Apoiar a implementação de pedágio urbano, pois estudos técnicos demonstram ser a forma mais eficiente de reduzir o congestionamento.",
+    "Ser contra um subsídio geral para a indústria, mas a favor de um investimento estatal pesado em pesquisa de Inteligência Artificial, baseado em estudos de retorno.",
+    "Avaliar o desempenho de escolas usando métricas padronizadas e criar bônus para professores com melhores resultados.",
+    "Usar análise de dados ('big data') para determinar onde alocar patrulhas policiais, em vez de seguir apenas a pressão de associações de bairro.",
+    "Preferir que o presidente do Banco Central seja um técnico com mandato fixo, isolado do debate político do dia a dia."
+  ]
+}

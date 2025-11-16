@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bússola Política – MVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CDN (ótimo para MVP local) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js para o gráfico de eixos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-6 md:py-10">
+    <!-- Header -->
+    <header class="mb-6 md:mb-10">
+      <div class="flex items-center justify-between gap-3 mb-3">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
+          Bússola Política
+        </h1>
+        <a
+          href="/"
+          class="hidden md:inline-flex text-sm text-indigo-300 hover:text-indigo-200"
+        >
+          ← Voltar para a página inicial
+        </a>
+      </div>
+      <p class="text-slate-300 max-w-3xl">
+        O teste é dividido em 5 eixos com 30 afirmações ao todo. Em cada etapa,
+        leia a breve explicação do eixo e marque como as frases combinam com seu
+        ponto de vista.
+      </p>
+      <a
+        href="/"
+        class="mt-3 inline-flex md:hidden text-sm text-indigo-300 hover:text-indigo-200"
+      >
+        ← Voltar para a página inicial
+      </a>
+    </header>
+
+    <div class="space-y-6">
+      <!-- BLOCO QUESTIONÁRIO -->
+      <section
+        id="quiz-section"
+        class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-lg shadow-slate-950/50"
+      >
+        <div class="flex flex-col gap-3 mb-4">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+                Questionário
+              </p>
+              <h2 id="axis-title" class="text-xl font-semibold text-slate-100">
+                Carregando perguntas…
+              </h2>
+            </div>
+            <div class="text-xs text-slate-400">
+              <span id="page-indicator">Eixo 1/5</span>
+            </div>
+          </div>
+          <p id="axis-description" class="text-sm text-slate-300">
+            Texto sobre o eixo atual…
+          </p>
+          <p id="axis-prompt" class="text-xs text-slate-400">
+            Responda a cada afirmação de acordo com o que você pensa.
+          </p>
+        </div>
+
+        <!-- barra de progresso simples -->
+        <div class="w-full h-2 bg-slate-800 rounded-full mb-4">
+          <div
+            id="progress-bar"
+            class="h-2 bg-indigo-500 rounded-full transition-all"
+            style="width: 0%"
+          ></div>
+        </div>
+
+        <!-- container das perguntas -->
+        <div id="questions-container" class="space-y-4">
+          <!-- preenchido via JS -->
+        </div>
+
+        <!-- legenda da escala -->
+        <div class="mt-4 mb-2 text-xs text-slate-400 flex flex-wrap gap-3">
+          <span>Discordo totalmente (-2)</span>
+          <span>Discordo (-1)</span>
+          <span>Neutro / Não sei (0)</span>
+          <span>Concordo (+1)</span>
+          <span>Concordo totalmente (+2)</span>
+        </div>
+
+        <!-- navegação -->
+        <div class="mt-4 flex items-center justify-between gap-3">
+          <button
+            id="prev-btn"
+            class="px-4 py-2 rounded-xl border border-slate-700 text-sm text-slate-200 hover:bg-slate-800 disabled:opacity-40 disabled:hover:bg-transparent"
+            disabled
+          >
+            ← Anterior
+          </button>
+
+          <button
+            id="next-btn"
+            class="px-4 py-2 rounded-xl bg-indigo-500 text-sm font-medium text-white hover:bg-indigo-400 transition-colors"
+          >
+            Próximo eixo →
+          </button>
+        </div>
+
+        <p id="quiz-message" class="mt-3 text-sm text-amber-300 hidden"></p>
+      </section>
+
+      <!-- Resultado simples (aparece após enviar) -->
+      <section
+        id="simple-result-section"
+        class="hidden bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-lg shadow-slate-950/50"
+      >
+        <div class="grid gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <div>
+                <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+                  Resultado simples
+                </p>
+                <h3 id="result-label" class="text-xl md:text-2xl font-semibold mt-1"></h3>
+              </div>
+              <button
+                id="restart-btn"
+                class="px-3 py-2 rounded-xl border border-slate-700 text-sm text-slate-200 hover:bg-slate-800"
+              >
+                Refazer
+              </button>
+            </div>
+            <p id="result-short" class="text-sm text-slate-300"></p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+              <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
+                Posição em quadrantes
+              </p>
+              <div class="relative">
+                <canvas id="quadrantChart" class="max-h-72"></canvas>
+                <p id="chart-fallback" class="hidden text-sm text-slate-400 mt-2">
+                  Pontuações insuficientes para exibir o gráfico.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-2 text-sm text-slate-200">
+              <p class="text-slate-300">
+                Abra a página completa para ver descrições detalhadas, referências e autores.
+              </p>
+              <button
+                id="open-details-btn"
+                class="w-full py-2 px-4 rounded-xl bg-indigo-500 text-sm font-medium text-white hover:bg-indigo-400 transition"
+              >
+                Ver detalhes completos →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Página de detalhes do perfil -->
+      <section
+        id="details-section"
+        class="hidden bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-lg shadow-slate-950/50"
+      >
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+              Detalhes do perfil
+            </p>
+            <h3 id="details-profile-label" class="text-xl md:text-2xl font-semibold mt-1"></h3>
+            <p id="details-profile-short" class="text-sm text-slate-300 mt-2"></p>
+          </div>
+          <button
+            id="close-details-btn"
+            class="px-3 py-1.5 rounded-lg border border-slate-700 text-sm text-slate-200 hover:bg-slate-800"
+          >
+            Fechar
+          </button>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] mb-4">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+            <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
+              Pontos por eixo
+            </p>
+            <ul id="details-axis-list" class="space-y-2 text-sm text-slate-200"></ul>
+          </div>
+
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+            <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
+              Explicação detalhada
+            </p>
+            <p
+              id="details-profile-long"
+              class="text-sm text-slate-200 whitespace-pre-line"
+            ></p>
+          </div>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
+              Autores clássicos relacionados
+            </h4>
+            <ul
+              id="details-authors-classic-list"
+              class="list-disc list-inside text-slate-200 text-sm"
+            ></ul>
+          </div>
+
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
+              Figuras modernas internacionais
+            </h4>
+            <ul
+              id="details-figures-int-list"
+              class="list-disc list-inside text-slate-200 text-sm"
+            ></ul>
+          </div>
+
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
+              Figuras modernas brasileiras
+            </h4>
+            <ul
+              id="details-figures-nat-list"
+              class="list-disc list-inside text-slate-200 text-sm"
+            ></ul>
+          </div>
+
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
+              Exemplos práticos de posicionamento
+            </h4>
+            <ul
+              id="details-examples-list"
+              class="list-disc list-inside text-slate-200 text-sm"
+            ></ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

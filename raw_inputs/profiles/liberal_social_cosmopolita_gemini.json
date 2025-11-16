@@ -1,0 +1,42 @@
+{
+  "label": "Liberal Social Cosmopolita",
+  "description_short": "Valoriza a economia de mercado e a inovação, desde que acompanhadas por uma rede de proteção social. É um forte defensor das liberdades individuais, do pluralismo e da cooperação internacional, preferindo reformas baseadas em dados.",
+  "description_long": "Na economia, vê a inovação, a competição e a responsabilidade fiscal como essenciais para o progresso. No entanto, acredita que o Estado deve atuar para garantir igualdade de oportunidades e uma rede de segurança (saúde, educação, seguro-desemprego), corrigindo as falhas do mercado sem sufocá-lo. Em relação a leis e costumes, é um defensor intransigente das liberdades civis, priorizando a autonomia individual, a liberdade de expressão e os direitos das minorias contra qualquer tipo de autoritarismo ou imposição moral. Sua identidade é marcadamente cosmopolita; vê a si mesmo como um 'cidadão do mundo', valoriza a diversidade, a globalização e acredita que a cooperação internacional é fundamental para resolver grandes problemas. Confia na ciência e em políticas públicas baseadas em evidências para promover mudanças sociais. Na política, busca soluções negociadas, mas mantém uma visão idealista sobre o progresso, os direitos humanos e a integração global.",
+  "axis_tendencies": {
+    "economic": "Defende o mercado e a inovação, mas com responsabilidade fiscal e uma rede de proteção social (igualdade de oportunidades).",
+    "social": "Fortemente a favor das liberdades civis, da autonomia individual, do pluralismo e dos direitos das minorias.",
+    "community": "Vê a si mesmo como um cidadão global, valorizando a diversidade, a globalização e a cooperação internacional.",
+    "method": "Acredita em políticas públicas planejadas e baseadas em evidências científicas para promover reformas.",
+    "pragmatism": "Busca soluções práticas e negociadas, mas mantém uma visão idealista sobre o progresso social e os direitos humanos."
+  },
+  "authors_classic": [
+    "John Stuart Mill",
+    "John Rawls",
+    "Immanuel Kant (especialmente 'A Paz Perpétua')",
+    "Karl Popper (especialmente 'A Sociedade Aberta e Seus Inimigos')",
+    "Amartya Sen"
+  ],
+  "figures_modern_international": [
+    "The Economist (A revista, como linha editorial)",
+    "Steven Pinker (Psicólogo cognitivo e autor)",
+    "Yascha Mounk (Cientista Político)",
+    "Fareed Zakaria (Comentarista e autor)",
+    "Timothy Garton Ash (Historiador e jornalista)",
+    "Daron Acemoglu (Economista)"
+  ],
+  "figures_modern_national": [
+    "Arminio Fraga (Economista)",
+    "Persio Arida (Economista)",
+    "Marcos Lisboa (Economista)",
+    "Samuel Pessôa (Economista)",
+    "Mônica de Bolle (Economista)"
+  ],
+  "examples_practical": [
+    "Defender a abertura comercial e acordos internacionais, mas ao mesmo tempo apoiar programas de requalificação profissional para trabalhadores afetados.",
+    "Ser a favor da legalização do casamento entre pessoas do mesmo sexo e da descriminalização do aborto.",
+    "Defender políticas de imigração baseadas em regras claras, vendo a chegada de estrangeiros como algo benéfico para a economia e a cultura.",
+    "Apoiar o investimento pesado em ciência, tecnologia e educação baseada em evidências, criticando abordagens ideológicas no ensino.",
+    "Defender a responsabilidade fiscal e o controle da inflação, mas ser contra cortes drásticos em programas sociais essenciais.",
+    "Apoiar políticas de ação afirmativa (cotas) como uma medida temporária e baseada em dados para corrigir desigualdades históricas."
+  ]
+}

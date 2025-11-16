@@ -1,0 +1,64 @@
+{
+  "social": [
+    {
+      "id": "E1",
+      "text": "O governo deve proibir o uso de certas drogas para proteger a saúde pública.",
+      "lean": "authority"
+    },
+    {
+      "id": "E2",
+      "text": "Cada pessoa deve ter o direito de decidir sobre seu próprio corpo sem interferência do governo.",
+      "lean": "liberty"
+    },
+    {
+      "id": "E3",
+      "text": "Leis mais rigorosas são necessárias para combater o crime nas ruas.",
+      "lean": "authority"
+    },
+    {
+      "id": "E4",
+      "text": "As pessoas devem ter liberdade para expressar opiniões mesmo que ofendam outras.",
+      "lean": "liberty"
+    },
+    {
+      "id": "E5",
+      "text": "O governo deve controlar o conteúdo na internet para evitar informações falsas.",
+      "lean": "authority"
+    },
+    {
+      "id": "E6",
+      "text": "Indivíduos devem poder portar armas para sua própria defesa.",
+      "lean": "liberty"
+    },
+    {
+      "id": "E7",
+      "text": "A polícia precisa de mais poderes para manter a ordem nas cidades.",
+      "lean": "authority"
+    },
+    {
+      "id": "E8",
+      "text": "O casamento entre pessoas do mesmo sexo deve ser uma escolha pessoal sem restrições legais.",
+      "lean": "liberty"
+    },
+    {
+      "id": "E9",
+      "text": "Leis devem limitar manifestações públicas que possam causar desordem.",
+      "lean": "authority"
+    },
+    {
+      "id": "E10",
+      "text": "A privacidade das comunicações pessoais não deve ser monitorada pelo governo.",
+      "lean": "liberty"
+    },
+    {
+      "id": "E11",
+      "text": "O governo deve impor regras mais estritas sobre o consumo de álcool e cigarro.",
+      "lean": "authority"
+    },
+    {
+      "id": "E12",
+      "text": "As pessoas devem ter o direito de escolher tratamentos médicos alternativos sem aprovação estatal.",
+      "lean": "liberty"
+    }
+  ]
+}

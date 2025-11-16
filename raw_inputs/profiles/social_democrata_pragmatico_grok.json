@@ -1,0 +1,41 @@
+{
+  "label": "Social-Democrata Pragmatista",
+  "description_short": "Defende um Estado que garanta serviços públicos e reduza desigualdades, mas vê o mercado como essencial para o crescimento. Valoriza liberdades individuais com algumas regras para o bem comum e prioriza acordos práticos em vez de ideias perfeitas.",
+  "description_long": "Na economia, considera o mercado o principal motor de riqueza, mas defende que o Estado corrija falhas, diminua desigualdades e ofereça saúde e educação para todos. Sobre leis e costumes, apoia direitos individuais e liberdades civis, aceitando regulações quando protegem a sociedade ou grupos vulneráveis. Na comunidade e identidade, equilibra o orgulho nacional e os laços locais com a abertura para cooperação internacional e diálogo entre culturas. Quanto a mudanças sociais, prefere planejar com dados e evidências, mas implementar aos poucos, ajustando conforme os resultados. Nas negociações políticas, valoriza alianças e coalizões para aprovar medidas viáveis, mesmo que não sejam ideais, rejeitando visões utópicas em favor de avanços concretos.",
+  "axis_tendencies": {
+    "economic": "Defende Estado forte em serviços públicos e redução de desigualdades, mas aceita mercado como fonte de crescimento.",
+    "social": "Prioriza liberdades civis e direitos individuais, com regulações pontuais para proteção social.",
+    "community": "Equilibra identidade nacional e comunitária com abertura ao diálogo internacional.",
+    "method": "Apoia reformas baseadas em evidências, implementadas de forma gradual e ajustável.",
+    "pragmatism": "Fortemente pragmático, prefere negociações e resultados concretos a ideias utópicas."
+  },
+  "authors_classic": [
+    "Eduard Bernstein",
+    "John Maynard Keynes",
+    "John Rawls",
+    "Karl Popper",
+    "Anthony Giddens"
+  ],
+  "figures_modern_international": [
+    "Joseph Stiglitz (Economista)",
+    "Thomas Piketty (Economista)",
+    "Mariana Mazzucato (Economista)",
+    "Yascha Mounk (Cientista Político)",
+    "Paul Krugman (Economista)"
+  ],
+  "figures_modern_national": [
+    "Fernando Henrique Cardoso (Sociólogo)",
+    "Marcos Lisboa (Economista)",
+    "Samuel Pessôa (Economista)",
+    "André Lara Resende (Economista)",
+    "Armínio Fraga (Economista)"
+  ],
+  "examples_practical": [
+    "Apoiar um sistema público de saúde universal, mas permitir clínicas privadas para quem quiser pagar mais rápido.",
+    "Defender aumento gradual do salário mínimo com estudos de impacto, em vez de salto repentino.",
+    "Ser a favor da descriminalização das drogas para tratar como questão de saúde, não de polícia.",
+    "Aceitar aliança com grupo de centro para aprovar reforma tributária que simplifique impostos.",
+    "Apoiar acordos comerciais internacionais com regras de proteção ao trabalho e ao meio ambiente.",
+    "Criticar excesso de burocracia estatal, mas manter concursos públicos para cargos importantes."
+  ]
+}

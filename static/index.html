@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bússola Política</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CDN (ótimo para MVP local) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-10 md:py-14">
+    <header class="space-y-4 text-center">
+      <p class="text-xs font-mono uppercase tracking-[0.2em] text-indigo-300">MVP</p>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Bússola Política</h1>
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto">
+        Um teste rápido para visualizar seu posicionamento em cinco eixos. Ao final, você vê um
+        perfil descritivo com referências, autores e exemplos práticos.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 text-sm text-slate-400">
+        <span class="bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-full">30 afirmações</span>
+        <span class="bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-full">5 eixos</span>
+        <span class="bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-full">Resultado imediato</span>
+      </div>
+      <a
+        href="/quiz"
+        class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-500 text-white text-base font-semibold shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition"
+      >
+        Iniciar o teste →
+      </a>
+    </header>
+
+    <main class="mt-12 space-y-8">
+      <section class="grid gap-4 md:grid-cols-3">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+          <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">Como funciona</p>
+          <h2 class="text-xl font-semibold">Responda 30 afirmações</h2>
+          <p class="text-sm text-slate-300">Cada afirmação vale de -2 a +2. Não há respostas certas ou erradas.</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+          <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">Eixos</p>
+          <h2 class="text-xl font-semibold">5 dimensões</h2>
+          <p class="text-sm text-slate-300">Economia, Costumes/Liberdades, Comunidade/Identidade, Método de mudança e Pragmatismo vs Idealismo.</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+          <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">Resultado</p>
+          <h2 class="text-xl font-semibold">Perfil e referências</h2>
+          <p class="text-sm text-slate-300">Visualize seu ponto nos eixos, leia um perfil resumido e aprofunde em autores e exemplos.</p>
+        </div>
+      </section>
+
+      <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">O que você verá</p>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex gap-3"><span class="text-indigo-400">•</span> Clareza sobre seu posicionamento em cinco eixos, com pontuação por dimensão.</li>
+          <li class="flex gap-3"><span class="text-indigo-400">•</span> Um perfil descritivo que resume tendências e oferece referência para se aprofundar.</li>
+          <li class="flex gap-3"><span class="text-indigo-400">•</span> Sugestões de autores clássicos e figuras contemporâneas relacionadas ao seu resultado.</li>
+        </ul>
+        <div>
+          <a
+            href="/quiz"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-indigo-500 text-white text-sm font-semibold shadow-md shadow-indigo-500/20 hover:bg-indigo-400 transition"
+          >
+            Começar agora →
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "label": "Esquerda Libertária Cosmopolita",
+  "description_short": "Defende um Estado ativo na redução da desigualdade econômica, mas é radicalmente contra a intervenção estatal na vida privada e nos costumes. Valoriza a diversidade, os direitos humanos universais e a cooperação internacional.",
+  "description_long": "Na economia, defende um Estado atuante para reduzir desigualdades e garantir igualdade de oportunidades, através de serviços públicos universais (saúde, educação) e tributação progressiva. Em contraste, é radicalmente libertário na esfera social: defende a autonomia individual total, a liberdade de expressão, os direitos das minorias e o direito de escolha sobre o próprio corpo, rejeitando qualquer controle moral ou autoritário do Estado. Sua identidade é cosmopolita; vê a si mesmo como um 'cidadão do mundo', valoriza a diversidade cultural, a imigração e acredita que os direitos humanos universais estão acima das fronteiras ou tradições nacionais. Acredita em reformas planejadas e baseadas em evidências para alcançar a justiça social, buscando implementar seus ideais de liberdade e igualdade de forma prática.",
+  "axis_tendencies": {
+    "economic": "Defende um Estado ativo na redistribuição de renda e na garantia de serviços públicos para reduzir desigualdades.",
+    "social": "Fortemente a favor da autonomia individual, da diversidade de estilos de vida e contra qualquer controle estatal sobre costumes.",
+    "community": "Claramente cosmopolita; valoriza a diversidade cultural, a imigração e os direitos humanos universais acima das fronteiras.",
+    "method": "Confia em reformas planejadas e baseadas em evidências para expandir a justiça social, respeitando as liberdades.",
+    "pragmatism": "Idealista nos objetivos de igualdade e liberdade, mas busca caminhos práticos e responsáveis para implementá-los."
+  },
+  "authors_classic": [
+    "John Stuart Mill",
+    "John Rawls",
+    "Karl Popper",
+    "Amartya Sen",
+    "Noam Chomsky"
+  ],
+  "figures_modern_international": [
+    "Thomas Piketty (Economista)",
+    "Judith Butler (Filósofa)",
+    "Joseph Stiglitz (Economista)",
+    "Martha Nussbaum (Filósofa)",
+    "Esther Duflo (Economista)"
+  ],
+  "figures_modern_national": [
+    "Silvio Almeida (Filósofo e Jurista)",
+    "Djamila Ribeiro (Filósofa)",
+    "Laura Carvalho (Economista)",
+    "Debora Diniz (Antropóloga)",
+    "Celso Rocha de Barros (Sociólogo e colunista)"
+  ],
+  "examples_practical": [
+    "Defender impostos progressivos sobre grandes fortunas e heranças para financiar saúde e educação universais.",
+    "Apoiar a legalização do aborto e das drogas leves, tratando ambos como temas de saúde pública e autonomia individual.",
+    "Defender políticas de cotas raciais e sociais como uma ferramenta baseada em evidências para acelerar a igualdade de oportunidades.",
+    "Criticar leis de segurança que aumentam o poder de vigilância do Estado, vendo-as como uma ameaça às liberdades civis.",
+    "Defender o acolhimento de refugiados e a regularização de imigrantes, vendo a diversidade cultural como positiva.",
+    "Apoiar acordos climáticos internacionais (como o Acordo de Paris) mesmo que exijam custos para a indústria nacional."
+  ]
+}

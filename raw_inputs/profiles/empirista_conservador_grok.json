@@ -1,0 +1,41 @@
+{
+  "label": "Empirista Conservador",
+  "description_short": "Prefere economia de mercado com prudência e intervenções só quando comprovadas, valoriza ordem social e tradições que funcionam. Prioriza mudanças lentas baseadas no que já deu certo e soluções práticas que mantenham a estabilidade.",
+  "description_long": "Na economia, apoia o mercado como gerador de riqueza, mas defende responsabilidade fiscal e ações pontuais do Estado para evitar crises ou proteger o essencial. Sobre leis e costumes, busca equilíbrio entre ordem pública e liberdades, preservando valores que mantêm a sociedade coesa. Na comunidade e identidade, vê tradições, famílias e nação como bases importantes para a vida em conjunto, merecendo proteção moderada. Quanto a mudanças sociais, insiste em avanços graduais, testados na prática e respeitosos ao que já provou ser útil ao longo do tempo. Nas negociações políticas, avalia propostas pelo custo real e benefício concreto, formando acordos que garantam funcionamento sem rupturas radicais.",
+  "axis_tendencies": {
+    "economic": "Mercado com prudência fiscal e intervenções pontuais comprovadas.",
+    "social": "Ordem e continuidade moral com liberdades que não desestabilizem.",
+    "community": "Moderadamente comunitário, preservando identidades e tradições locais.",
+    "method": "Fortemente empirista, com mudanças graduais e baseadas em experiência.",
+    "pragmatism": "Altamente pragmático, focado em custo-benefício e resultados reais."
+  },
+  "authors_classic": [
+    "Edmund Burke",
+    "David Hume",
+    "Michael Oakeshott",
+    "Alexis de Tocqueville",
+    "Aristóteles"
+  ],
+  "figures_modern_international": [
+    "Thomas Sowell (Economista)",
+    "Niall Ferguson (Historiador)",
+    "Roger Scruton (Filósofo)",
+    "Charles Murray (Sociólogo)",
+    "Yuval Noah Harari (Historiador, em aspectos institucionais)"
+  ],
+  "figures_modern_national": [
+    "Luiz Felipe Pondé (Filósofo)",
+    "Denis Rosenfield (Filósofo)",
+    "João Cezar de Castro Rocha (Crítico literário)",
+    "José Guilherme Merquior (Ensaiista, em aspectos conservadores)",
+    "Roberto Campos (Economista, em prudência fiscal)"
+  ],
+  "examples_practical": [
+    "Apoiar redução gradual de impostos com monitoramento de impacto na arrecadação.",
+    "Defender manutenção de feriados tradicionais para reforçar laços sociais.",
+    "Ser a favor de testes piloto para novas políticas educacionais antes de adoção nacional.",
+    "Aceitar regulação ambiental que proteja recursos sem paralisar atividades econômicas.",
+    "Criticar reformas radicais no sistema de previdência, preferindo ajustes paramétricos.",
+    "Propor parcerias entre governo e empresas locais para infraestrutura com contratos claros."
+  ]
+}

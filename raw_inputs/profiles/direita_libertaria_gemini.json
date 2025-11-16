@@ -1,0 +1,42 @@
+{
+  "label": "Direita Libertária",
+  "description_short": "Defende a máxima liberdade individual, tanto na economia (mercado livre, impostos baixos) quanto na vida pessoal (escolhas de estilo de vida). Vê o Estado como a principal ameaça à liberdade e acredita que sua função deve ser mínima, focando apenas na proteção da propriedade e na garantia de contratos.",
+  "description_long": "Na economia, este perfil é um defensor radical do livre mercado, da propriedade privada e da concorrência. Acredita que impostos são uma forma de coerção e que serviços como saúde, educação e previdência são mais eficientes e éticos quando geridos pela iniciativa privada, sem intervenção estatal. Em relação a leis e costumes, é fortemente anti-autoritário, defendendo a autonomia do indivíduo sobre o próprio corpo, a liberdade de expressão irrestrita e o direito de viver como quiser, desde que não inicie força contra outros. Sobre comunidade, vê a sociedade como uma rede de associações voluntárias; a liberdade individual vem sempre antes de qualquer obrigação imposta por um coletivo ou tradição. Rejeita mudanças planejadas pelo governo (engenharia social), confiando que as melhores soluções emergem de forma espontânea e descentralizada através do mercado. Na política, é pragmático ao defender a liberdade como o meio mais eficaz para gerar prosperidade e resolver problemas complexos.",
+  "axis_tendencies": {
+    "economic": "Defende um Estado mínimo, impostos radicalmente baixos, privatizações e a máxima liberdade de mercado.",
+    "social": "Totalmente a favor das liberdades civis, da autonomia individual e contra qualquer intervenção do Estado na vida privada.",
+    "community": "Prioriza os direitos e a autonomia do indivíduo acima das tradições ou do pertencimento comunitário/nacional.",
+    "method": "Rejeita planejamentos centrais e confia na 'ordem espontânea' que emerge das interações livres e descentralizadas.",
+    "pragmatism": "Foca nos resultados práticos, defendendo que o mercado livre é a forma mais eficiente e rápida de resolver problemas sociais."
+  },
+  "authors_classic": [
+    "John Locke",
+    "Adam Smith",
+    "Frédéric Bastiat",
+    "Ludwig von Mises",
+    "Friedrich Hayek",
+    "Robert Nozick"
+  ],
+  "figures_modern_international": [
+    "Milton Friedman (Economista)",
+    "Thomas Sowell (Economista e filósofo social)",
+    "Peter Thiel (Investidor e ensaísta)",
+    "Ron Paul (Autor e ex-político)",
+    "Deirdre McCloskey (Economista e historiadora)"
+  ],
+  "figures_modern_national": [
+    "Roberto Campos (Economista)",
+    "Gustavo Franco (Economista)",
+    "Hélio Beltrão (Administrador e fundador de 'think tank')",
+    "Rodrigo Constantino (Comentarista)",
+    "Paulo Guedes (Economista)"
+  ],
+  "examples_practical": [
+    "Defender a privatização total de empresas estatais, incluindo as de setores estratégicos como energia e saneamento.",
+    "Ser a favor da legalização de todas as drogas, tratando o consumo como uma escolha individual e um assunto de saúde, não de polícia.",
+    "Apoiar o fim de todos os subsídios governamentais, seja para a indústria, agricultura ou cultura.",
+    "Defender o direito irrestrito ao 'homeschooling' (ensino domiciliar) e a criação de 'vouchers' educacionais para que os pais escolham a escola dos filhos.",
+    "Ser radicalmente contra qualquer regulação estatal de mídias sociais ou da liberdade de expressão na internet.",
+    "Propor a extinção da maioria das agências reguladoras do governo."
+  ]
+}

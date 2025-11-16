@@ -1,0 +1,41 @@
+{
+  "label": "Direita Autoritária Nacionalista",
+  "description_short": "Defende autoridade forte para manter ordem e unidade nacional, com economia que proteja interesses do país. Valoriza tradições, disciplina social e políticas práticas que reforcem a coesão e a soberania.",
+  "description_long": "Na economia, apoia medidas que fortaleçam a indústria local e a independência, usando mercado ou intervenção conforme beneficie a nação. Sobre leis e costumes, defende regras rigorosas, punições firmes e controle sobre comportamentos que ameacem a estabilidade ou valores coletivos. Na comunidade e identidade, enfatiza orgulho nacional, cultura própria e laços tradicionais como base da sociedade. Quanto a mudanças sociais, aceita planejamento central para preservar ordem e herança, com ajustes baseados no que mantém a unidade. Nas negociações políticas, prioriza acordos que garantam segurança e grandeza nacional, sendo pragmático em execução mas firme em princípios de soberania.",
+  "axis_tendencies": {
+    "economic": "Intervencionismo ou mercado para autonomia e indústria nacional.",
+    "social": "Forte autoridade, leis rígidas e controle para disciplina social.",
+    "community": "Altamente comunitário, com ênfase em identidade e tradições nacionais.",
+    "method": "Mistura planejamento centralizador com empirismo para estabilidade.",
+    "pragmatism": "Pragmático em segurança, com idealismo na unidade nacional."
+  },
+  "authors_classic": [
+    "Thomas Hobbes",
+    "Carl Schmitt",
+    "Joseph de Maistre",
+    "Giovanni Gentile",
+    "Charles Maurras"
+  ],
+  "figures_modern_international": [
+    "Patrick Buchanan (Comentarista)",
+    "Viktor Orbán (em ideias, como pensador)",
+    "Aleksandr Dugin (Filósofo)",
+    "Yoram Hazony (Pensador)",
+    "Thierry Baudet (Comentarista)"
+  ],
+  "figures_modern_national": [
+    "Olavo de Carvalho (Filósofo)",
+    "Luiz Philippe de Orléans e Bragança (Pensador)",
+    "Flávio Gordon (Antropólogo)",
+    "Bernardo Küster (Comentarista, em aspectos nacionais)",
+    "Carlos Alberto Di Franco (Jornalista)"
+  ],
+  "examples_practical": [
+    "Apoiar barreiras comerciais para proteger empregos na indústria local.",
+    "Defender aumento de penas para crimes violentos e mais poder à polícia.",
+    "Ser a favor de ensino obrigatório de história nacional com ênfase em heróis patrióticos.",
+    "Propor programas estatais para incentivar natalidade e fortalecer famílias tradicionais.",
+    "Aceitar alianças internacionais apenas com países que respeitem soberania nacional.",
+    "Criticar imigração descontrolada, preferindo critérios que priorizem integração cultural."
+  ]
+}

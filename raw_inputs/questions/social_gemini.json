@@ -1,0 +1,64 @@
+{
+  "social": [
+    {
+      "id": "S1",
+      "text": "A liberdade de expressão deve ser protegida, mesmo que inclua ideias que a maioria das pessoas ache ofensivas.",
+      "lean": "liberty"
+    },
+    {
+      "id": "S2",
+      "text": "O governo deve ter o poder de proibir discursos que possam incitar o ódio ou causar desordem social.",
+      "lean": "authority"
+    },
+    {
+      "id": "S3",
+      "text": "Leis mais duras e sentenças mais longas são a forma mais eficaz de reduzir a criminalidade.",
+      "lean": "authority"
+    },
+    {
+      "id": "S4",
+      "text": "O foco do sistema de justiça deve ser a reabilitação dos infratores, não apenas a punição.",
+      "lean": "liberty"
+    },
+    {
+      "id": "S5",
+      "text": "As agências de segurança precisam ter autoridade para monitorar comunicações para garantir a segurança de todos.",
+      "lean": "authority"
+    },
+    {
+      "id": "S6",
+      "text": "A privacidade dos cidadãos contra a vigilância do Estado é um direito fundamental que não deve ser violado.",
+      "lean": "liberty"
+    },
+    {
+      "id": "S7",
+      "text": "O que adultos fazem consensualmente em suas vidas privadas não deve ser regulado pelo governo.",
+      "lean": "liberty"
+    },
+    {
+      "id": "S8",
+      "text": "O Estado tem a responsabilidade de promover valores morais positivos e desencorajar comportamentos prejudiciais na sociedade.",
+      "lean": "authority"
+    },
+    {
+      "id": "S9",
+      "text": "O direito de protestar é essencial, mesmo que cause grandes transtornos para a rotina da cidade.",
+      "lean": "liberty"
+    },
+    {
+      "id": "S10",
+      "text": "A polícia deve ter autoridade para agir rapidamente e dispersar protestos antes que eles saiam do controle.",
+      "lean": "authority"
+    },
+    {
+      "id": "S11",
+      "text": "O governo deve regular o conteúdo da mídia (TV, internet) para proteger as crianças e os valores da sociedade.",
+      "lean": "authority"
+    },
+    {
+      "id": "S12",
+      "text": "Adultos devem ter total liberdade para consumir qualquer tipo de mídia ou arte que escolherem, sem censura.",
+      "lean": "liberty"
+    }
+  ]
+}

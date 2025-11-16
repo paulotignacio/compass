@@ -1,0 +1,64 @@
+{
+  "community": [
+    {
+      "id": "E1",
+      "text": "É importante valorizar as tradições locais para manter a identidade da comunidade.",
+      "lean": "communal"
+    },
+    {
+      "id": "E2",
+      "text": "As pessoas devem ter liberdade para adotar estilos de vida diferentes de sua cultura original.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "E3",
+      "text": "A família e os laços comunitários são essenciais para uma sociedade estável.",
+      "lean": "communal"
+    },
+    {
+      "id": "E4",
+      "text": "Interagir com culturas estrangeiras enriquece a vida individual.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "E5",
+      "text": "Manter costumes antigos ajuda a unir as pessoas em uma nação.",
+      "lean": "communal"
+    },
+    {
+      "id": "E6",
+      "text": "Cada indivíduo deve priorizar suas próprias escolhas acima das expectativas da sociedade.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "E7",
+      "text": "O patriotismo fortalece o senso de pertencimento a um país.",
+      "lean": "communal"
+    },
+    {
+      "id": "E8",
+      "text": "Viver em diferentes países pode ajudar no desenvolvimento pessoal.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "E9",
+      "text": "As comunidades devem preservar sua língua e herança cultural.",
+      "lean": "communal"
+    },
+    {
+      "id": "E10",
+      "text": "A diversidade de ideias globais beneficia o progresso individual.",
+      "lean": "cosmopolitan"
+    },
+    {
+      "id": "E11",
+      "text": "Participar de eventos locais reforça os vínculos entre vizinhos.",
+      "lean": "communal"
+    },
+    {
+      "id": "E12",
+      "text": "Explorar novas perspectivas além das fronteiras nacionais é valioso.",
+      "lean": "cosmopolitan"
+    }
+  ]
+}

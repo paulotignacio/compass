@@ -1,0 +1,41 @@
+{
+  "label": "Esquerda Libertária Cosmopolita",
+  "description_short": "Defende Estado ativo para reduzir desigualdades e garantir oportunidades, com total liberdade nas escolhas pessoais. Valoriza diversidade global, cooperação entre povos e reformas planejadas que ampliem justiça sem controles autoritários.",
+  "description_long": "Na economia, apoia redistribuição e proteção social para igualar chances, sem eliminar a iniciativa individual ou a inovação. Sobre leis e costumes, protege autonomia sobre corpo, expressão e estilos de vida, rejeitando qualquer regulação moral do Estado. Na comunidade e identidade, celebra mistura de culturas, direitos universais e fronteiras abertas para pessoas e ideias. Quanto a mudanças sociais, favorece planejamento com evidências para expandir inclusão, respeitando liberdades e ajustando com base em resultados. Nas negociações políticas, busca alianças internacionais e acordos que promovam igualdade e diversidade, equilibrando visões amplas com passos viáveis.",
+  "axis_tendencies": {
+    "economic": "Redistribuição e proteção social sem sufocar iniciativas individuais.",
+    "social": "Fortemente libertária, com autonomia pessoal e diversidade.",
+    "community": "Claramente cosmopolita, com integração global e direitos universais.",
+    "method": "Racionalista moderado, com reformas baseadas em evidências.",
+    "pragmatism": "Moderado, com foco em igualdade e liberdades implementáveis."
+  },
+  "authors_classic": [
+    "Pierre-Joseph Proudhon",
+    "Mikhail Bakunin",
+    "Emma Goldman",
+    "John Stuart Mill",
+    "Karl Marx (em aspectos libertários)"
+  ],
+  "figures_modern_international": [
+    "Noam Chomsky (Linguista e ativista)",
+    "Naomi Klein (Jornalista)",
+    "Slavoj Žižek (Filósofo, em crítica global)",
+    "David Graeber (Antropólogo)",
+    "Yanisa Varoufakis (Economista)"
+  ],
+  "figures_modern_national": [
+    "Marilena Chaui (Filósofa)",
+    "Vladimir Safatle (Filósofo)",
+    "Jessé Souza (Sociólogo)",
+    "Renato Janine Ribeiro (Filósofo)",
+    "Sabrina Fernandes (Socióloga)"
+  ],
+  "examples_practical": [
+    "Apoiar renda básica universal financiada por impostos sobre grandes fortunas.",
+    "Defender descriminalização de todas as drogas, tratando uso como questão de saúde.",
+    "Ser a favor de políticas de cotas e ações afirmativas em universidades públicas.",
+    "Propor acolhimento humanitário a refugiados com integração cultural e econômica.",
+    "Aceitar parcerias globais para combate à pobreza e mudanças climáticas.",
+    "Criticar censura em redes sociais, defendendo moderação comunitária descentralizada."
+  ]
+}

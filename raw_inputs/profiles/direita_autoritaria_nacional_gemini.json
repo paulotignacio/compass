@@ -1,0 +1,40 @@
+{
+  "label": "Direita Autoritária Nacionalista",
+  "description_short": "Prioriza a unidade nacional, a ordem social e a soberania do país. Defende um Estado forte para aplicar leis rígidas, proteger a cultura local e fortalecer a economia nacional contra influências externas.",
+  "description_long": "Este perfil vê a nação como o valor central. Na economia, é misto: pode aceitar o mercado, mas defende um forte intervencionismo estatal para proteger indústrias estratégicas, garantir a autossuficiência e promover o poderio nacional, rejeitando o livre comércio irrestrito. Em relação a leis e costumes, é fortemente autoritário, defendendo a disciplina social, punições severas para crimes e o controle estatal sobre comportamentos vistos como 'desviantes' ou 'prejudiciais' à moral tradicional. A identidade nacional é fundamental; valoriza as tradições, a cultura unificada e desconfia profundamente do 'globalismo', da imigração em larga escala e de instituições internacionais, vistas como ameaças à soberania. Aceita o planejamento centralizado do Estado (racionalismo) para executar grandes projetos nacionais ou para reverter mudanças sociais que considera negativas. É pragmático no uso da força para manter a ordem, mas idealista em sua visão de uma nação unida e grandiosa.",
+  "axis_tendencies": {
+    "economic": "Vê a economia como ferramenta estratégica, aceitando forte intervenção estatal para proteger a indústria e a autonomia nacional.",
+    "social": "Fortemente a favor da autoridade, de leis rígidas e do controle estatal sobre costumes para garantir a ordem e a disciplina moral.",
+    "community": "Altamente nacionalista; valoriza a identidade, a cultura e as tradições, e desconfia fortemente do globalismo e de influências externas.",
+    "method": "Aceita o planejamento centralizado do Estado (racionalismo) para preservar ou restaurar a ordem e os valores nacionais.",
+    "pragmatism": "Idealista na visão de 'grandeza nacional', mas pragmático e duro na aplicação de políticas de segurança e ordem."
+  },
+  "authors_classic": [
+    "Thomas Hobbes",
+    "Carl Schmitt",
+    "Joseph de Maistre",
+    "Johann Gottlieb Fichte",
+    "Machiavelli"
+  ],
+  "figures_modern_international": [
+    "Yoram Hazony (Filósofo)",
+    "Patrick Deneen (Cientista Político)",
+    "Aleksandr Dugin (Geopolítico)",
+    "Alain de Benoist (Filósofo)",
+    "John Mearsheimer (Teórico de Relações Internacionais, pelo 'realismo' focado no Estado-Nação)"
+  ],
+  "figures_modern_national": [
+    "Oliveira Vianna (Sociólogo)",
+    "Alberto Torres (Pensador social)",
+    "Olavo de Carvalho (Comentarista, pelo antiglobalismo e defesa da tradição)",
+    "Eneias Carneiro (Médico/Autor, como arquétipo do 'nacional-desenvolvimentismo' e autoridade)"
+  ],
+  "examples_practical": [
+    "Defender altas tarifas de importação para proteger a indústria nacional, mesmo que isso aumente os preços para o consumidor.",
+    "Ser a favor de leis que aumentem drasticamente as penas para crimes como desacato à autoridade, vandalismo ou organização de protestos não autorizados.",
+    "Apoiar o controle rigoroso de fronteiras e a restrição da imigração de grupos culturais vistos como 'inassimiláveis'.",
+    "Defender que o governo deve ter o poder de intervir no currículo escolar para garantir o ensino do patriotismo e dos valores tradicionais.",
+    "Criticar a participação do país em tribunais ou organizações internacionais (como a ONU ou a OMS), vendo-as como uma perda de soberania.",
+    "Apoiar a censura estatal de manifestações artísticas ou da imprensa consideradas 'antipatrióticas' ou 'imorais'."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "label": "Conservador Comunitário",
+  "description_short": "Valoriza a economia de mercado com regras que protejam a estabilidade social, defende ordem e costumes tradicionais para a segurança da comunidade. Prioriza mudanças lentas e testadas, com forte apego às raízes locais e nacionais.",
+  "description_long": "Na economia, apoia o mercado como fonte de prosperidade, mas defende regulações que evitem instabilidade e protejam famílias e trabalhadores locais. Sobre leis e costumes, acredita que a autoridade deve garantir ordem, responsabilidade pessoal e continuidade de valores morais compartilhados. Na comunidade e identidade, enfatiza o pertencimento a tradições, instituições familiares e nacionais que unem as pessoas ao longo do tempo. Quanto a mudanças sociais, prefere ajustes graduais baseados no que já funcionou, rejeitando planos radicais impostos de cima. Nas negociações políticas, busca acordos que mantenham a coesão social e a funcionalidade prática, equilibrando princípios com soluções viáveis para a comunidade.",
+  "axis_tendencies": {
+    "economic": "Favorece mercado com regulações para estabilidade e coesão comunitária.",
+    "social": "Prioriza ordem, responsabilidade e autoridade para preservar costumes.",
+    "community": "Fortemente comunitário, com ênfase em identidade local e nacional.",
+    "method": "Defende mudanças graduais, orgânicas e respeitosas à tradição.",
+    "pragmatism": "Prefere soluções realistas que mantenham a estabilidade comunitária."
+  },
+  "authors_classic": [
+    "Edmund Burke",
+    "Alexis de Tocqueville",
+    "Benjamin Disraeli",
+    "Russell Kirk",
+    "Michael Oakeshott"
+  ],
+  "figures_modern_international": [
+    "Roger Scruton (Filósofo)",
+    "Yuval Noah Harari (Historiador, em aspectos culturais)",
+    "Niall Ferguson (Historiador)",
+    "Jordan Peterson (Psicólogo)",
+    "Douglas Murray (Comentarista)"
+  ],
+  "figures_modern_national": [
+    "Olavo de Carvalho (Filósofo)",
+    "Luiz Felipe Pondé (Filósofo)",
+    "Roberto Campos (Economista, em aspectos institucionais)",
+    "Paulo Guedes (Economista, em regulação moderada)",
+    "Denis Rosenfield (Filósofo)"
+  ],
+  "examples_practical": [
+    "Apoiar incentivos fiscais para empresas que mantenham empregos na região, em vez de deslocalização total.",
+    "Defender leis mais rigorosas contra vandalismo em manifestações para proteger o espaço público.",
+    "Ser a favor de ensino de história nacional nas escolas para fortalecer o senso de identidade.",
+    "Preferir reformas trabalhistas testadas em pilotos regionais antes de aplicação nacional.",
+    "Aceitar acordos comerciais que protejam indústrias locais tradicionais.",
+    "Criticar mudanças rápidas no currículo escolar que ignorem conteúdos clássicos de formação moral."
+  ]
+}
