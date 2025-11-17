@@ -26,11 +26,6 @@
           ← Voltar para a página inicial
         </a>
       </div>
-      <p class="text-slate-300 max-w-3xl">
-        O teste é dividido em 5 eixos com 30 afirmações ao todo. Em cada etapa,
-        leia a breve explicação do eixo e marque como as frases combinam com seu
-        ponto de vista.
-      </p>
       <a
         href="/"
         class="mt-3 inline-flex md:hidden text-sm text-indigo-300 hover:text-indigo-200"
@@ -39,31 +34,40 @@
       </a>
     </header>
 
+    <!-- Descrição do eixo atual -->
+    <section
+      id="axis-info"
+      class="mb-6 md:mb-8 bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-6 space-y-2"
+    >
+      <div class="flex items-center justify-between gap-2">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400">Eixo atual</p>
+          <h2 id="axis-title" class="text-xl md:text-2xl font-semibold text-slate-100">
+            Carregando eixo…
+          </h2>
+        </div>
+        <div class="text-xs text-slate-400">
+          <span id="page-indicator">Eixo 1/5</span>
+        </div>
+      </div>
+      <p id="axis-description" class="text-sm text-slate-300 max-w-4xl text-justify">
+        Texto sobre o eixo atual…
+      </p>
+      <p id="axis-prompt" class="text-xs text-slate-400">
+        Responda a cada afirmação de acordo com o que você pensa.
+      </p>
+    </section>
+
     <div class="space-y-6">
       <!-- BLOCO QUESTIONÁRIO -->
       <section
         id="quiz-section"
         class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-lg shadow-slate-950/50"
       >
-        <div class="flex flex-col gap-3 mb-4">
-          <div class="flex items-center justify-between gap-2">
-            <div>
-              <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
-                Questionário
-              </p>
-              <h2 id="axis-title" class="text-xl font-semibold text-slate-100">
-                Carregando perguntas…
-              </h2>
-            </div>
-            <div class="text-xs text-slate-400">
-              <span id="page-indicator">Eixo 1/5</span>
-            </div>
-          </div>
-          <p id="axis-description" class="text-sm text-slate-300">
-            Texto sobre o eixo atual…
-          </p>
-          <p id="axis-prompt" class="text-xs text-slate-400">
-            Responda a cada afirmação de acordo com o que você pensa.
+        <div class="flex flex-col gap-1 mb-4">
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400">Questionário</p>
+          <p class="text-sm text-slate-400">
+            Marque o quanto você concorda ou discorda de cada afirmação.
           </p>
         </div>
 

@@ -17,11 +17,16 @@ const AXIS_LABELS = {
 };
 
 const AXIS_DESCRIPTIONS = {
-  economic: 'Texto sobre o eixo "Economia"...',
-  social: 'Texto sobre o eixo "Costumes / Liberdades"...',
-  community: 'Texto sobre o eixo "Comunidade / Identidade"...',
-  method: 'Texto sobre o eixo "Método de mudança"...',
-  pragmatism: 'Texto sobre o eixo "Pragmatismo vs Idealismo"...',
+  economic:
+    "Este eixo avalia como você entende o papel do Estado e do mercado na organização econômica: impostos, regulação, serviços públicos e liberdade empresarial.",
+  social:
+    "Este eixo mede sua visão sobre a liberdade pessoal: quanto o Estado ou a sociedade devem influenciar comportamentos individuais, moralidade e escolhas privadas.",
+  community:
+    "Este eixo analisa como você equilibra autonomia individual, pertencimento cultural, identidade nacional e deveres com a comunidade.",
+  method:
+    "Este eixo identifica como você acredita que mudanças sociais devem ocorrer: por evoluções graduais, pela ação de especialistas ou por transformações estruturadas.",
+  pragmatism:
+    "Este eixo mede se você prioriza soluções práticas e imediatas ou visões de longo prazo orientadas por princípios e objetivos ideais.",
 };
 
 const axisOrder = ["economic", "social", "community", "method", "pragmatism"];
@@ -132,12 +137,13 @@ function renderPage() {
   const nextBtn = document.getElementById("next-btn");
   const prevBtn = document.getElementById("prev-btn");
   const quizMsg = document.getElementById("quiz-message");
+  const axisInfo = document.getElementById("axis-info");
 
   quizMsg.classList.add("hidden");
   quizMsg.textContent = "";
 
   const axisName = AXIS_LABELS[page.axis] || page.axis;
-  axisTitle.textContent = `Eixo atual: ${axisName}`;
+  axisTitle.textContent = axisName;
   if (axisDescription) {
     axisDescription.textContent =
       AXIS_DESCRIPTIONS[page.axis] ||
@@ -266,10 +272,14 @@ function handleResult(data) {
   const labelEl = document.getElementById("result-label");
   const shortEl = document.getElementById("result-short");
   const quizSection = document.getElementById("quiz-section");
+  const axisInfo = document.getElementById("axis-info");
 
   // troca a visualização: esconde questionário e mostra a página de resultado simples
   if (quizSection) {
     quizSection.classList.add("hidden");
+  }
+  if (axisInfo) {
+    axisInfo.classList.add("hidden");
   }
   if (simpleSection) {
     simpleSection.classList.remove("hidden");
@@ -482,11 +492,15 @@ function resetQuiz() {
   hideDetailsPage();
   const simple = document.getElementById("simple-result-section");
   const quizSection = document.getElementById("quiz-section");
+  const axisInfo = document.getElementById("axis-info");
   if (simple) {
     simple.classList.add("hidden");
   }
   if (quizSection) {
     quizSection.classList.remove("hidden");
+  }
+  if (axisInfo) {
+    axisInfo.classList.remove("hidden");
   }
   if (chartInstance) {
     chartInstance.destroy();
