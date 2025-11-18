@@ -5,6 +5,7 @@ let pages = []; // cada página = perguntas de um eixo
 let currentPageIndex = 0;
 let answers = {}; // { questionId: value }
 let chartInstance = null;
+let radarChartInstance = null;
 let latestResult = null; // guarda último resultado para abrir a página de detalhes
 
 // mapa para nomes bonitos dos eixos
@@ -30,6 +31,11 @@ const AXIS_DESCRIPTIONS = {
 };
 
 const axisOrder = ["economic", "social", "community", "method", "pragmatism"];
+
+function getAxisNumber(val) {
+  const num = Number(val);
+  return Number.isFinite(num) ? num : null;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchQuestions();
@@ -403,6 +409,94 @@ function renderQuadrantChart(axes) {
   });
 }
 
+function renderRadarChart(axes) {
+  const canvas = document.getElementById("radarChart");
+  const fallback = document.getElementById("radarChartFallback");
+  if (!canvas) return;
+
+  const hasValues = axisOrder.some(
+    (axis) => axes && getAxisNumber(axes[axis]) !== null
+  );
+
+  if (radarChartInstance) {
+    radarChartInstance.destroy();
+    radarChartInstance = null;
+  }
+
+  if (!hasValues) {
+    fallback?.classList.remove("hidden");
+    return;
+  }
+
+  fallback?.classList.add("hidden");
+
+  const labels = axisOrder.map((axis) => AXIS_LABELS[axis] || axis);
+  const values = axisOrder.map((axis) => getAxisNumber(axes[axis]) ?? 0);
+
+  const maxAbs = Math.max(...values.map((val) => Math.abs(val)), 10);
+  const suggestedMax = Math.ceil((maxAbs + 2) / 5) * 5;
+  const tickStep = Math.max(Math.round(suggestedMax / 4), 5);
+
+  const ctx = canvas.getContext("2d");
+  radarChartInstance = new Chart(ctx, {
+    type: "radar",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Pontuação por eixo",
+          data: values,
+          backgroundColor: "rgba(99, 102, 241, 0.2)",
+          borderColor: "rgba(99, 102, 241, 0.8)",
+          borderWidth: 2,
+          pointBackgroundColor: "#c7d2fe",
+          pointBorderColor: "#6366f1",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "#6366f1",
+          fill: true,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        r: {
+          suggestedMin: -suggestedMax,
+          suggestedMax,
+          beginAtZero: false,
+          angleLines: {
+            color: "rgba(148, 163, 184, 0.25)",
+          },
+          grid: {
+            color: "rgba(148, 163, 184, 0.15)",
+          },
+          pointLabels: {
+            color: "#e2e8f0",
+            font: { size: 11 },
+          },
+          ticks: {
+            display: true,
+            stepSize: tickStep,
+            color: "#cbd5e1",
+            backdropColor: "rgba(15, 23, 42, 0.4)",
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.label}: ${ctx.formattedValue}`,
+          },
+        },
+      },
+    },
+  });
+}
+
 function fillList(elementId, items) {
   const ul = document.getElementById(elementId);
   ul.innerHTML = "";
@@ -473,6 +567,7 @@ function showDetailsPage() {
     profile.figures_modern_national || []
   );
   fillList("details-examples-list", profile.examples_practical || []);
+  renderRadarChart(axes || {});
 
   section.classList.remove("hidden");
   section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -505,6 +600,10 @@ function resetQuiz() {
   if (chartInstance) {
     chartInstance.destroy();
     chartInstance = null;
+  }
+  if (radarChartInstance) {
+    radarChartInstance.destroy();
+    radarChartInstance = null;
   }
   renderPage();
   scrollToQuizTop();

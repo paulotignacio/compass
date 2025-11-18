@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>IDEOMAP – Teste</title>
+  <title>IDEOCHART – Teste</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Tailwind CDN (ótimo para MVP local) -->
@@ -17,7 +17,7 @@
     <header class="mb-6 md:mb-10">
       <div class="flex items-center justify-between gap-3 mb-3">
         <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
-          IDEOMAP
+          IDEOCHART
         </h1>
         <a
           href="/"
@@ -246,6 +246,25 @@
               id="details-examples-list"
               class="list-disc list-inside text-slate-200 text-sm"
             ></ul>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
+            Visualização em teia
+          </p>
+          <p class="text-sm text-slate-300 mb-3">
+            Compare os cinco eixos ao mesmo tempo: quanto mais distante do centro,
+            maior a intensidade naquele eixo.
+          </p>
+          <div class="relative h-72 md:h-80">
+            <canvas id="radarChart"></canvas>
+            <p
+              id="radarChartFallback"
+              class="hidden text-sm text-slate-400 mt-2"
+            >
+              Sem pontuações suficientes para montar o gráfico.
+            </p>
           </div>
         </div>
       </section>
