@@ -7,65 +7,87 @@
 
   <!-- Tailwind CDN (ótimo para MVP local) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/css/style.css" />
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
-  <div class="max-w-5xl mx-auto px-4 py-10 md:py-14">
-    <header class="space-y-4 text-center">
+  <div class="landing-shell">
+    <header class="landing-hero text-center">
       <p class="text-xs font-mono uppercase tracking-[0.2em] text-indigo-300">MVP</p>
       <h1 class="text-3xl md:text-5xl font-bold tracking-tight">IDEOCHART</h1>
       <p class="text-base md:text-lg font-semibold text-indigo-200">
         No Ideochart, você entende seu posicionamento ideológico com clareza e autoconhecimento.
       </p>
-      <p class="text-lg text-slate-300 max-w-4xl mx-auto text-justify">
-        Este teste mede seu posicionamento em cinco dimensões políticas independentes. Em cada uma
-        delas, você verá afirmações que refletem diferentes maneiras pelas quais as pessoas enxergam
-        economia, liberdades individuais, comunidade, reformas e visões de futuro. Não existem respostas
-        certas ou erradas — apenas como você interpreta o mundo. Ao final, você verá um perfil descritivo com referências, autores e exemplos práticos.
-      </p>
-      <div class="flex flex-wrap justify-center gap-3 text-sm text-slate-400">
-        <span class="bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-full">30 afirmações</span>
-        <span class="bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-full">5 eixos</span>
-        <span class="bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-full">Resultado imediato</span>
-        <span class="bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-full">Imparcial e transparente</span>
+      <div class="landing-intro text-lg text-slate-300 text-justify">
+        <p>Este teste avalia sua perspectiva em cinco dimensões políticas independentes.</p>
+        <p>
+          Em cada uma delas, você encontrará afirmações que representam diferentes maneiras de enxergar economia,
+          liberdades individuais, comunidade, reformas e visões de futuro. Não existem respostas certas ou erradas —
+          apenas diferentes formas de interpretar o mundo.
+        </p>
+        <p>
+          Ao final, você recebe um perfil descritivo, com referências, autores e exemplos práticos que ajudam a
+          contextualizar sua visão.
+        </p>
+        <p class="landing-disclaimer text-indigo-200">
+          Observação: o Ideochart é uma ferramenta de reflexão e autoconhecimento, não um instrumento clínico ou
+          diagnóstico.
+        </p>
       </div>
-      <a
-        href="/quiz"
-        class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-500 text-white text-base font-semibold shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition"
-      >
-        Iniciar o teste →
-      </a>
+      <div class="landing-chip-list text-sm text-slate-300">
+        <span class="info-chip">30 afirmações</span>
+        <span class="info-chip">5 eixos</span>
+        <span class="info-chip">Resultado imediato</span>
+        <span class="info-chip">Imparcial e transparente</span>
+      </div>
+      <div class="cta-wrapper">
+        <a
+          href="/quiz"
+          class="cta-primary inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-500 text-white text-base font-semibold shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition"
+        >
+          Iniciar o teste →
+        </a>
+      </div>
     </header>
 
-    <main class="mt-12 space-y-8">
-      <section class="grid gap-4 md:grid-cols-3">
-        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
-          <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">Como funciona</p>
-          <h2 class="text-xl font-semibold">Responda 30 afirmações</h2>
-          <p class="text-sm text-slate-300">Cada resposta varia de –2 a +2, indicando seu grau de concordância. Não existem respostas certas ou erradas.</p>
-        </div>
-        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
-          <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">Eixos</p>
-          <h2 class="text-xl font-semibold">5 dimensões</h2>
-          <p class="text-sm text-slate-300">Economia, Costumes/Liberdades, Comunidade/Identidade, Método de mudança e Pragmatismo vs Idealismo.</p>
-        </div>
-        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
-          <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">Resultado</p>
-          <h2 class="text-xl font-semibold">Perfil e referências</h2>
-          <p class="text-sm text-slate-300">Veja sua posição nos eixos, conheça um resumo do seu perfil e explore autores, figuras e exemplos relacionados.</p>
-        </div>
+    <main class="landing-main">
+      <section class="feature-grid">
+        <article class="feature-card">
+          <p class="card-eyebrow">Como funciona</p>
+          <h2 class="card-title">Responda 30 afirmações</h2>
+          <p class="card-description">Cada resposta varia de –2 a +2, indicando seu grau de concordância. Não existem respostas certas ou erradas.</p>
+        </article>
+        <article class="feature-card">
+          <p class="card-eyebrow">Eixos</p>
+          <h2 class="card-title">5 dimensões</h2>
+          <p class="card-description">Economia, Costumes/Liberdades, Comunidade/Identidade, Método de mudança e Pragmatismo vs Idealismo.</p>
+        </article>
+        <article class="feature-card">
+          <p class="card-eyebrow">Resultado</p>
+          <h2 class="card-title">Perfil e referências</h2>
+          <p class="card-description">Veja sua posição nos eixos, conheça um resumo do seu perfil e explore autores, figuras e exemplos relacionados.</p>
+        </article>
       </section>
 
-      <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
-        <p class="text-xs font-mono uppercase tracking-wide text-indigo-300">O que você verá</p>
-        <ul class="space-y-3 text-sm text-slate-300">
-          <li class="flex gap-3"><span class="text-indigo-400">•</span> Seu posicionamento nos cinco eixos, com pontuação e breve interpretação de cada dimensão.</li>
-          <li class="flex gap-3"><span class="text-indigo-400">•</span> Um perfil sintético, destacando padrões, tendências e possíveis nuances do seu posicionamento.</li>
-          <li class="flex gap-3"><span class="text-indigo-400">•</span> Um conjunto de referências, reunindo autores, figuras contemporâneas e exemplos práticos alinhados ao seu resultado.</li>
+      <section class="insight-card">
+        <p class="card-eyebrow">O que você verá</p>
+        <ul class="insight-list text-sm text-slate-300">
+          <li class="insight-item">
+            <span class="insight-bullet">•</span>
+            <span>Seu posicionamento nos cinco eixos, com pontuação e breve interpretação de cada dimensão.</span>
+          </li>
+          <li class="insight-item">
+            <span class="insight-bullet">•</span>
+            <span>Um perfil sintético, destacando padrões, tendências e possíveis nuances do seu posicionamento.</span>
+          </li>
+          <li class="insight-item">
+            <span class="insight-bullet">•</span>
+            <span>Um conjunto de referências, reunindo autores, figuras contemporâneas e exemplos práticos alinhados ao seu resultado.</span>
+          </li>
         </ul>
-        <div>
+        <div class="insight-cta">
           <a
             href="/quiz"
-            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-indigo-500 text-white text-sm font-semibold shadow-md shadow-indigo-500/20 hover:bg-indigo-400 transition"
+            class="cta-secondary inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-indigo-500 text-white text-sm font-semibold shadow-md shadow-indigo-500/20 hover:bg-indigo-400 transition"
           >
             Começar agora →
           </a>

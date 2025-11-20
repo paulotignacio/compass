@@ -1,0 +1,215 @@
+/* Landing Ideochart */
+
+:root {
+  --landing-border: rgba(51, 65, 85, 0.8);
+  --landing-bg: rgba(15, 23, 42, 0.6);
+  --landing-shadow: 0 25px 60px rgba(15, 23, 42, 0.5);
+}
+
+body {
+  font-family: "Inter", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.landing-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+@media (min-width: 768px) {
+  .landing-shell {
+    padding: 4rem 2.5rem 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .landing-shell {
+    max-width: 1200px;
+  }
+}
+
+.landing-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.landing-intro {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.landing-intro p {
+  margin-bottom: 1.15rem;
+  line-height: 1.75;
+}
+
+.landing-disclaimer {
+  margin-top: 0.5rem;
+  padding-top: 0.25rem;
+  font-size: clamp(0.85rem, 0.83rem + 0.1vw, 0.92rem);
+  color: rgb(199, 210, 254);
+}
+
+.landing-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.info-chip {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(100, 116, 139, 0.7);
+  border-radius: 999px;
+  padding: 0.45rem 1.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: #cbd5f5;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+@media (hover: hover) {
+  .info-chip:hover {
+    border-color: rgba(129, 140, 248, 0.9);
+    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.25);
+    transform: translateY(-1px);
+  }
+}
+
+.cta-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-primary,
+.cta-secondary {
+  min-width: 220px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.landing-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.feature-card,
+.insight-card {
+  background: var(--landing-bg);
+  border: 1px solid var(--landing-border);
+  border-radius: 1.5rem;
+  box-shadow: var(--landing-shadow);
+}
+
+.feature-card {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.card-eyebrow {
+  font-family: "Space Mono", "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgb(165, 180, 252);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #d4dcf7;
+  line-height: 1.65;
+}
+
+.insight-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #d4dcf7;
+}
+
+.insight-item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.insight-bullet {
+  color: rgb(129, 140, 248);
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+.insight-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .insight-cta {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-shell {
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .feature-card,
+  .insight-card {
+    padding: 1.5rem;
+  }
+}
