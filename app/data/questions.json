@@ -29,7 +29,18 @@
       "id": "EC6",
       "text": "Abertura comercial amplia oportunidades econômicas, mesmo que exija adaptação de setores locais.",
       "axes": [{ "name": "economic", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "EC7",
+      "text": "O governo deve manter empresas estatais estratégicas para influenciar diretamente o desenvolvimento econômico do país.",
+      "axes": [{ "name": "economic", "direction": -1, "weight": 1.0 }]
+    },
+    {
+      "id": "EC8",
+      "text": "Mesmo que existam desigualdades, permitir que o mercado funcione com pouca intervenção estatal tende a gerar melhores resultados no longo prazo.",
+      "axes": [{ "name": "economic", "direction": 1, "weight": 1.0 }]
     }
+
   ],
 
   "social": [
@@ -62,6 +73,16 @@
       "id": "SO6",
       "text": "Políticas mais restritivas podem ser usadas para controlar substâncias que gerem riscos sociais.",
       "axes": [{ "name": "social", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "SO7",
+      "text": "Em situações de crise, pode ser aceitável restringir temporariamente certas liberdades individuais para garantir segurança e estabilidade social.",
+      "axes": [{ "name": "social", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "SO8",
+      "text": "Mesmo em cenários de crise, é importante preservar o máximo possível as liberdades civis e os direitos individuais.",
+      "axes": [{ "name": "social", "direction": -1, "weight": 1.0 }]
     }
   ],
 
@@ -83,18 +104,28 @@
     },
     {
       "id": "CM4",
-      "text": "Indivíduos devem ter margem para tomar decisões pessoais mesmo quando as normas comunitárias sugerem outros caminhos.",
-      "axes": [{ "name": "community", "direction": -1, "weight": 1.0 }]
-    },
-    {
-      "id": "CM5",
       "text": "Instituições internacionais podem desempenhar papel relevante em questões que ultrapassam fronteiras nacionais.",
       "axes": [{ "name": "community", "direction": -1, "weight": 1.0 }]
     },
     {
-      "id": "CM6",
+      "id": "CM5",
       "text": "Sentimentos de identificação nacional podem fortalecer vínculos sociais.",
       "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "CM6",
+      "text": "É legítimo que o país priorize empresas e indústrias nacionais mesmo que isso reduza algumas vantagens da integração econômica internacional.",
+      "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "CM7",
+      "text": "Decisões importantes sobre o futuro do país devem depender mais da vontade nacional do que de recomendações de organismos internacionais.",
+      "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "CM8",
+      "text": "Em certas questões globais, pode ser desejável que os países aceitem limitar parte de sua autonomia em acordos internacionais estáveis.",
+      "axes": [{ "name": "community", "direction": -1, " weight": 1.0 }]
     }
   ],
 
@@ -128,6 +159,16 @@
       "id": "ME6",
       "text": "Reformas sociais podem seguir princípios estruturados que não dependem integralmente de práticas anteriores.",
       "axes": [{ "name": "method", "direction": -1, "weight": 1.0 }]
+    },
+    {
+      "id": "ME7",
+      "text": "Quando o país enfrenta desafios estruturais, planos nacionais de longo prazo coordenados pelo Estado podem ser mais eficazes do que ajustes pontuais.",
+      "axes": [ { "name": "method", "direction": -1, "weight": 1.0 }]
+    },
+    {
+      "id": "ME8",
+      "text": "Mesmo em grandes obras ou programas nacionais, é prudente testar soluções em menor escala antes de adotá-las em todo o país.",
+      "axes": [ { "name": "method", "direction": 1, "weight": 1.0 }]
     }
   ],
 
@@ -161,7 +202,18 @@
       "id": "PR6",
       "text": "Acordos práticos entre grupos diferentes podem oferecer soluções rápidas a problemas imediatos.",
       "axes": [{ "name": "pragmatism", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "PR7",
+      "text": "Se uma política gera resultados positivos comprovados, deve ser adotada mesmo que contrarie valores tradicionais de parte da sociedade.",
+      "axes": [ { "name": "pragmatism", "direction": 1, "weight": 1.0 }]
+    },
+    {
+      "id": "PR8",
+      "text": "Alguns princípios são tão fundamentais que não devem ser comprometidos, mesmo que isso dificulte soluções práticas para problemas imediatos.",
+      "axes": [{ "name": "pragmatism", "direction": -1, "weight": 1.0 }]
     }
+
   ]
 }
 

@@ -4,13 +4,29 @@ from __future__ import annotations
 from typing import Dict, Mapping
 import math
 
-# Eixos em uso no teste
+# ---------------------------------------------------------
+# EIXOS do teste — espaço 5D usado na classificação
+# economic   → Estado vs Mercado
+# social     → Autoridade/Ordem vs Liberdades Individuais
+# community  → Nacional/Comunitário vs Cosmopolita/Global
+# method     → Planejamento/Engenharia Social vs Incrementalismo
+# pragmatism → Idealismo/Princípios vs Pragmatismo/Resultados
+# ---------------------------------------------------------
 AXES = ["economic", "social", "community", "method", "pragmatism"]
 
-# "Centros" aproximados de cada perfil no espaço 5D (-10..+10)
-# Esses valores são calibráveis depois, mas já dão um mapa coerente.
+# ---------------------------------------------------------
+# VETORES-ALVO ("centros ideais") de cada perfil no espaço 5D
+# Faixa recomendada: -10 (extremo esquerda/liberdade/status quo)
+#                    +10 (extremo direita/autoridade/comunidade)
+# Esses valores são ajustáveis; servem como coordenadas culturais.
+# ---------------------------------------------------------
 PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
-    # Centro-esquerda institucional / social-democrata
+    # Social-democrata pragmático
+    # economic   → centro-esquerda pró-Estado moderado
+    # social     → liberdades civis com alguma ordem
+    # community  → leve pertença comunitária
+    # method     → reformas graduais, baseadas em evidências
+    # pragmatism → muito pragmático
     "social_democrata_pragmatico": {
         "economic": -6,
         "social": -3,
@@ -18,7 +34,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": -2,
         "pragmatism": +6,
     },
-    # Liberal clássico pró-mercado, costumes moderados
+
+    # Liberal clássico, pro-mercado, costumes moderados
+    # economic   → mercado livre forte
+    # social     → moderadamente liberal
+    # community  → neutro
+    # method     → incremental
+    # pragmatism → pragmático
     "liberal_classico_mercado": {
         "economic": +8,
         "social": +1,
@@ -26,7 +48,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": +2,
         "pragmatism": +5,
     },
-    # Liberal social pró-direitos civis, cosmopolita
+
+    # Liberal social — direitos civis + globalismo
+    # economic   → liberal pró-inovação
+    # social     → liberdades máximas
+    # community  → cosmopolita
+    # method     → tecnicista moderado
+    # pragmatism → pragmatismo moderado
     "liberal_social_cosmopolita": {
         "economic": +5,
         "social": -6,
@@ -34,7 +62,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": -1,
         "pragmatism": +3,
     },
-    # Tecnocrata pragmático, orientado a dados
+
+    # Tecnocrata pragmático — dados > ideologia
+    # economic   → mercado regulado
+    # social     → neutro
+    # community  → neutro
+    # method     → muito planejado, racionalista
+    # pragmatism → altamente pragmático
     "tecnocrata_pragmatico": {
         "economic": +2,
         "social": -1,
@@ -42,7 +76,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": -6,
         "pragmatism": +9,
     },
-    # Conservador empirista (prudência + tradição)
+
+    # Empirista conservador — prudência institucional
+    # economic   → pró-mercado sem radicalismo
+    # social     → mais ordem e estabilidade
+    # community  → comunitário moderado
+    # method     → forte incrementalismo
+    # pragmatism → muito pragmático
     "empirista_conservador": {
         "economic": +3,
         "social": +5,
@@ -50,7 +90,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": +8,
         "pragmatism": +7,
     },
-    # Conservador comunitário
+
+    # Conservador comunitário — tradição e pertencimento
+    # economic   → leve pró-mercado
+    # social     → forte ordem/moralidade
+    # community  → comunitarismo/nacional moderado
+    # method     → incremental forte
+    # pragmatism → alto pragmatismo
     "conservador_comunitario": {
         "economic": +1,
         "social": +6,
@@ -58,7 +104,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": +7,
         "pragmatism": +6,
     },
-    # Direita libertária / minarquista
+
+    # Direita libertária — máxima liberdade individual
+    # economic   → livre-mercado extremo
+    # social     → liberdades civis máximas
+    # community  → leve cosmopolitismo
+    # method     → anti-planejamento estatal
+    # pragmatism → pragmatismo médio
     "direita_libertaria": {
         "economic": +9,
         "social": -9,
@@ -66,7 +118,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": -3,
         "pragmatism": +4,
     },
+
     # Direita autoritária nacionalista
+    # economic   → pró-mercado com proteção nacional
+    # social     → autoridade forte
+    # community  → nacionalismo alto
+    # method     → planejamento nacional moderado
+    # pragmatism → pragmatismo médio
     "direita_autoritaria_nacional": {
         "economic": +3,
         "social": +9,
@@ -74,7 +132,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": +3,
         "pragmatism": +5,
     },
-    # Esquerda libertária cosmopolita
+
+    # Esquerda libertária — autonomia e globalismo
+    # economic   → anti-mercado forte
+    # social     → máxima liberdade
+    # community  → global/cosmopolita
+    # method     → racionalista leve
+    # pragmatism → pouco pragmático (por idealismo leve)
     "esquerda_libertaria_cosmopolita": {
         "economic": -8,
         "social": -8,
@@ -82,7 +146,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": -3,
         "pragmatism": +2,
     },
+
     # Esquerda comunitária igualitária
+    # economic   → anti-mercado
+    # social     → liberdades, mas com coesão social
+    # community  → comunitário/solidário
+    # method     → racionalismo reformista
+    # pragmatism → pragmatismo moderado
     "esquerda_comunitaria": {
         "economic": -8,
         "social": -2,
@@ -90,7 +160,13 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": -2,
         "pragmatism": +3,
     },
-    # Estilo idealista/utópico (principalmente no pragmatism)
+
+    # Idealista utópico — extremo em princípios
+    # economic   → variável (0)
+    # social     → variável (0)
+    # community  → variável (0)
+    # method     → engenharia social
+    # pragmatism → idealismo máximo
     "idealista_utopico": {
         "economic": 0,
         "social": 0,
@@ -98,21 +174,30 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "method": -4,
         "pragmatism": -9,
     },
-    # Centro moderado pragmático
-    "moderado_centro_pragmatico": {
-        "economic": 0,
-        "social": 0,
-        "community": 0,
-        "method": 0,
-        "pragmatism": +8,
+
+    # Esquerda nacional-desenvolvimentista autoritária
+    # economic   → Estado forte e desenvolvimentista
+    # social     → ordem e controle moderados
+    # community  → nacionalismo popular
+    # method     → planejamento estatal
+    # pragmatism → pragmatismo moderado
+    "esquerda_nacional_desenvolvimentista_autoritaria": {
+        "economic": -7,
+        "social": +5,
+        "community": +8,
+        "method": -5,
+        "pragmatism": +1,
     },
 }
 
-
+# ---------------------------------------------------------
+# Normalização: converte pontuação bruta (ex: -16..+16) para -10..+10
+# ---------------------------------------------------------
 def normalize_axes(axes_scores: Mapping[str, float], max_abs: float = 12.0) -> Dict[str, float]:
     """
     Normaliza os eixos para a faixa aproximada -10..10,
-    assumindo que o valor absoluto máximo é max_abs (ex: 6 perguntas * 2 pontos = 12).
+    assumindo que o valor absoluto máximo é max_abs (8 perguntas * 2 pontos = 16 ideal,
+    mas deixamos 12 como valor seguro e suavizador).
     """
     norm: Dict[str, float] = {}
     for axis, val in axes_scores.items():
@@ -123,11 +208,13 @@ def normalize_axes(axes_scores: Mapping[str, float], max_abs: float = 12.0) -> D
         norm[axis] = (v / max_abs) * 10.0
     return norm
 
-
+# ---------------------------------------------------------
+# Classificação: encontra o perfil mais próximo
+# usando distância euclidiana no espaço 5D.
+# ---------------------------------------------------------
 def classify_profile(axes_scores: Mapping[str, float], profiles_dict: Dict[str, dict]) -> dict:
     """
-    Recebe os scores brutos dos eixos (ex: -12..+12) e o dicionário de perfis
-    carregado do profiles.json, e retorna o perfil mais próximo no espaço 5D.
+    Recebe os scores brutos dos eixos e retorna o perfil mais próximo.
     """
     # Caso totalmente neutro/inconclusivo
     if not axes_scores or all(v == 0 for v in axes_scores.values()):
@@ -155,7 +242,8 @@ def classify_profile(axes_scores: Mapping[str, float], profiles_dict: Dict[str, 
     best_dist = float("inf")
 
     for key, target in PROFILE_TARGETS.items():
-        # só considera perfis definidos e existentes no profiles.json
+
+        # Só considera perfis presentes no profiles.json
         if key not in profiles_dict:
             continue
 
@@ -170,7 +258,7 @@ def classify_profile(axes_scores: Mapping[str, float], profiles_dict: Dict[str, 
             best_dist = dist_sq
             best_key = key
 
-    # fallback extremo (não deveria acontecer se PROFILE_TARGETS e profiles.json estiverem alinhados)
+    # fallback de segurança
     if best_key is None:
         any_key = next(iter(profiles_dict.keys()))
         profile = profiles_dict[any_key].copy()
