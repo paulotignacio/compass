@@ -37,6 +37,121 @@ function getAxisNumber(val) {
   return Number.isFinite(num) ? num : null;
 }
 
+function formatAxisValue(val) {
+  if (!Number.isFinite(val)) return "--";
+  const rounded = Math.abs(val % 1) < 0.001 ? Math.round(val) : Number(val.toFixed(1));
+  return rounded > 0 ? `+${rounded}` : String(rounded);
+}
+
+function interpretAxisScore(axis, raw) {
+  const score = getAxisNumber(raw);
+  if (score === null) return "Sem dados suficientes para este eixo.";
+
+  const strong = Math.abs(score) >= 7;
+  const moderate = Math.abs(score) >= 3;
+
+  switch (axis) {
+    case "economic":
+      if (strong && score > 0)
+        return "Forte preferência por mercado, concorrência e menor intervenção estatal.";
+      if (moderate && score > 0)
+        return "Inclinação a soluções de mercado com regulação moderada.";
+      if (strong && score < 0)
+        return "Defesa intensa da atuação estatal, redistribuição e proteção social.";
+      if (moderate && score < 0)
+        return "Tendência a políticas estatais e maior regulação econômica.";
+      return "Equilíbrio entre atuação do Estado e do mercado conforme o contexto.";
+    case "social":
+      if (strong && score > 0)
+        return "Valorização de normas tradicionais, autoridade e regulação de costumes.";
+      if (moderate && score > 0)
+        return "Tendência a conservar costumes e limitar mudanças bruscas em pautas sociais.";
+      if (strong && score < 0)
+        return "Defesa forte de liberdades civis, autonomia individual e pluralismo.";
+      if (moderate && score < 0)
+        return "Inclinação liberal em costumes, com pouca interferência estatal.";
+      return "Postura moderada em temas de costumes e liberdades individuais.";
+    case "community":
+      if (strong && score > 0)
+        return "Prioriza identidade coletiva, coesão social e laços nacionais.";
+      if (moderate && score > 0)
+        return "Valoriza raízes locais e deveres com a comunidade.";
+      if (strong && score < 0)
+        return "Visão cosmopolita, foco no indivíduo e na cooperação internacional.";
+      if (moderate && score < 0)
+        return "Inclinação universalista, com identidades mais fluidas e abertas.";
+      return "Equilibra pertencimento comunitário com abertura cosmopolita.";
+    case "method":
+      if (strong && score > 0)
+        return "Prefere mudanças graduais, prudentes e institucionalizadas.";
+      if (moderate && score > 0)
+        return "Favorece reformas incrementais e pactuadas.";
+      if (strong && score < 0)
+        return "Aceita transformações mais rápidas, experimentação e reformismo intenso.";
+      if (moderate && score < 0)
+        return "Inclinação a intervenções planejadas e inovação mais acelerada.";
+      return "Ajusta entre gradualismo e mudança rápida conforme o tema.";
+    case "pragmatism":
+      if (strong && score > 0)
+        return "Orientação fortemente pragmática: prioriza resultados práticos e negociáveis.";
+      if (moderate && score > 0)
+        return "Mais pragmático que idealista, aberto a acordos para avançar.";
+      if (strong && score < 0)
+        return "Visão idealista ou utópica, priorizando princípios sobre a negociação.";
+      if (moderate && score < 0)
+        return "Inclinação idealista, com menos foco em compromissos imediatos.";
+      return "Equilibra pragmatismo e idealismo dependendo do contexto.";
+    default:
+      return "Eixo fora do conjunto principal.";
+  }
+}
+
+function splitShortDescription(text) {
+  if (!text) return [];
+  const bySemicolon = text.split(";").map((t) => t.trim()).filter(Boolean);
+  if (bySemicolon.length >= 2 && bySemicolon.length <= 4) {
+    return bySemicolon;
+  }
+
+  const sentences = text
+    .split(/[.!?]/)
+    .map((t) => t.trim())
+    .filter(Boolean);
+
+  if (!sentences.length) return [text.trim()];
+  if (sentences.length <= 3) return sentences;
+
+  const chunkSize = Math.ceil(sentences.length / 3);
+  const chunks = [];
+  for (let i = 0; i < sentences.length; i += chunkSize) {
+    chunks.push(sentences.slice(i, i + chunkSize).join(" "));
+  }
+  return chunks;
+}
+
+function renderShortDescription(containerId, text) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  container.innerHTML = "";
+  const parts = splitShortDescription(text);
+
+  if (!parts.length) {
+    const p = document.createElement("p");
+    p.className = "text-sm text-slate-300";
+    p.textContent = "Ainda não temos um resumo curto para este perfil.";
+    container.appendChild(p);
+    return;
+  }
+
+  parts.slice(0, 3).forEach((segment) => {
+    const p = document.createElement("p");
+    p.className = "text-sm text-slate-200";
+    p.textContent = segment;
+    container.appendChild(p);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   fetchQuestions();
 
@@ -276,6 +391,7 @@ function handleResult(data) {
   // exibir resultado simples
   const simpleSection = document.getElementById("simple-result-section");
   const labelEl = document.getElementById("result-label");
+  const taglineEl = document.getElementById("result-tagline");
   const shortEl = document.getElementById("result-short");
   const quizSection = document.getElementById("quiz-section");
   const axisInfo = document.getElementById("axis-info");
@@ -292,6 +408,7 @@ function handleResult(data) {
   }
 
   labelEl.textContent = profile.label || "Perfil não identificado";
+  taglineEl.textContent = profile.tagline || "";
   shortEl.textContent =
     profile.description_short ||
     "Não foi possível gerar uma descrição resumida para este perfil.";
@@ -308,8 +425,9 @@ function renderQuadrantChart(axes) {
   const fallback = document.getElementById("chart-fallback");
   if (!canvas) return;
 
-  const hasAxes =
-    axes && typeof axes.economic === "number" && typeof axes.social === "number";
+  const econ = axes ? getAxisNumber(axes.economic) : null;
+  const soc = axes ? getAxisNumber(axes.social) : null;
+  const hasAxes = econ !== null && soc !== null;
 
   if (chartInstance) {
     chartInstance.destroy();
@@ -354,7 +472,7 @@ function renderQuadrantChart(axes) {
       datasets: [
         {
           label: "Posição",
-          data: [{ x: axes.economic, y: axes.social }],
+          data: [{ x: econ, y: soc }],
           backgroundColor: "rgba(99, 102, 241, 0.9)",
           borderColor: "rgba(129, 140, 248, 0.9)",
           pointRadius: 6,
@@ -499,6 +617,8 @@ function renderRadarChart(axes) {
 
 function fillList(elementId, items) {
   const ul = document.getElementById(elementId);
+  if (!ul) return;
+
   ul.innerHTML = "";
 
   if (!items || !items.length) {
@@ -534,8 +654,70 @@ function fillAxisList(axes) {
   axisKeys.forEach((axis) => {
     const li = document.createElement("li");
     const axisLabel = AXIS_LABELS[axis] || axis;
-    li.textContent = `${axisLabel}: ${axes[axis]}`;
-    li.className = "flex justify-between gap-2";
+    const value = getAxisNumber(axes[axis]);
+
+    const row = document.createElement("div");
+    row.className = "flex items-center justify-between gap-2";
+
+    const labelEl = document.createElement("span");
+    labelEl.className = "font-medium text-slate-100";
+    labelEl.textContent = axisLabel;
+
+    const valueEl = document.createElement("span");
+    valueEl.className = "text-indigo-300 font-semibold";
+    valueEl.textContent = formatAxisValue(value);
+
+    row.appendChild(labelEl);
+    row.appendChild(valueEl);
+
+    const interpretation = document.createElement("p");
+    interpretation.className = "text-xs text-slate-400 mt-1";
+    interpretation.textContent = interpretAxisScore(axis, value);
+
+    li.className =
+      "bg-slate-950/60 border border-slate-800 rounded-lg p-3 space-y-1";
+    li.appendChild(row);
+    li.appendChild(interpretation);
+    ul.appendChild(li);
+  });
+}
+
+function fillWorldviewSections(descriptionSplit = {}) {
+  const mapping = {
+    economic: "details-worldview-economic",
+    social: "details-worldview-social",
+    community: "details-worldview-community",
+    method: "details-worldview-method",
+    pragmatism: "details-worldview-pragmatism",
+  };
+
+  Object.entries(mapping).forEach(([key, elementId]) => {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    el.textContent =
+      (descriptionSplit && descriptionSplit[key]) ||
+      "Sem descrição específica para este ponto.";
+  });
+}
+
+function renderExamplesList(examples) {
+  const ul = document.getElementById("details-examples-list");
+  if (!ul) return;
+
+  ul.innerHTML = "";
+
+  if (!examples || !examples.length) {
+    const li = document.createElement("li");
+    li.className = "text-slate-500";
+    li.textContent = "Ainda não há exemplos cadastrados para este perfil.";
+    ul.appendChild(li);
+    return;
+  }
+
+  examples.forEach((ex) => {
+    const li = document.createElement("li");
+    li.className = "text-slate-200 leading-relaxed";
+    li.textContent = ex;
     ul.appendChild(li);
   });
 }
@@ -549,24 +731,22 @@ function showDetailsPage() {
 
   document.getElementById("details-profile-label").textContent =
     profile.label || "Perfil não identificado";
-  document.getElementById("details-profile-short").textContent =
-    profile.description_short ||
-    "Ainda não temos um resumo curto para este perfil.";
-  document.getElementById("details-profile-long").textContent =
-    profile.description_long ||
-    "Sem explicação detalhada disponível para este perfil.";
+  document.getElementById("details-profile-tagline").textContent =
+    profile.tagline || "";
 
+  renderShortDescription("details-short-block", profile.description_short);
   fillAxisList(axes || {});
-  fillList("details-authors-classic-list", profile.authors_classic || []);
+  fillWorldviewSections(profile.description_long_split || {});
+  fillList("details-authors-classic-list", profile.authors?.classic || []);
   fillList(
-    "details-figures-int-list",
-    profile.figures_modern_international || []
+    "details-authors-international-list",
+    profile.authors?.modern_international || []
   );
   fillList(
-    "details-figures-nat-list",
-    profile.figures_modern_national || []
+    "details-authors-national-list",
+    profile.authors?.modern_national || []
   );
-  fillList("details-examples-list", profile.examples_practical || []);
+  renderExamplesList(profile.examples || []);
   renderRadarChart(axes || {});
 
   section.classList.remove("hidden");

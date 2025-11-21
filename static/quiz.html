@@ -120,28 +120,28 @@
         id="simple-result-section"
         class="hidden bg-slate-900/60 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-lg shadow-slate-950/50"
       >
+        <div class="flex items-start justify-between gap-3 mb-4">
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wide text-slate-400">Seu resultado</p>
+            <h3 id="result-label" class="text-2xl md:text-3xl font-semibold mt-1"></h3>
+            <p id="result-tagline" class="text-base md:text-lg text-indigo-200 mt-1"></p>
+          </div>
+        </div>
+
         <div class="grid gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
-          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-            <div class="flex items-start justify-between gap-3 mb-2">
-              <div>
-                <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
-                  Resultado simples
-                </p>
-                <h3 id="result-label" class="text-xl md:text-2xl font-semibold mt-1"></h3>
-              </div>
-              <button
-                id="restart-btn"
-                class="px-3 py-2 rounded-xl border border-slate-700 text-sm text-slate-200 hover:bg-slate-800"
-              >
-                Refazer
-              </button>
-            </div>
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3">
+            <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+              Em poucas palavras
+            </p>
             <p id="result-short" class="text-sm text-slate-300"></p>
+            <p class="text-xs text-slate-400">
+              Este resultado é um retrato de tendências, não um rótulo definitivo.
+            </p>
           </div>
 
           <div class="space-y-4">
-            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-              <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
+            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-2">
+              <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
                 Posição em quadrantes
               </p>
               <div class="relative">
@@ -150,18 +150,29 @@
                   Pontuações insuficientes para exibir o gráfico.
                 </p>
               </div>
+              <p class="text-sm text-slate-400">
+                O ponto mostra sua tendência principal entre os quadrantes. Não há certo ou errado, apenas diferentes formas de enxergar política e sociedade.
+              </p>
             </div>
 
-            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-2 text-sm text-slate-200">
+            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3 text-sm text-slate-200">
               <p class="text-slate-300">
-                Abra a página completa para ver descrições detalhadas, referências e autores.
+                Explore a análise completa para ver interpretações por eixo, referências e exemplos de posicionamento.
               </p>
-              <button
-                id="open-details-btn"
-                class="w-full py-2 px-4 rounded-xl bg-indigo-500 text-sm font-medium text-white hover:bg-indigo-400 transition"
-              >
-                Ver detalhes completos →
-              </button>
+              <div class="flex flex-col sm:flex-row gap-2">
+                <button
+                  id="open-details-btn"
+                  class="w-full py-2 px-4 rounded-xl bg-indigo-500 text-sm font-medium text-white hover:bg-indigo-400 transition"
+                >
+                  Ver análise completa →
+                </button>
+                <button
+                  id="restart-btn"
+                  class="w-full py-2 px-4 rounded-xl border border-slate-700 text-sm text-slate-200 hover:bg-slate-800"
+                >
+                  Refazer teste
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -177,8 +188,8 @@
             <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
               Detalhes do perfil
             </p>
-            <h3 id="details-profile-label" class="text-xl md:text-2xl font-semibold mt-1"></h3>
-            <p id="details-profile-short" class="text-sm text-slate-300 mt-2"></p>
+            <h3 id="details-profile-label" class="text-2xl md:text-3xl font-semibold mt-1"></h3>
+            <p id="details-profile-tagline" class="text-base md:text-lg text-indigo-200 mt-1"></p>
           </div>
           <button
             id="close-details-btn"
@@ -189,73 +200,30 @@
         </div>
 
         <div class="grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] mb-4">
-          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-            <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3">
+            <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+              Em poucas palavras
+            </p>
+            <div id="details-short-block" class="space-y-3 text-sm text-slate-200"></div>
+          </div>
+
+          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3">
+            <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
               Pontos por eixo
             </p>
-            <ul id="details-axis-list" class="space-y-2 text-sm text-slate-200"></ul>
-          </div>
-
-          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-            <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
-              Explicação detalhada
+            <p class="text-xs text-slate-400">
+              Valores numéricos com uma leitura rápida sobre a direção indicada pelas suas respostas.
             </p>
-            <p
-              id="details-profile-long"
-              class="text-sm text-slate-200 whitespace-pre-line"
-            ></p>
+            <ul id="details-axis-list" class="space-y-3 text-sm text-slate-200"></ul>
           </div>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2">
-          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
-              Autores clássicos relacionados
-            </h4>
-            <ul
-              id="details-authors-classic-list"
-              class="list-disc list-inside text-slate-200 text-sm"
-            ></ul>
-          </div>
-
-          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
-              Figuras modernas internacionais
-            </h4>
-            <ul
-              id="details-figures-int-list"
-              class="list-disc list-inside text-slate-200 text-sm"
-            ></ul>
-          </div>
-
-          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
-              Figuras modernas brasileiras
-            </h4>
-            <ul
-              id="details-figures-nat-list"
-              class="list-disc list-inside text-slate-200 text-sm"
-            ></ul>
-          </div>
-
-          <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-            <h4 class="font-semibold text-slate-100 mb-2 text-sm">
-              Exemplos práticos de posicionamento
-            </h4>
-            <ul
-              id="details-examples-list"
-              class="list-disc list-inside text-slate-200 text-sm"
-            ></ul>
-          </div>
-        </div>
-
-        <div class="mt-4 bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
-          <p class="text-xs font-mono uppercase tracking-wide text-slate-400 mb-2">
+        <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3 mb-4">
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
             Visualização em teia
           </p>
-          <p class="text-sm text-slate-300 mb-3">
-            Compare os cinco eixos ao mesmo tempo: quanto mais distante do centro,
-            maior a intensidade naquele eixo.
+          <p class="text-sm text-slate-300">
+            Quanto mais distante do centro, mais intensa é sua tendência em cada eixo.
           </p>
           <div class="relative h-72 md:h-80">
             <canvas id="radarChart"></canvas>
@@ -266,6 +234,86 @@
               Sem pontuações suficientes para montar o gráfico.
             </p>
           </div>
+        </div>
+
+        <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3 mb-4">
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+            Como este perfil enxerga o mundo
+          </p>
+          <div class="grid gap-3 md:grid-cols-2">
+            <div class="space-y-1">
+              <h3 class="font-semibold text-slate-100 text-sm">Economia e papel do Estado</h3>
+              <p id="details-worldview-economic" class="text-sm text-slate-200"></p>
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-semibold text-slate-100 text-sm">Costumes e liberdades individuais</h3>
+              <p id="details-worldview-social" class="text-sm text-slate-200"></p>
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-semibold text-slate-100 text-sm">Comunidade e identidade</h3>
+              <p id="details-worldview-community" class="text-sm text-slate-200"></p>
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-semibold text-slate-100 text-sm">Método de mudança</h3>
+              <p id="details-worldview-method" class="text-sm text-slate-200"></p>
+            </div>
+            <div class="space-y-1 md:col-span-2">
+              <h3 class="font-semibold text-slate-100 text-sm">Pragmatismo vs idealismo</h3>
+              <p id="details-worldview-pragmatism" class="text-sm text-slate-200"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3 mb-4">
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+            Referências e leituras relacionadas
+          </p>
+          <div class="grid gap-3 md:grid-cols-3">
+            <div>
+              <h4 class="font-semibold text-slate-100 mb-2 text-sm">
+                Clássicos
+              </h4>
+              <ul
+                id="details-authors-classic-list"
+                class="list-disc list-inside text-slate-200 text-sm space-y-1"
+              ></ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-100 mb-2 text-sm">
+                Pensadores internacionais
+              </h4>
+              <ul
+                id="details-authors-international-list"
+                class="list-disc list-inside text-slate-200 text-sm space-y-1"
+              ></ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-100 mb-2 text-sm">
+                Referências nacionais
+              </h4>
+              <ul
+                id="details-authors-national-list"
+                class="list-disc list-inside text-slate-200 text-sm space-y-1"
+              ></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-3 mb-4">
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+            Como este perfil tende a se posicionar
+          </p>
+          <ul
+            id="details-examples-list"
+            class="grid grid-cols-1 md:grid-cols-2 gap-2 list-disc list-inside text-slate-200 text-sm"
+          ></ul>
+        </div>
+
+        <div class="mt-2 bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4">
+          <p class="text-sm text-slate-300">
+            Este resultado é uma ferramenta de autoconhecimento, não um diagnóstico.
+            Suas opiniões podem mudar com o tempo, novas experiências e novos argumentos.
+          </p>
         </div>
       </section>
     </div>

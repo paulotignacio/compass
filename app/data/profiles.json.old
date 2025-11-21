@@ -1,0 +1,699 @@
+{
+  "liberal_social_cosmopolita": {
+    "label": "Liberal Social Cosmopolita",
+    "description_short": "Valoriza a economia de mercado e a inovação, desde que acompanhadas por uma rede de proteção social. É um forte defensor das liberdades individuais, do pluralismo e da cooperação internacional, preferindo reformas baseadas em dados.",
+    "description_long": "Na economia, vê a inovação, a competição e a responsabilidade fiscal como essenciais para o progresso. No entanto, acredita que o Estado deve atuar para garantir igualdade de oportunidades e uma rede de segurança (saúde, educação, seguro-desemprego), corrigindo as falhas do mercado sem sufocá-lo. Em relação a leis e costumes, é um defensor intransigente das liberdades civis, priorizando a autonomia individual, a liberdade de expressão e os direitos das minorias contra qualquer tipo de autoritarismo ou imposição moral. Sua identidade é marcadamente cosmopolita; vê a si mesmo como um 'cidadão do mundo', valoriza a diversidade, a globalização e acredita que a cooperação internacional é fundamental para resolver grandes problemas. Confia na ciência e em políticas públicas baseadas em evidências para promover mudanças sociais. Na política, busca soluções negociadas, mas mantém uma visão idealista sobre o progresso, os direitos humanos e a integração global.",
+    "axis_tendencies": {
+      "economic": "Defende o mercado e a inovação, mas com responsabilidade fiscal e uma rede de proteção social (igualdade de oportunidades).",
+      "social": "Fortemente a favor das liberdades civis, da autonomia individual, do pluralismo e dos direitos das minorias.",
+      "community": "Vê a si mesmo como um cidadão global, valorizando a diversidade, a globalização e a cooperação internacional.",
+      "method": "Acredita em políticas públicas planejadas e baseadas em evidências científicas para promover reformas.",
+      "pragmatism": "Busca soluções práticas e negociadas, mas mantém uma visão idealista sobre o progresso social e os direitos humanos."
+    },
+    "authors_classic": [
+      "John Stuart Mill",
+      "John Rawls",
+      "Immanuel Kant (especialmente 'A Paz Perpétua')",
+      "Karl Popper (especialmente 'A Sociedade Aberta e Seus Inimigos')",
+      "Amartya Sen",
+      "Immanuel Kant",
+      "Adam Smith",
+      "Voltaire",
+      "Mary Wollstonecraft"
+    ],
+    "figures_modern_international": [
+      "The Economist (A revista, como linha editorial)",
+      "Steven Pinker (Psicólogo cognitivo e autor)",
+      "Yascha Mounk (Cientista Político)",
+      "Fareed Zakaria (Comentarista e autor)",
+      "Timothy Garton Ash (Historiador e jornalista)",
+      "Daron Acemoglu (Economista)",
+      "Amartya Sen (Economista)",
+      "Martha Nussbaum (Filósofa)",
+      "Yuval Noah Harari (Historiador)",
+      "Steven Pinker (Psicólogo)",
+      "Kwame Anthony Appiah (Filósofo)"
+    ],
+    "figures_modern_national": [
+      "Arminio Fraga (Economista)",
+      "Persio Arida (Economista)",
+      "Marcos Lisboa (Economista)",
+      "Samuel Pessôa (Economista)",
+      "Mônica de Bolle (Economista)",
+      "Contardo Calligaris (Psicanalista)",
+      "Leila Pinheiro (não, erro; melhor: Leandro Karnal (Historiador)",
+      "Vladimir Safatle (Filósofo, em aspectos liberais)",
+      "Conrado Hübner Mendes (Jurista)",
+      "Marcos Nobre (Filósofo)"
+    ],
+    "examples_practical": [
+      "Defender a abertura comercial e acordos internacionais, mas ao mesmo tempo apoiar programas de requalificação profissional para trabalhadores afetados.",
+      "Ser a favor da legalização do casamento entre pessoas do mesmo sexo e da descriminalização do aborto.",
+      "Defender políticas de imigração baseadas em regras claras, vendo a chegada de estrangeiros como algo benéfico para a economia e a cultura.",
+      "Apoiar o investimento pesado em ciência, tecnologia e educação baseada em evidências, criticando abordagens ideológicas no ensino.",
+      "Defender a responsabilidade fiscal e o controle da inflação, mas ser contra cortes drásticos em programas sociais essenciais.",
+      "Apoiar políticas de ação afirmativa (cotas) como uma medida temporária e baseada em dados para corrigir desigualdades históricas.",
+      "Apoiar programas de bolsa de estudos para acesso universal à universidade, financiados por impostos progressivos moderados.",
+      "Defender a legalização do casamento entre pessoas do mesmo sexo e direitos de adoção sem restrições.",
+      "Ser a favor de acordos internacionais para combate às mudanças climáticas com metas realistas.",
+      "Propor vistos humanitários e caminhos para cidadania a imigrantes qualificados ou refugiados.",
+      "Aceitar regulação de redes sociais para combater desinformação, mas com salvaguardas à liberdade de expressão.",
+      "Criticar barreiras comerciais, preferindo integração econômica regional com padrões trabalhistas."
+    ]
+  },
+  "tecnocrata_pragmatico": {
+    "label": "Tecnocrata Pragmaticista",
+    "description_short": "Rejeita ideologias rígidas em favor de soluções baseadas em dados, expertise técnica e eficiência. Para este perfil, a boa política é a que apresenta resultados mensuráveis, usando o mercado ou o Estado como ferramentas, não como fins em si mesmos.",
+    "description_long": "Este perfil acredita que a gestão pública deve ser tratada como uma ciência, não como um debate de paixões. Na economia, é híbrido: vê o mercado como uma ferramenta eficiente para alocar recursos, mas defende a intervenção estatal estratégica, baseada em dados, para corrigir falhas (como poluição ou monopólios) e otimizar o bem-estar coletivo. Em leis e costumes, tende a ser liberal, mas sua defesa da liberdade (ex: legalização de drogas) se baseia mais na ineficiência da proibição do que em um princípio moral absoluto. Sobre comunidade, valoriza a cooperação internacional e instituições globais (como a OMS ou a OMC) quando elas se provam úteis e eficientes, mas foca na administração local baseada em métricas. É um forte racionalista, acreditando em planejamento, estudos de impacto e na liderança de especialistas (técnicos). É, acima de tudo, pragmático: a melhor política é simplesmente 'aquela que funciona' e pode ser comprovada com números.",
+    "axis_tendencies": {
+      "economic": "Vê o Estado e o Mercado como ferramentas, usando intervenções estratégicas e baseadas em dados para maximizar a eficiência.",
+      "social": "Prefere a liberdade individual regulada, onde as leis são baseadas em evidências (ex: saúde pública, segurança) e não em moralidade.",
+      "community": "Aberto à cooperação global se for eficiente, mas foca em soluções de gestão pública adaptadas ao contexto local.",
+      "method": "Fortemente racionalista; acredita que a política é planejamento, gestão por métricas e expertise técnica.",
+      "pragmatism": "Totalmente focado em resultados; a melhor solução é aquela que os dados comprovam funcionar, independente da ideologia."
+    },
+    "authors_classic": [
+      "Max Weber (pela teoria da burocracia racional)",
+      "Jeremy Bentham (pelo utilitarismo calculista)",
+      "Platão (pela ideia do 'Rei-Filósofo' ou governante-especialista)",
+      "Saint-Simon (pelo planejamento industrial e social por especialistas)",
+      "Francis Bacon (pela aplicação do método científico à sociedade)",
+      "Max Weber",
+      "John Maynard Keynes",
+      "Joseph Schumpeter",
+      "Vilfredo Pareto",
+      "Herbert Simon"
+    ],
+    "figures_modern_international": [
+      "Esther Duflo (Economista, foco em avaliação de impacto - RCTs)",
+      "Abhijit Banerjee (Economista, foco em avaliação de impacto - RCTs)",
+      "Mariana Mazzucato (Economista, sobre o 'Estado Empreendedor' estratégico)",
+      "Cass Sunstein (Acadêmico, sobre 'Nudge' e economia comportamental aplicada a políticas)",
+      "Michael Bloomberg (Gestor, foco em administração baseada em dados)",
+      "Bill Gates (Foco em soluções técnicas e métricas para problemas globais)",
+      "Dani Rodrik (Economista)",
+      "Esther Duflo (Economista)",
+      "Cass Sunstein (Jurista)",
+      "Gerd Gigerenzer (Psicólogo)",
+      "Nate Silver (Estatístico)"
+    ],
+    "figures_modern_national": [
+      "Ricardo Paes de Barros (Economista, especialista em avaliação de impacto de políticas sociais)",
+      "Arminio Fraga (Economista, foco técnico em gestão macroeconômica)",
+      "Persio Arida (Economista, foco em design de instituições)",
+      "Marcos Lisboa (Economista, foco em avaliação de políticas públicas)",
+      "Claudia Costin (Especialista em gestão educacional baseada em evidências)",
+      "Armínio Fraga (Economista)",
+      "Marcos Lisboa (Economista)",
+      "Bernard Appy (Economista)",
+      "Zeina Latif (Economista)",
+      "Eduardo Giannetti (Filósofo e economista)"
+    ],
+    "examples_practical": [
+      "Defender a legalização de drogas ou do aborto, não por uma questão moral, mas sim porque os dados mostram que a proibição é ineficiente e cara para a saúde pública.",
+      "Apoiar a implementação de pedágio urbano, pois estudos técnicos demonstram ser a forma mais eficiente de reduzir o congestionamento.",
+      "Ser contra um subsídio geral para a indústria, mas a favor de um investimento estatal pesado em pesquisa de Inteligência Artificial, baseado em estudos de retorno.",
+      "Avaliar o desempenho de escolas usando métricas padronizadas e criar bônus para professores com melhores resultados.",
+      "Usar análise de dados ('big data') para determinar onde alocar patrulhas policiais, em vez de seguir apenas a pressão de associações de bairro.",
+      "Preferir que o presidente do Banco Central seja um técnico com mandato fixo, isolado do debate político do dia a dia.",
+      "Apoiar reforma tributária simplificada com base em simulações de impacto econômico.",
+      "Defender vacinação obrigatória com campanhas educativas e monitoramento de cobertura.",
+      "Propor parcerias público-privadas para infraestrutura, com contratos baseados em metas de desempenho.",
+      "Ser a favor de políticas de renda básica testadas em pilotos regionais antes de expansão nacional.",
+      "Aceitar acordos internacionais de comércio com cláusulas de sustentabilidade verificáveis.",
+      "Criticar programas sociais sem avaliação de resultados, preferindo ajustes contínuos por dados."
+    ]
+  },
+  "conservador_comunitario": {
+    "label": "Conservador Comunitário",
+    "description_short": "Valoriza profundamente as tradições, a identidade nacional e as instituições que unem a comunidade (família, vizinhança, associações). Prefere mudanças sociais graduais, baseadas na experiência, e acredita que a economia de mercado deve servir à estabilidade social, aceitando regulações para isso.",
+    "description_long": "Este perfil vê a comunidade como a base da sociedade, mais importante que o indivíduo isolado ou o Estado abstrato. Na economia, enxerga o mercado como uma ferramenta útil para a prosperidade, mas não hesita em apoiar regulações que protejam empregos locais, pequenos negócios ou a indústria nacional contra uma globalização desregrada. Em relação a leis e costumes, valoriza a ordem, a segurança e a responsabilidade individual, acreditando que as leis devem refletir e proteger os valores morais tradicionais. A identidade é central: sente forte orgulho e pertencimento à sua nação e cultura. Rejeita mudanças radicais ou 'engenharia social', confiando mais na sabedoria acumulada pelas gerações. Na política, busca soluções realistas que mantenham a estabilidade e a coesão do 'tecido social'.",
+    "axis_tendencies": {
+      "economic": "Prefere a livre iniciativa, mas aceita regulação estatal para proteger a comunidade, os empregos locais e a estabilidade social.",
+      "social": "Valoriza a ordem, a segurança pública e a autoridade como pilares para preservar os valores morais da comunidade.",
+      "community": "Fortemente enraizado na identidade nacional, nas tradições locais e nas instituições que formam a comunidade (família, vizinhança).",
+      "method": "Desconfia de grandes planos; acredita que a sociedade deve mudar lentamente, respeitando a experiência e as tradições.",
+      "pragmatism": "Foca em soluções realistas e testadas que garantam a estabilidade e o bom funcionamento da comunidade."
+    },
+    "authors_classic": [
+      "Edmund Burke",
+      "G.K. Chesterton",
+      "Robert Nisbet",
+      "Michael Oakeshott",
+      "Russell Kirk",
+      "Alexis de Tocqueville",
+      "Benjamin Disraeli"
+    ],
+    "figures_modern_international": [
+      "Roger Scruton (Filósofo)",
+      "Robert D. Putnam (Cientista Político, autor de 'Bowling Alone')",
+      "Patrick Deneen (Cientista Político)",
+      "Yoram Hazony (Filósofo)",
+      "Jordan Peterson (Psicólogo e comentarista, no aspecto da valorização da ordem e tradição)",
+      "Yuval Noah Harari (Historiador, em aspectos culturais)",
+      "Niall Ferguson (Historiador)",
+      "Jordan Peterson (Psicólogo)",
+      "Douglas Murray (Comentarista)"
+    ],
+    "figures_modern_national": [
+      "Gilberto Freyre (Sociólogo - pela análise da formação social e cultural)",
+      "Roberto DaMatta (Antropólogo - pela análise da 'casa' e da 'rua' e da identidade brasileira)",
+      "José Murilo de Carvalho (Historiador - pela análise da formação da cidadania e da república)",
+      "Bruno Garschagen (Comentarista e autor focado no conservadorismo Burkeano)",
+      "Olavo de Carvalho (Filósofo)",
+      "Luiz Felipe Pondé (Filósofo)",
+      "Roberto Campos (Economista, em aspectos institucionais)",
+      "Paulo Guedes (Economista, em regulação moderada)",
+      "Denis Rosenfield (Filósofo)"
+    ],
+    "examples_practical": [
+      "Defender políticas de incentivo ao comércio de bairro e à agricultura familiar, mesmo que produtos importados sejam mais baratos.",
+      "Ser a favor de leis mais rígidas de segurança pública e de um maior controle de fronteiras.",
+      "Criticar uma reforma educacional que proponha mudanças radicais na grade curricular, defendendo o ensino de história nacional e valores cívicos.",
+      "Valorizar o papel de organizações de caridade locais ou religiosas na assistência social, em vez de depender apenas de programas estatais impessoais.",
+      "Opor-se à demolição de um prédio histórico para a construção de um arranha-céu moderno, mesmo que este último traga mais retorno financeiro.",
+      "Defender a liberdade econômica, mas ser a favor de restrições a empresas estrangeiras em setores considerados estratégicos para o país.",
+      "Apoiar incentivos fiscais para empresas que mantenham empregos na região, em vez de deslocalização total.",
+      "Defender leis mais rigorosas contra vandalismo em manifestações para proteger o espaço público.",
+      "Ser a favor de ensino de história nacional nas escolas para fortalecer o senso de identidade.",
+      "Preferir reformas trabalhistas testadas em pilotos regionais antes de aplicação nacional.",
+      "Aceitar acordos comerciais que protejam indústrias locais tradicionais.",
+      "Criticar mudanças rápidas no currículo escolar que ignorem conteúdos clássicos de formação moral."
+    ]
+  },
+  "direita_autoritaria_nacional": {
+    "label": "Direita Autoritária Nacionalista",
+    "description_short": "Prioriza a unidade nacional, a ordem social e a soberania do país. Defende um Estado forte para aplicar leis rígidas, proteger a cultura local e fortalecer a economia nacional contra influências externas.",
+    "description_long": "Este perfil vê a nação como o valor central. Na economia, é misto: pode aceitar o mercado, mas defende um forte intervencionismo estatal para proteger indústrias estratégicas, garantir a autossuficiência e promover o poderio nacional, rejeitando o livre comércio irrestrito. Em relação a leis e costumes, é fortemente autoritário, defendendo a disciplina social, punições severas para crimes e o controle estatal sobre comportamentos vistos como 'desviantes' ou 'prejudiciais' à moral tradicional. A identidade nacional é fundamental; valoriza as tradições, a cultura unificada e desconfia profundamente do 'globalismo', da imigração em larga escala e de instituições internacionais, vistas como ameaças à soberania. Aceita o planejamento centralizado do Estado (racionalismo) para executar grandes projetos nacionais ou para reverter mudanças sociais que considera negativas. É pragmático no uso da força para manter a ordem, mas idealista em sua visão de uma nação unida e grandiosa.",
+    "axis_tendencies": {
+      "economic": "Vê a economia como ferramenta estratégica, aceitando forte intervenção estatal para proteger a indústria e a autonomia nacional.",
+      "social": "Fortemente a favor da autoridade, de leis rígidas e do controle estatal sobre costumes para garantir a ordem e a disciplina moral.",
+      "community": "Altamente nacionalista; valoriza a identidade, a cultura e as tradições, e desconfia fortemente do globalismo e de influências externas.",
+      "method": "Aceita o planejamento centralizado do Estado (racionalismo) para preservar ou restaurar a ordem e os valores nacionais.",
+      "pragmatism": "Idealista na visão de 'grandeza nacional', mas pragmático e duro na aplicação de políticas de segurança e ordem."
+    },
+    "authors_classic": [
+      "Thomas Hobbes",
+      "Carl Schmitt",
+      "Joseph de Maistre",
+      "Johann Gottlieb Fichte",
+      "Machiavelli",
+      "Giovanni Gentile",
+      "Charles Maurras"
+    ],
+    "figures_modern_international": [
+      "Yoram Hazony (Filósofo)",
+      "Patrick Deneen (Cientista Político)",
+      "Aleksandr Dugin (Geopolítico)",
+      "Alain de Benoist (Filósofo)",
+      "John Mearsheimer (Teórico de Relações Internacionais, pelo 'realismo' focado no Estado-Nação)",
+      "Patrick Buchanan (Comentarista)",
+      "Viktor Orbán (em ideias, como pensador)",
+      "Aleksandr Dugin (Filósofo)",
+      "Yoram Hazony (Pensador)",
+      "Thierry Baudet (Comentarista)"
+    ],
+    "figures_modern_national": [
+      "Oliveira Vianna (Sociólogo)",
+      "Alberto Torres (Pensador social)",
+      "Olavo de Carvalho (Comentarista, pelo antiglobalismo e defesa da tradição)",
+      "Eneias Carneiro (Médico/Autor, como arquétipo do 'nacional-desenvolvimentismo' e autoridade)",
+      "Olavo de Carvalho (Filósofo)",
+      "Luiz Philippe de Orléans e Bragança (Pensador)",
+      "Flávio Gordon (Antropólogo)",
+      "Bernardo Küster (Comentarista, em aspectos nacionais)",
+      "Carlos Alberto Di Franco (Jornalista)"
+    ],
+    "examples_practical": [
+      "Defender altas tarifas de importação para proteger a indústria nacional, mesmo que isso aumente os preços para o consumidor.",
+      "Ser a favor de leis que aumentem drasticamente as penas para crimes como desacato à autoridade, vandalismo ou organização de protestos não autorizados.",
+      "Apoiar o controle rigoroso de fronteiras e a restrição da imigração de grupos culturais vistos como 'inassimiláveis'.",
+      "Defender que o governo deve ter o poder de intervir no currículo escolar para garantir o ensino do patriotismo e dos valores tradicionais.",
+      "Criticar a participação do país em tribunais ou organizações internacionais (como a ONU ou a OMS), vendo-as como uma perda de soberania.",
+      "Apoiar a censura estatal de manifestações artísticas ou da imprensa consideradas 'antipatrióticas' ou 'imorais'.",
+      "Apoiar barreiras comerciais para proteger empregos na indústria local.",
+      "Defender aumento de penas para crimes violentos e mais poder à polícia.",
+      "Ser a favor de ensino obrigatório de história nacional com ênfase em heróis patrióticos.",
+      "Propor programas estatais para incentivar natalidade e fortalecer famílias tradicionais.",
+      "Aceitar alianças internacionais apenas com países que respeitem soberania nacional.",
+      "Criticar imigração descontrolada, preferindo critérios que priorizem integração cultural."
+    ]
+  },
+  "esquerda_comunitaria": {
+    "label": "Esquerda Comunitária Igualitária",
+    "description_short": "Defende um Estado forte para garantir a igualdade econômica e o bem-estar social, vendo a solidariedade e os laços comunitários como a base para isso. Valoriza as liberdades pessoais, mas acredita que elas devem ser equilibradas com o dever de cada um para com o coletivo.",
+    "description_long": "Na economia, foca no Estado como o agente central para reduzir a desigualdade, defendendo serviços públicos universais (saúde, educação), impostos progressivos e forte proteção ao trabalhador. Em relação a leis e costumes, busca um equilíbrio: defende as liberdades pessoais, mas acredita que elas são fortalecidas por um senso de dever e normas comunitárias compartilhadas, priorizando a coesão social. Sua visão central é a comunidade; rejeita o individualismo e o globalismo anônimo, valorizando a solidariedade, o pertencimento local, as associações de bairro, os sindicatos e uma identidade nacional inclusiva. Acredita em planejamento e reformas para alcançar a justiça social, mas de forma prática e sustentável. Na política, combina um ideal de igualdade com a necessidade de soluções concretas que funcionem para o coletivo.",
+    "axis_tendencies": {
+      "economic": "Defende um Estado robusto, focado na redistribuição de renda e no fortalecimento dos serviços públicos.",
+      "social": "Valoriza a liberdade pessoal, mas acredita que ela deve ser equilibrada pelo bem-estar e coesão da comunidade.",
+      "community": "Fortemente comunitário; valoriza a solidariedade, o pertencimento local e uma identidade coletiva forte.",
+      "method": "Acredita em planejamento estatal para implementar políticas sociais, mas com ajustes práticos e graduais.",
+      "pragmatism": "Combina um ideal de justiça social com a preocupação prática de implementar políticas que funcionem."
+    },
+    "authors_classic": [
+      "Jean-Jacques Rousseau",
+      "Karl Polanyi",
+      "Émile Durkheim",
+      "Robert Owen",
+      "John Dewey",
+      "Ferdinand Lassalle",
+      "Eduard Bernstein"
+    ],
+    "figures_modern_international": [
+      "Michael Sandel (Filósofo)",
+      "Robert D. Putnam (Cientista Político)",
+      "Thomas Piketty (Economista)",
+      "David Goodhart (Jornalista, autor de 'Somewhere vs. Anywhere')",
+      "Arlie Russell Hochschild (Socióloga)",
+      "Richard Wilkinson (Epidemiologista)",
+      "Kate Pickett (Socióloga)",
+      "Roberto Mangabeira Unger (Filósofo)",
+      "Yanisa Varoufakis (Economista)"
+    ],
+    "figures_modern_national": [
+      "Celso Furtado (Economista)",
+      "Darcy Ribeiro (Antropólogo)",
+      "Milton Santos (Geógrafo)",
+      "Jessé Souza (Sociólogo)",
+      "Leonardo Boff (Teólogo)",
+      "Roberto Mangabeira Unger (Filósofo)",
+      "Maria da Conceição Tavares (Economista)",
+      "Aloizio Mercadante (Economista)",
+      "Ladislau Dowbor (Economista)",
+      "Márcio Pochmann (Economista)"
+    ],
+    "examples_practical": [
+      "Defender um sistema de saúde público e universal, financiado por impostos progressivos sobre os mais ricos.",
+      "Apoiar o fortalecimento de sindicatos, cooperativas de trabalhadores e associações de bairro.",
+      "Ser a favor de políticas que protejam o comércio local e a indústria nacional da concorrência global predatória.",
+      "Defender a liberdade de expressão, mas apoiar regulações que combatam a desinformação que ameace a saúde pública ou a coesão social.",
+      "Apoiar programas de renda básica, mas preferencialmente vinculados a redes de apoio locais ou participação comunitária.",
+      "Criticar o individualismo excessivo, defendendo que os cidadãos têm deveres para com sua comunidade, não apenas direitos.",
+      "Apoiar expansão do sistema público de saúde com atendimento gratuito para toda a população.",
+      "Defender leis que incentivem cooperativas de trabalhadores para fortalecer comunidades locais.",
+      "Ser a favor de programas de moradia popular em bairros para promover integração social.",
+      "Propor educação cívica nas escolas com foco em valores de solidariedade e participação coletiva.",
+      "Aceitar parcerias com empresas para geração de empregos, desde que incluam benefícios sociais.",
+      "Criticar privatizações que enfraqueçam serviços essenciais à coesão comunitária."
+    ]
+  },
+  "social_democrata_pragmatico": {
+    "label": "Social-Democrata Pragmatista",
+    "description_short": "Defende um equilíbrio entre um Estado de bem-estar social atuante e uma economia de mercado funcional. Valoriza as liberdades individuais, mas prioriza, acima de tudo, a negociação política e a busca por resultados concretos e implementáveis, rejeitando utopias.",
+    "description_long": "Na economia, enxerga o mercado como a principal fonte de geração de riqueza, mas acredita que o Estado é essencial para corrigir falhas, reduzir desigualdades e garantir serviços públicos universais, como saúde e educação. Em relação a leis e costumes, tende a apoiar as liberdades civis e os direitos das minorias, mas aceita regulações que visem a proteção social ou o bem comum. Sobre comunidade, equilibra um senso de identidade nacional e dever cívico com uma visão aberta ao diálogo internacional, sem nacionalismos exacerbados. Prefere mudanças sociais baseadas em evidências e planejamento, mas aplicadas de forma gradual e testada. Sua característica mais forte é o realismo: acredita que a política é a 'arte do possível', valorizando alianças, coalizões e acordos para alcançar avanços graduais, mesmo que imperfeitos.",
+    "axis_tendencies": {
+      "economic": "Favorece um Estado de bem-estar social robusto (saúde, educação, previdência), mas aceita a economia de mercado como motor de crescimento.",
+      "social": "Defende as liberdades civis e direitos individuais, mas aceita regulações pontuais em nome da ordem ou proteção social.",
+      "community": "Equilibra o pertencimento à comunidade local/nacional com uma abertura para a cooperação e o diálogo internacional.",
+      "method": "Apoia reformas planejadas com base em dados, mas prefere implementá-las de forma gradual e testada, em vez de mudanças radicais.",
+      "pragmatism": "Fortemente realista, acredita que a negociação e a busca por resultados práticos são mais importantes que a pureza ideológica."
+    },
+    "authors_classic": [
+      "Eduard Bernstein",
+      "John Maynard Keynes",
+      "John Rawls",
+      "Karl Popper",
+      "John Stuart Mill",
+      "Anthony Giddens"
+    ],
+    "figures_modern_international": [
+      "Joseph Stiglitz (Economista)",
+      "Thomas Piketty (Economista)",
+      "Mariana Mazzucato (Economista)",
+      "Yascha Mounk (Cientista Político)",
+      "Anne Applebaum (Historiadora e jornalista)",
+      "Paul Krugman (Economista)"
+    ],
+    "figures_modern_national": [
+      "Fernando Henrique Cardoso (Sociólogo)",
+      "André Lara Resende (Economista)",
+      "Marcos Lisboa (Economista)",
+      "Samuel Pessôa (Economista)",
+      "Celso Furtado (Economista - como referência desenvolvimentista)",
+      "Armínio Fraga (Economista)"
+    ],
+    "examples_practical": [
+      "Defender a existência de um sistema de saúde público e universal, mas ser contra o congelamento artificial de preços de aluguéis.",
+      "Apoiar um aumento gradual do salário mínimo baseado em estudos de impacto econômico, em vez de um aumento radical por decreto.",
+      "Ser a favor da descriminalização do porte de drogas para uso pessoal, tratando o tema mais como saúde pública do que como caso de polícia.",
+      "Aceitar que seu grupo político forme uma aliança com um grupo de centro-direita para aprovar uma reforma tributária considerada essencial.",
+      "Apoiar acordos de livre comércio, desde que incluam cláusulas de proteção ambiental e trabalhista.",
+      "Criticar a burocracia excessiva do Estado, mas defender concursos públicos para áreas estratégicas.",
+      "Apoiar um sistema público de saúde universal, mas permitir clínicas privadas para quem quiser pagar mais rápido.",
+      "Defender aumento gradual do salário mínimo com estudos de impacto, em vez de salto repentino.",
+      "Ser a favor da descriminalização das drogas para tratar como questão de saúde, não de polícia.",
+      "Aceitar aliança com grupo de centro para aprovar reforma tributária que simplifique impostos.",
+      "Apoiar acordos comerciais internacionais com regras de proteção ao trabalho e ao meio ambiente.",
+      "Criticar excesso de burocracia estatal, mas manter concursos públicos para cargos importantes."
+    ]
+  },
+  "idealista_utopico": {
+    "label": "Idealista Utópico",
+    "description_short": "Coloca princípios morais, filosóficos ou uma grande visão de futuro acima de tudo. Acredita que a sociedade deve ser radicalmente transformada para se alinhar a esse ideal, rejeitando acordos práticos que comprometam essa visão.",
+    "description_long": "Este perfil enxerga o mundo através de um conjunto de princípios fortes. Na economia, a posição (seja pró-Estado ou pró-Mercado) é uma ferramenta para alcançar uma utopia, seja ela de igualdade total, liberdade absoluta ou pureza moral. Em relação a leis e costumes, julga a realidade atual com base nesse ideal; se as leis existentes são 'injustas' ou 'imorais' segundo esse padrão, elas não devem ser reformadas, mas sim substituídas. A comunidade idealizada pode ser tanto uma 'fraternidade humana' global (cosmopolita) quanto uma 'nação perfeitamente ordenada' (comunitária). Este perfil acredita em mudanças sociais profundas e planejadas (engenharia social) para 'consertar' o mundo. Rejeita a política do 'possível', vendo negociações e acordos pragmáticos como uma traição aos princípios; prefere o fracasso com pureza à vitória com concessões.",
+    "axis_tendencies": {
+      "economic": "Adota qualquer modelo econômico (Estado ou Mercado) desde que sirva a um ideal moral ou filosófico superior.",
+      "social": "Avalia leis com base em princípios; se a realidade não se encaixa no ideal, a realidade deve mudar radicalmente.",
+      "community": "A visão de comunidade é uma utopia, seja uma 'nação pura' (comunitária) ou uma 'humanidade unida' (cosmopolita).",
+      "method": "Fortemente racionalista; acredita que a sociedade pode e deve ser redesenhada do zero para alcançar a perfeição.",
+      "pragmatism": "Fortemente idealista; prefere o 'certo' ao 'possível' e rejeita acordos que comprometam seus princípios fundamentais."
+    },
+    "authors_classic": [
+      "Platão (em 'A República')",
+      "Thomas More (em 'Utopia')",
+      "Jean-Jacques Rousseau",
+      "Karl Marx",
+      "Ayn Rand",
+      "Robert Owen",
+      "Platão",
+      "Thomas More",
+      "Immanuel Kant"
+    ],
+    "figures_modern_international": [
+      "Noam Chomsky",
+      "Peter Singer",
+      "Slavoj Žižek",
+      "Greta Thunberg (no ativismo climático)",
+      "Judith Butler",
+      "Slavoj Žižek (Filósofo)",
+      "Cornel West (Filósofo)",
+      "Judith Butler (Filósofa)",
+      "Peter Singer (Filósofo)",
+      "Naomi Klein (Jornalista)"
+    ],
+    "figures_modern_national": [
+      "Paulo Freire (pela visão de pedagogia transformadora)",
+      "Darcy Ribeiro (pela visão de 'nova utopia' para o Brasil)",
+      "Olavo de Carvalho (pela visão de restauração de uma ordem ideal)",
+      "Leonardo Boff (pela visão de teologia e ecologia integral)",
+      "Silvio Almeida (pela visão de transformação estrutural)",
+      "Vladimir Safatle (Filósofo)",
+      "Marilena Chaui (Filósofa)",
+      "Paulo Arantes (Filósofo)",
+      "Jessé Souza (Sociólogo)",
+      "Renato Janine Ribeiro (Filósofo)"
+    ],
+    "examples_practical": [
+      "Defender o fim imediato de todas as fontes de energia não renováveis, mesmo que isso cause um colapso econômico, pois o planeta é a prioridade moral absoluta.",
+      "Rejeitar qualquer aliança política com um grupo que discorde de um ponto central da pauta, preferindo 'perder de pé' a 'ganhar de joelhos'.",
+      "Propor a abolição total da propriedade privada (ou, o oposto, a abolição total do Estado) por acreditar que o sistema atual é intrinsecamente corrupto.",
+      "Ser a favor da abolição completa de prisões, acreditando que uma nova estrutura social eliminaria as causas do crime.",
+      "Defender a abolição de fronteiras nacionais em nome da 'fraternidade humana' ou, o oposto, defender a pureza cultural total em nome de uma 'nação ideal'.",
+      "Defender uma reestruturação completa do sistema educacional para formar cidadãos conforme um modelo ético ideal.",
+      "Apoiar abolição de fronteiras nacionais em nome de uma humanidade unida sem divisões.",
+      "Propor economia planejada centralmente para eliminar desigualdades de forma definitiva.",
+      "Ser a favor de leis que imponham padrões morais elevados na mídia e na cultura popular.",
+      "Aceitar rupturas institucionais para instaurar uma nova ordem social baseada em princípios filosóficos.",
+      "Criticar acordos políticos que comprometam a visão pura de justiça ou igualdade absoluta."
+    ]
+  },
+  "empirista_conservador": {
+    "label": "Empirista Conservador",
+    "description_short": "Cético em relação a grandes ideologias, este perfil valoriza a estabilidade e as tradições que resistiram ao teste do tempo. Prefere mudanças graduais, baseadas na experiência prática e no bom senso, em vez de grandes projetos de engenharia social.",
+    "description_long": "Este perfil acredita que a sociedade é um organismo complexo que não pode ser 'reiniciado' ou consertado por grandes planos. Na economia, defende a prudência fiscal e o livre mercado como regra geral, mas sem dogmatismo, aceitando intervenções pontuais que a experiência demonstrou serem necessárias para a estabilidade. Em leis e costumes, valoriza a ordem e a continuidade moral, vendo-os como o resultado de uma longa experiência social, e desconfia de mudanças abruptas nas liberdades civis. Sobre comunidade, vê as tradições e a identidade local como um conhecimento social valioso, acumulado por gerações, que deve ser preservado. Rejeita fortemente 'revoluções' ou 'refundações' da sociedade, acreditando que o progresso real vem de ajustes pequenos e testados. Na política, é altamente pragmático, focado em soluções de 'senso comum' e no custo-benefício, desconfiando de discursos utópicos.",
+    "axis_tendencies": {
+      "economic": "Defende o mercado com responsabilidade fiscal, mas aceita intervenções pontuais baseadas na experiência, evitando extremos.",
+      "social": "Valoriza a ordem e a estabilidade, aceitando mudanças graduais nos costumes que não ameacem a coesão social.",
+      "community": "Acredita que as tradições e a identidade local são uma forma de sabedoria prática e devem ser preservadas.",
+      "method": "Fortemente empirista; prefere mudanças pequenas e testadas, rejeitando qualquer 'engenharia social' baseada em teorias.",
+      "pragmatism": "Altamente focado no 'mundo real', valorizando o senso comum e o que funciona na prática, acima de ideologias."
+    },
+    "authors_classic": [
+      "Edmund Burke",
+      "David Hume",
+      "Michael Oakeshott",
+      "Russell Kirk",
+      "Alexis de Tocqueville",
+      "G.K. Chesterton (pela defesa do 'senso comum')",
+      "Aristóteles"
+    ],
+    "figures_modern_international": [
+      "Roger Scruton (Filósofo)",
+      "Thomas Sowell (Economista e filósofo social)",
+      "Theodore Dalrymple (Psiquiatra e ensaísta)",
+      "Yuval Levin (Comentarista e autor)",
+      "Robert Nisbet (Sociólogo)",
+      "Thomas Sowell (Economista)",
+      "Niall Ferguson (Historiador)",
+      "Charles Murray (Sociólogo)",
+      "Yuval Noah Harari (Historiador, em aspectos institucionais)"
+    ],
+    "figures_modern_national": [
+      "Roberto DaMatta (Antropólogo, pela análise das instituições sociais 'da casa e da rua')",
+      "José Murilo de Carvalho (Historiador, pela análise da formação gradual das instituições)",
+      "Bruno Garschagen (Comentarista, focado no conservadorismo Burkeano)",
+      "Paulo Rabello de Castro (Economista, foco em 'ajustes' e 'senso prático' na economia)",
+      "Luiz Felipe Pondé (Filósofo)",
+      "Denis Rosenfield (Filósofo)",
+      "João Cezar de Castro Rocha (Crítico literário)",
+      "José Guilherme Merquior (Ensaiista, em aspectos conservadores)",
+      "Roberto Campos (Economista, em prudência fiscal)"
+    ],
+    "examples_practical": [
+      "Opor-se a uma nova Constituição escrita do zero, preferindo aprovar reformas pontuais (emendas) na Constituição existente.",
+      "Defender o controle de gastos públicos não por uma ideologia de 'Estado mínimo', mas por 'bom senso', para evitar inflação e dívidas futuras.",
+      "Ser cético em relação a propostas de 'renda básica universal', preferindo focar em pequenos ajustes nos programas sociais que já existem e mostraram algum resultado.",
+      "Em um debate sobre segurança, defender o fortalecimento do policiamento de bairro (uma solução testada) em vez de um novo plano radical de desencarceramento.",
+      "Defender a preservação de um centro histórico, mesmo que um projeto imobiliário moderno prometesse mais lucro imediato.",
+      "Ser contra a estatização completa da saúde, mas também contra a privatização total, preferindo ajustar o modelo misto existente.",
+      "Apoiar redução gradual de impostos com monitoramento de impacto na arrecadação.",
+      "Defender manutenção de feriados tradicionais para reforçar laços sociais.",
+      "Ser a favor de testes piloto para novas políticas educacionais antes de adoção nacional.",
+      "Aceitar regulação ambiental que proteja recursos sem paralisar atividades econômicas.",
+      "Criticar reformas radicais no sistema de previdência, preferindo ajustes paramétricos.",
+      "Propor parcerias entre governo e empresas locais para infraestrutura com contratos claros."
+    ]
+  },
+  "direita_libertaria": {
+    "label": "Direita Libertária",
+    "description_short": "Defende a máxima liberdade individual, tanto na economia (mercado livre, impostos baixos) quanto na vida pessoal (escolhas de estilo de vida). Vê o Estado como a principal ameaça à liberdade e acredita que sua função deve ser mínima, focando apenas na proteção da propriedade e na garantia de contratos.",
+    "description_long": "Na economia, este perfil é um defensor radical do livre mercado, da propriedade privada e da concorrência. Acredita que impostos são uma forma de coerção e que serviços como saúde, educação e previdência são mais eficientes e éticos quando geridos pela iniciativa privada, sem intervenção estatal. Em relação a leis e costumes, é fortemente anti-autoritário, defendendo a autonomia do indivíduo sobre o próprio corpo, a liberdade de expressão irrestrita e o direito de viver como quiser, desde que não inicie força contra outros. Sobre comunidade, vê a sociedade como uma rede de associações voluntárias; a liberdade individual vem sempre antes de qualquer obrigação imposta por um coletivo ou tradição. Rejeita mudanças planejadas pelo governo (engenharia social), confiando que as melhores soluções emergem de forma espontânea e descentralizada através do mercado. Na política, é pragmático ao defender a liberdade como o meio mais eficaz para gerar prosperidade e resolver problemas complexos.",
+    "axis_tendencies": {
+      "economic": "Defende um Estado mínimo, impostos radicalmente baixos, privatizações e a máxima liberdade de mercado.",
+      "social": "Totalmente a favor das liberdades civis, da autonomia individual e contra qualquer intervenção do Estado na vida privada.",
+      "community": "Prioriza os direitos e a autonomia do indivíduo acima das tradições ou do pertencimento comunitário/nacional.",
+      "method": "Rejeita planejamentos centrais e confia na 'ordem espontânea' que emerge das interações livres e descentralizadas.",
+      "pragmatism": "Foca nos resultados práticos, defendendo que o mercado livre é a forma mais eficiente e rápida de resolver problemas sociais."
+    },
+    "authors_classic": [
+      "John Locke",
+      "Adam Smith",
+      "Frédéric Bastiat",
+      "Ludwig von Mises",
+      "Friedrich Hayek",
+      "Robert Nozick",
+      "Ayn Rand"
+    ],
+    "figures_modern_international": [
+      "Milton Friedman (Economista)",
+      "Thomas Sowell (Economista e filósofo social)",
+      "Peter Thiel (Investidor e ensaísta)",
+      "Ron Paul (Autor e ex-político)",
+      "Deirdre McCloskey (Economista e historiadora)",
+      "Thomas Sowell (Economista)",
+      "Bryan Caplan (Economista)",
+      "David Friedman (Economista)",
+      "Peter Thiel (Empreendedor e pensador)"
+    ],
+    "figures_modern_national": [
+      "Roberto Campos (Economista)",
+      "Gustavo Franco (Economista)",
+      "Hélio Beltrão (Administrador e fundador de 'think tank')",
+      "Rodrigo Constantino (Comentarista)",
+      "Paulo Guedes (Economista)",
+      "Helio Beltrão (Empresário e pensador)",
+      "Kim Kataguiri (Ativista, em aspectos libertários)",
+      "Paulo Cruz (Economista)"
+    ],
+    "examples_practical": [
+      "Defender a privatização total de empresas estatais, incluindo as de setores estratégicos como energia e saneamento.",
+      "Ser a favor da legalização de todas as drogas, tratando o consumo como uma escolha individual e um assunto de saúde, não de polícia.",
+      "Apoiar o fim de todos os subsídios governamentais, seja para a indústria, agricultura ou cultura.",
+      "Defender o direito irrestrito ao 'homeschooling' (ensino domiciliar) e a criação de 'vouchers' educacionais para que os pais escolham a escola dos filhos.",
+      "Ser radicalmente contra qualquer regulação estatal de mídias sociais ou da liberdade de expressão na internet.",
+      "Propor a extinção da maioria das agências reguladoras do governo.",
+      "Defender a privatização de serviços públicos como correios e estradas para melhorar eficiência.",
+      "Ser contra leis que obriguem o uso de capacete ou cinto de segurança, por escolha individual.",
+      "Apoiar a legalização total do porte de armas para autodefesa pessoal.",
+      "Criticar impostos progressivos e defender um imposto único e baixo para todos.",
+      "Ser a favor do homeschooling como direito dos pais, sem regulação estatal.",
+      "Aceitar criptomoedas como alternativa ao controle monetário do governo central."
+    ]
+  },
+  "moderado_centro_pragmatico": {
+    "label": "Moderado de Centro Pragmatista",
+    "description_short": "Um perfil focado no equilíbrio e em evitar extremos ideológicos. Prioriza soluções práticas, baseadas em evidências e no diálogo, acreditando que o mercado e o Estado devem trabalhar juntos para garantir estabilidade e bem-estar.",
+    "description_long": "Na economia, busca um caminho do meio, defendendo a livre iniciativa e a responsabilidade fiscal, mas reconhecendo o papel do Estado em corrigir falhas de mercado e manter uma rede de proteção social (saúde, educação). Em leis e costumes, valoriza as liberdades individuais e os direitos civis, mas entende que a convivência exige regras, apoiando regulações baseadas no bom senso para garantir a segurança e a ordem. Sobre identidade, é equilibrado: valoriza a cultura local e o pertencimento, mas é aberto à cooperação internacional e ao comércio global, rejeitando tanto o nacionalismo isolacionista quanto o cosmopolitismo desenraizado. Desconfia de mudanças radicais. Acredita que o progresso social deve ser gradual, baseado em reformas testadas, evidências e no fortalecimento das instituições. Na política, é a personificação do pragmatismo: prioriza a governabilidade, o diálogo entre opostos, a formação de alianças e a busca por resultados concretos, mesmo que exijam concessões.",
+    "axis_tendencies": {
+      "economic": "Busca um equilíbrio entre o mercado e uma rede de proteção social, focando na responsabilidade fiscal.",
+      "social": "Valoriza as liberdades individuais, mas aceita regulações baseadas no bom senso para garantir a segurança e a ordem.",
+      "community": "Equilibra o pertencimento local com a abertura à cooperação global, evitando extremos nacionalistas ou cosmopolitas.",
+      "method": "Prefere reformas graduais, testadas e baseadas em evidências, desconfiando de rupturas ou imobilismo.",
+      "pragmatism": "Fortemente realista; prioriza a estabilidade, o diálogo, a negociação e as soluções que funcionam na prática."
+    },
+    "authors_classic": [
+      "Aristóteles",
+      "Montesquieu",
+      "Alexis de Tocqueville",
+      "Max Weber",
+      "John Stuart Mill",
+      "John Locke",
+      "Adam Smith"
+    ],
+    "figures_modern_international": [
+      "The Economist (A revista, como linha editorial)",
+      "Fareed Zakaria (Comentarista e autor)",
+      "Anne Applebaum (Historiadora e jornalista)",
+      "Steven Pinker (Psicólogo cognitivo e autor)",
+      "Cass Sunstein (Acadêmico)",
+      "Anthony Giddens (Sociólogo)",
+      "Francis Fukuyama (Cientista Político)",
+      "Daniel Bell (Sociólogo)",
+      "Michael Sandel (Filósofo)",
+      "Yascha Mounk (Cientista Político)"
+    ],
+    "figures_modern_national": [
+      "Fernando Henrique Cardoso (Sociólogo)",
+      "Persio Arida (Economista)",
+      "Arminio Fraga (Economista)",
+      "Marcos Lisboa (Economista)",
+      "Celso Rocha de Barros (Sociólogo e colunista)",
+      "Bolívar Lamounier (Cientista político)",
+      "José Murilo de Carvalho (Historiador)",
+      "Simon Schwartzman (Sociólogo)",
+      "Eduardo Giannetti (Filósofo)"
+    ],
+    "examples_practical": [
+      "Defender uma reforma tributária que simplifique impostos (pró-mercado) mas aumente a taxação sobre super-ricos (pró-Estado).",
+      "Apoiar a privatização de uma estatal ineficiente, mas defender o fortalecimento de outra estatal em um setor estratégico.",
+      "Ser a favor de um debate sobre a legalização de drogas focado em saúde pública e estatísticas de segurança, em vez de moralidade.",
+      "Defender que seu grupo político forme uma aliança com um adversário moderado para garantir a aprovação do orçamento e a estabilidade.",
+      "Apoiar acordos comerciais internacionais, mas com cláusulas que protejam setores-chave da indústria local por um período de transição.",
+      "Defender um projeto-piloto de 'escolas charter' (gestão privada de escola pública) em algumas cidades antes de expandir para o país.",
+      "Apoiar redução de impostos para empresas com contrapartida de investimentos em treinamento de funcionários.",
+      "Defender leis de trânsito rigorosas para segurança, mas sem restrições excessivas à mobilidade pessoal.",
+      "Ser a favor de acordos comerciais que incluam cláusulas ambientais e trabalhistas equilibradas.",
+      "Propor expansão gradual de programas sociais com avaliação periódica de impacto.",
+      "Aceitar alianças amplas para aprovar uma reforma administrativa que melhore eficiência pública.",
+      "Criticar polarização extrema, preferindo debates focados em dados e soluções intermediárias."
+    ]
+  },
+  "esquerda_libertaria_cosmopolita": {
+    "label": "Esquerda Libertária Cosmopolita",
+    "description_short": "Defende um Estado ativo na redução da desigualdade econômica, mas é radicalmente contra a intervenção estatal na vida privada e nos costumes. Valoriza a diversidade, os direitos humanos universais e a cooperação internacional.",
+    "description_long": "Na economia, defende um Estado atuante para reduzir desigualdades e garantir igualdade de oportunidades, através de serviços públicos universais (saúde, educação) e tributação progressiva. Em contraste, é radicalmente libertário na esfera social: defende a autonomia individual total, a liberdade de expressão, os direitos das minorias e o direito de escolha sobre o próprio corpo, rejeitando qualquer controle moral ou autoritário do Estado. Sua identidade é cosmopolita; vê a si mesmo como um 'cidadão do mundo', valoriza a diversidade cultural, a imigração e acredita que os direitos humanos universais estão acima das fronteiras ou tradições nacionais. Acredita em reformas planejadas e baseadas em evidências para alcançar a justiça social, buscando implementar seus ideais de liberdade e igualdade de forma prática.",
+    "axis_tendencies": {
+      "economic": "Defende um Estado ativo na redistribuição de renda e na garantia de serviços públicos para reduzir desigualdades.",
+      "social": "Fortemente a favor da autonomia individual, da diversidade de estilos de vida e contra qualquer controle estatal sobre costumes.",
+      "community": "Claramente cosmopolita; valoriza a diversidade cultural, a imigração e os direitos humanos universais acima das fronteiras.",
+      "method": "Confia em reformas planejadas e baseadas em evidências para expandir a justiça social, respeitando as liberdades.",
+      "pragmatism": "Idealista nos objetivos de igualdade e liberdade, mas busca caminhos práticos e responsáveis para implementá-los."
+    },
+    "authors_classic": [
+      "John Stuart Mill",
+      "John Rawls",
+      "Karl Popper",
+      "Amartya Sen",
+      "Noam Chomsky",
+      "Pierre-Joseph Proudhon",
+      "Mikhail Bakunin",
+      "Emma Goldman",
+      "Karl Marx (em aspectos libertários)"
+    ],
+    "figures_modern_international": [
+      "Thomas Piketty (Economista)",
+      "Judith Butler (Filósofa)",
+      "Joseph Stiglitz (Economista)",
+      "Martha Nussbaum (Filósofa)",
+      "Esther Duflo (Economista)",
+      "Noam Chomsky (Linguista e ativista)",
+      "Naomi Klein (Jornalista)",
+      "Slavoj Žižek (Filósofo, em crítica global)",
+      "David Graeber (Antropólogo)",
+      "Yanisa Varoufakis (Economista)"
+    ],
+    "figures_modern_national": [
+      "Silvio Almeida (Filósofo e Jurista)",
+      "Djamila Ribeiro (Filósofa)",
+      "Laura Carvalho (Economista)",
+      "Debora Diniz (Antropóloga)",
+      "Celso Rocha de Barros (Sociólogo e colunista)",
+      "Marilena Chaui (Filósofa)",
+      "Vladimir Safatle (Filósofo)",
+      "Jessé Souza (Sociólogo)",
+      "Renato Janine Ribeiro (Filósofo)",
+      "Sabrina Fernandes (Socióloga)"
+    ],
+    "examples_practical": [
+      "Defender impostos progressivos sobre grandes fortunas e heranças para financiar saúde e educação universais.",
+      "Apoiar a legalização do aborto e das drogas leves, tratando ambos como temas de saúde pública e autonomia individual.",
+      "Defender políticas de cotas raciais e sociais como uma ferramenta baseada em evidências para acelerar a igualdade de oportunidades.",
+      "Criticar leis de segurança que aumentam o poder de vigilância do Estado, vendo-as como uma ameaça às liberdades civis.",
+      "Defender o acolhimento de refugiados e a regularização de imigrantes, vendo a diversidade cultural como positiva.",
+      "Apoiar acordos climáticos internacionais (como o Acordo de Paris) mesmo que exijam custos para a indústria nacional.",
+      "Apoiar renda básica universal financiada por impostos sobre grandes fortunas.",
+      "Defender descriminalização de todas as drogas, tratando uso como questão de saúde.",
+      "Ser a favor de políticas de cotas e ações afirmativas em universidades públicas.",
+      "Propor acolhimento humanitário a refugiados com integração cultural e econômica.",
+      "Aceitar parcerias globais para combate à pobreza e mudanças climáticas.",
+      "Criticar censura em redes sociais, defendendo moderação comunitária descentralizada."
+    ]
+  },
+  "liberal_classico_mercado": {
+    "label": "Liberal Clássico de Mercado",
+    "description_short": "Defende a liberdade individual e a economia de mercado como os melhores caminhos para a prosperidade. Acredita em instituições fortes, como o Estado de Direito, e em reformas graduais baseadas em evidências, priorizando o pragmatismo sobre grandes ideologias.",
+    "description_long": "Este perfil vê na livre iniciativa e na economia de mercado os principais motores da prosperidade. Defende um Estado focado em garantir o Estado de Direito, a propriedade privada e a concorrência, atuando como um regulador leve e eficiente, não como um interventor pesado. Em relação a leis e costumes, valoriza fortemente as liberdades civis, a liberdade de expressão e a autonomia individual, opondo-se a controles autoritários ou moralistas do Estado sobre o comportamento. Na esfera da comunidade, tende a ser moderadamente cosmopolita, apoiando a abertura comercial, a integração global e a cooperação internacional como fontes de oportunidade. Acredita que as mudanças sociais devem ser graduais, baseadas em evidências e no fortalecimento das instituições, rejeitando 'engenharia social' ou rupturas radicais. Na política, é fortemente pragmático, preferindo soluções negociadas, sustentáveis e testáveis a grandes projetos ideológicos ou utópicos.",
+    "axis_tendencies": {
+      "economic": "Defende a livre iniciativa e a concorrência, com um Estado atuando como regulador leve e garantidor de contratos.",
+      "social": "Prioriza as liberdades civis, o Estado de Direito e a autonomia individual contra o autoritarismo ou controle moral.",
+      "community": "Tende a ser aberto ao mundo, valorizando o comércio internacional, a cooperação global e a livre circulação de ideias.",
+      "method": "Prefere reformas graduais e baseadas em evidências, fortalecendo instituições em vez de promover rupturas.",
+      "pragmatism": "Fortemente realista, foca em soluções práticas, negociadas e sustentáveis, rejeitando utopias."
+    },
+    "authors_classic": [
+      "Adam Smith",
+      "John Locke",
+      "John Stuart Mill",
+      "Friedrich Hayek",
+      "Alexis de Tocqueville",
+      "Montesquieu",
+      "David Hume",
+      "James Madison"
+    ],
+    "figures_modern_international": [
+      "The Economist (A revista, como linha editorial)",
+      "Steven Pinker (Psicólogo cognitivo e autor)",
+      "Thomas Sowell (Economista e filósofo social)",
+      "Mario Vargas Llosa (Escritor e ensaísta)",
+      "Deirdre McCloskey (Economista e historiadora)",
+      "Anne Applebaum (Historiadora e jornalista)",
+      "Milton Friedman (Economista)",
+      "Deirdre McCloskey (Economista)",
+      "Tyler Cowen (Economista)",
+      "Virginia Postrel (Escritora)",
+      "Jonathan Rauch (Jornalista)"
+    ],
+    "figures_modern_national": [
+      "Roberto Campos (Economista)",
+      "Gustavo Franco (Economista)",
+      "Marcos Lisboa (Economista)",
+      "Samuel Pessôa (Economista)",
+      "Elena Landau (Economista)",
+      "Eugênio Gudin (Economista)"
+    ],
+    "examples_practical": [
+      "Defender a privatização de empresas estatais, mas mantendo agências reguladoras fortes e independentes para monitorar o setor.",
+      "Ser a favor de acordos de livre comércio e contra barreiras protecionistas à indústria nacional.",
+      "Defender radicalmente a liberdade de expressão, mesmo para opiniões consideradas 'erradas' ou impopulares.",
+      "Apoiar uma reforma tributária que simplifique impostos e reduza a carga sobre empresas, acreditando que isso gera mais empregos.",
+      "Opor-se a leis que proíbam comportamentos privados entre adultos consensuais (ex: jogos de azar, consumo de certas substâncias).",
+      "Criticar propostas de 'soluções mágicas' ou planos econômicos grandiosos, preferindo ajustes graduais na política fiscal.",
+      "Apoiar a redução de barreiras ao comércio internacional para aumentar opções ao consumidor.",
+      "Defender a liberdade de expressão absoluta, inclusive em redes sociais, com regras contra monopólios.",
+      "Ser a favor de vistos de trabalho facilitados para atrair talentos estrangeiros.",
+      "Propor privatizações com leilões transparentes e regulação para evitar abusos.",
+      "Aceitar coalizão para aprovar uma reforma que simplifique o sistema tributário.",
+      "Criticar subsídios setoriais, preferindo incentivos neutros à inovação geral."
+    ]
+  }
+}
