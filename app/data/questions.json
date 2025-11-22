@@ -125,7 +125,7 @@
     {
       "id": "CM8",
       "text": "Em certas questões globais, pode ser desejável que os países aceitem limitar parte de sua autonomia em acordos internacionais estáveis.",
-      "axes": [{ "name": "community", "direction": -1, " weight": 1.0 }]
+      "axes": [{ "name": "community", "direction": -1, "weight": 1.0 }]
     }
   ],
 

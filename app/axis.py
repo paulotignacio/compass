@@ -193,11 +193,14 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
 # ---------------------------------------------------------
 # Normalização: converte pontuação bruta (ex: -16..+16) para -10..+10
 # ---------------------------------------------------------
-def normalize_axes(axes_scores: Mapping[str, float], max_abs: float = 12.0) -> Dict[str, float]:
+def normalize_axes(axes_scores: Mapping[str, float], max_abs: float = 16.0) -> Dict[str, float]:
     """
-    Normaliza os eixos para a faixa aproximada -10..10,
-    assumindo que o valor absoluto máximo é max_abs (8 perguntas * 2 pontos = 16 ideal,
-    mas deixamos 12 como valor seguro e suavizador).
+    Normaliza as pontuações brutas dos eixos para a escala -10..10.
+    O valor máximo absoluto considerado é max_abs = 16,
+    correspondente a 8 perguntas * 2 pontos (Likert de -2 a +2).
+    
+    Nota: valores acima ou abaixo desse limite são automaticamente
+    'clamped' para evitar distorções na classificação.
     """
     norm: Dict[str, float] = {}
     for axis, val in axes_scores.items():
@@ -205,7 +208,13 @@ def normalize_axes(axes_scores: Mapping[str, float], max_abs: float = 12.0) -> D
             v = float(val)
         except (TypeError, ValueError):
             continue
+
+        # Proteção contra overflow: garante que o eixo fica entre -max_abs e +max_abs
+        v = max(-max_abs, min(max_abs, v))
+
+        # Normaliza para -10..10
         norm[axis] = (v / max_abs) * 10.0
+
     return norm
 
 # ---------------------------------------------------------
