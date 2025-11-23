@@ -7,6 +7,7 @@
 
   <!-- Tailwind CDN (ótimo para MVP local) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/css/style.css" />
 
   <!-- Chart.js para o gráfico de eixos -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -87,11 +88,11 @@
 
         <!-- legenda da escala -->
         <div class="mt-4 mb-2 text-xs text-slate-400 flex flex-wrap gap-3">
-          <span>Discordo totalmente (-2)</span>
+          <span>Discordo Muito (-2)</span>
           <span>Discordo (-1)</span>
           <span>Neutro / Não sei (0)</span>
           <span>Concordo (+1)</span>
-          <span>Concordo totalmente (+2)</span>
+          <span>Concordo Muito (+2)</span>
         </div>
 
         <!-- navegação -->
@@ -126,6 +127,28 @@
             <h3 id="result-label" class="text-2xl md:text-3xl font-semibold mt-1"></h3>
             <p id="result-tagline" class="text-base md:text-lg text-indigo-200 mt-1"></p>
           </div>
+        </div>
+
+        <div
+          id="result-key-block"
+          class="hidden bg-slate-950/60 border border-slate-800 rounded-xl p-3 md:p-4 space-y-2 mb-4"
+        >
+          <p class="text-xs font-mono uppercase tracking-wide text-slate-400">
+            Sua chave de resultado (guarde para ver novamente)
+          </p>
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+            <code
+              id="result-key-value"
+              class="px-3 py-2 rounded-lg bg-slate-900 text-indigo-100 font-semibold text-sm sm:text-base tracking-wide"
+            >---</code>
+            <button
+              id="copy-result-key-btn"
+              class="px-3 py-2 rounded-lg border border-slate-700 text-sm text-slate-200 hover:bg-slate-800 transition-colors"
+            >
+              Copiar
+            </button>
+          </div>
+          <p id="result-key-message" class="text-xs text-emerald-300 hidden"></p>
         </div>
 
         <div class="grid gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">

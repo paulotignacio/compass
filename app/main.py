@@ -1,15 +1,25 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from pathlib import Path
 from pydantic import BaseModel
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 from .logic import load_questions, load_profiles, compute_axes
 from .axis import classify_profile
+from .db import (
+    init_db,
+    save_result_record,
+    fetch_result_record,
+    get_stats_summary,
+)
 
 app = FastAPI(title="Compass MVP")
+APP_VERSION = "1.0.0"
+
+# garante que a tabela exista ao subir a aplicação
+init_db()
 
 # CORS liberado para uso local (se acessar via file:// ou outras portas)
 app.add_middleware(
@@ -26,6 +36,24 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 class AnswersPayload(BaseModel):
     answers: Dict[str, int]
+
+class SaveResultPayload(BaseModel):
+    answers: Dict[str, int]
+    scores: Dict[str, float]
+    profile_key: str
+    profile_label: str
+    locale: Optional[str] = None
+    device: Optional[str] = None
+
+class SaveResultResponse(BaseModel):
+    result_id: str
+
+class ResultResponse(BaseModel):
+    result_id: str
+    axes: Dict[str, float]
+    profile: Dict[str, Any]
+    answers: Optional[Dict[str, int]] = None
+    metadata: Optional[Dict[str, Any]] = None
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -111,3 +139,68 @@ def submit_answers(payload: AnswersPayload) -> Any:
         "axes": axes_scores,
         "profile": profile,
     }
+
+
+@app.post("/api/save_result", response_model=SaveResultResponse)
+def save_result(payload: SaveResultPayload) -> Any:
+    """
+    Persiste o resultado de forma anônima e retorna a chave de recuperação.
+    """
+    # perfil pode mudar de versão, mas guardamos o rótulo enviado
+    profile_label = payload.profile_label
+    profiles = load_profiles()
+    if not profile_label and payload.profile_key in profiles:
+        profile_label = profiles[payload.profile_key].get("label", payload.profile_key)
+
+    result_id = save_result_record(
+        answers=payload.answers or {},
+        scores=payload.scores or {},
+        version=APP_VERSION,
+        profile_key=payload.profile_key,
+        profile_label=profile_label or payload.profile_key,
+        user_locale=payload.locale,
+        device_type=payload.device,
+    )
+
+    return {"result_id": result_id}
+
+
+@app.get("/api/result/{result_id}", response_model=ResultResponse)
+def get_result(result_id: str) -> Any:
+    """
+    Recupera um resultado salvo a partir da chave pública.
+    """
+    record = fetch_result_record(result_id)
+    if not record:
+        raise HTTPException(status_code=404, detail="Resultado não encontrado.")
+
+    profiles = load_profiles()
+    profile = profiles.get(record["profile_key"], {})
+    profile_with_meta = {
+        **profile,
+        "key": record["profile_key"],
+        "label": record["profile_label"] or profile.get("label") or record["profile_key"],
+    }
+
+    metadata = {
+        "timestamp": record["timestamp"],
+        "version": record["version"],
+        "user_locale": record["user_locale"],
+        "device_type": record["device_type"],
+    }
+
+    return {
+        "result_id": record["id"],
+        "axes": record["scores"],
+        "profile": profile_with_meta,
+        "answers": record["answers"],
+        "metadata": metadata,
+    }
+
+
+@app.get("/api/stats")
+def get_stats() -> Any:
+    """
+    Estatísticas agregadas simples para acompanhamento.
+    """
+    return get_stats_summary()

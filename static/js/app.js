@@ -7,6 +7,7 @@ let answers = {}; // { questionId: value }
 let chartInstance = null;
 let radarChartInstance = null;
 let latestResult = null; // guarda último resultado para abrir a página de detalhes
+let latestResultId = null; // chave do resultado salvo
 
 // mapa para nomes bonitos dos eixos
 const AXIS_LABELS = {
@@ -31,6 +32,132 @@ const AXIS_DESCRIPTIONS = {
 };
 
 const axisOrder = ["economic", "social", "community", "method", "pragmatism"];
+const LIKERT_OPTIONS = [
+  { value: -2, label: "Discordo Muito" },
+  { value: -1, label: "Discordo" },
+  { value: 0, label: "Neutro" },
+  { value: 1, label: "Concordo" },
+  { value: 2, label: "Concordo Muito" },
+];
+const RESULT_ID_REGEX = /^IDEO-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
+
+function detectDeviceType() {
+  const ua = typeof navigator !== "undefined" ? navigator.userAgent || "" : "";
+  const isTouch = typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches;
+  if (/Mobi|Android/i.test(ua) || isTouch) return "mobile";
+  return "desktop";
+}
+
+function normalizeResultId(value) {
+  if (!value) return "";
+  return value.trim().toUpperCase();
+}
+
+function setInlineMessage(elementId, text, { error = false } = {}) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  if (!text) {
+    el.textContent = "";
+    el.classList.add("hidden");
+    return;
+  }
+  el.textContent = text;
+  el.classList.remove("hidden");
+  el.classList.toggle("text-red-300", error);
+  el.classList.toggle("text-emerald-300", !error);
+}
+
+function updateResultKeyDisplay(resultId) {
+  const block = document.getElementById("result-key-block");
+  const valueEl = document.getElementById("result-key-value");
+  const copyBtn = document.getElementById("copy-result-key-btn");
+  if (!block || !valueEl) return;
+
+  if (resultId) {
+    valueEl.textContent = resultId;
+    block.classList.remove("hidden");
+    copyBtn?.removeAttribute("disabled");
+  } else {
+    valueEl.textContent = "Chave ainda não gerada";
+    copyBtn?.setAttribute("disabled", "true");
+    block.classList.remove("hidden");
+  }
+}
+
+async function copyResultKeyToClipboard() {
+  if (!latestResultId) return;
+  try {
+    await navigator.clipboard.writeText(latestResultId);
+    setInlineMessage("result-key-message", "Chave copiada para a área de transferência.");
+  } catch (err) {
+    console.error(err);
+    setInlineMessage(
+      "result-key-message",
+      "Não foi possível copiar automaticamente. Selecione e copie manualmente.",
+      { error: true }
+    );
+  }
+}
+
+function createLikertControl(questionId, axis, currentValue, onChange) {
+  const container = document.createElement("div");
+  container.className = "likert-scale";
+  container.setAttribute("role", "radiogroup");
+  container.setAttribute(
+    "aria-label",
+    "Selecione o quanto você concorda ou discorda desta afirmação"
+  );
+
+  const optionNodes = [];
+
+  const optionsRow = document.createElement("div");
+  optionsRow.className = "likert-scale__options";
+
+  const syncSelection = (newValue) => {
+    optionNodes.forEach(({ label, input, value }) => {
+      const active = value === newValue;
+      label.dataset.selected = active ? "true" : "false";
+      input.checked = active;
+    });
+  };
+
+  LIKERT_OPTIONS.forEach((opt) => {
+    const optionId = `likert-${questionId}-${opt.value}`;
+    const optionLabel = document.createElement("label");
+    optionLabel.className = "likert-scale__option";
+    optionLabel.dataset.value = opt.value;
+    optionLabel.dataset.selected = currentValue === opt.value ? "true" : "false";
+    optionLabel.setAttribute("for", optionId);
+
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = `likert-${questionId}`;
+    input.id = optionId;
+    input.value = opt.value;
+    input.checked = currentValue === opt.value;
+    input.setAttribute("aria-label", opt.label);
+
+    input.addEventListener("change", () => {
+      onChange(opt.value);
+      syncSelection(opt.value);
+    });
+
+    const textLabel = document.createElement("span");
+    textLabel.className = "likert-scale__label-text";
+    textLabel.textContent = opt.label;
+
+    optionLabel.appendChild(input);
+    optionLabel.appendChild(textLabel);
+    optionsRow.appendChild(optionLabel);
+
+    optionNodes.push({ label: optionLabel, input, value: opt.value });
+  });
+
+  syncSelection(currentValue ?? null);
+
+  container.appendChild(optionsRow);
+  return container;
+}
 
 function getAxisNumber(val) {
   const num = Number(val);
@@ -185,6 +312,38 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("restart-btn")?.addEventListener("click", () => {
     resetQuiz();
   });
+
+  document.getElementById("retrieve-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    handleRetrieveSubmit();
+  });
+
+  document
+    .getElementById("copy-result-key-btn")
+    ?.addEventListener("click", (event) => {
+      event.preventDefault();
+      copyResultKeyToClipboard();
+    });
+
+  // Se veio da landing com uma chave, tenta recuperar automaticamente
+  const pendingKey = sessionStorage.getItem("ideo-pending-key");
+  if (pendingKey) {
+    sessionStorage.removeItem("ideo-pending-key");
+    loadResultById(pendingKey)
+      .then((data) => {
+        answers = data.answers || {};
+        handleResult(data);
+        setInlineMessage("result-key-message", "Resultado recuperado pela sua chave IDEO.");
+      })
+      .catch((err) => {
+        console.error(err);
+        const quizMsg = document.getElementById("quiz-message");
+        if (quizMsg) {
+          quizMsg.textContent = "Não foi possível recuperar o resultado com essa chave.";
+          quizMsg.classList.remove("hidden");
+        }
+      });
+  }
 });
 
 async function fetchQuestions() {
@@ -303,55 +462,20 @@ function renderPage() {
     title.textContent = q.text || q.question || "(pergunta sem texto)";
     wrapper.appendChild(title);
 
-    const scaleRow = document.createElement("div");
-    scaleRow.className =
-      "flex flex-wrap items-center justify-between gap-2 text-xs md:text-sm";
-
-    const options = [
-      { label: "Discordo totalmente", value: -2 },
-      { label: "Discordo", value: -1 },
-      { label: "Neutro / Não sei", value: 0 },
-      { label: "Concordo", value: 1 },
-      { label: "Concordo totalmente", value: 2 },
-    ];
-
-    options.forEach((opt) => {
-      const optId = `q_${qId}_${opt.value}`;
-      const label = document.createElement("label");
-      label.className =
-        "flex flex-col items-center gap-1 cursor-pointer text-slate-300";
-
-      const input = document.createElement("input");
-      input.type = "radio";
-      input.name = `q_${qId}`;
-      input.value = String(opt.value);
-      input.id = optId;
-      input.className = "accent-indigo-500";
-      if (currentValue === opt.value) {
-        input.checked = true;
-      }
-
-      input.addEventListener("change", () => {
-        answers[qId] = parseInt(input.value, 10);
-      });
-
-      const spanLabel = document.createElement("span");
-      spanLabel.textContent = opt.label;
-      spanLabel.className = "text-center";
-
-      label.appendChild(input);
-      label.appendChild(spanLabel);
-
-      scaleRow.appendChild(label);
+    const likertControl = createLikertControl(qId, q.axis || page.axis, currentValue, (newValue) => {
+      answers[qId] = newValue;
     });
 
-    wrapper.appendChild(scaleRow);
+    wrapper.appendChild(likertControl);
     container.appendChild(wrapper);
   });
 }
 
 async function submitAnswers() {
   const quizMsg = document.getElementById("quiz-message");
+  if (quizMsg) {
+    quizMsg.classList.add("hidden");
+  }
 
   try {
     // se não respondeu nada, ainda assim enviamos — backend já trata como "inconclusivo"
@@ -370,8 +494,28 @@ async function submitAnswers() {
     }
 
     const data = await res.json();
-    handleResult(data);
-    quizMsg.classList.add("hidden");
+
+    let resultId = null;
+    try {
+      resultId = await saveResultToServer({
+        answers,
+        axes: data.axes,
+        profile: data.profile,
+      });
+      setInlineMessage(
+        "result-key-message",
+        "Chave gerada com sucesso. Guarde para recuperar o resultado depois."
+      );
+    } catch (err) {
+      console.error(err);
+      setInlineMessage(
+        "result-key-message",
+        "Não foi possível gerar a chave agora. Seu resultado continua visível nesta sessão.",
+        { error: true }
+      );
+    }
+
+    handleResult({ ...data, result_id: resultId, answers });
   } catch (err) {
     console.error(err);
     quizMsg.textContent =
@@ -380,13 +524,98 @@ async function submitAnswers() {
   }
 }
 
+async function saveResultToServer({ answers, axes, profile }) {
+  const payload = {
+    answers,
+    scores: axes || {},
+    profile_key: profile?.key || "",
+    profile_label: profile?.label || "",
+    locale: navigator.language || "pt-BR",
+    device: detectDeviceType(),
+  };
+
+  const res = await fetch("/api/save_result", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    throw new Error("Erro ao salvar resultado.");
+  }
+
+  const data = await res.json();
+  return data.result_id;
+}
+
+async function handleRetrieveSubmit() {
+  const input = document.getElementById("retrieve-input");
+  if (!input) return;
+  const rawValue = normalizeResultId(input.value);
+
+  if (!rawValue) {
+    setInlineMessage("retrieve-message", "Digite uma chave IDEO para recuperar o resultado.", {
+      error: true,
+    });
+    return;
+  }
+
+  if (!RESULT_ID_REGEX.test(rawValue)) {
+    setInlineMessage(
+      "retrieve-message",
+      "Formato inválido. Use IDEO-XXXX-YYYY (letras e números).",
+      { error: true }
+    );
+    return;
+  }
+
+  setInlineMessage("retrieve-message", "Buscando resultado...");
+  try {
+    const data = await loadResultById(rawValue);
+    answers = data.answers || {};
+    handleResult(data);
+    setInlineMessage("retrieve-message", "Resultado carregado com sucesso.");
+  } catch (err) {
+    console.error(err);
+    setInlineMessage(
+      "retrieve-message",
+      "Chave não encontrada. Confira e tente novamente.",
+      { error: true }
+    );
+  }
+}
+
+async function loadResultById(resultId) {
+  const res = await fetch(`/api/result/${encodeURIComponent(resultId)}`);
+  if (!res.ok) {
+    throw new Error("Resultado não encontrado.");
+  }
+  return res.json();
+}
+
 function handleResult(data) {
   const axes = data.axes || {};
   const profile = data.profile || {};
+  const resultId = data.result_id || data.id || null;
 
   // salva para uso na página de detalhes
-  latestResult = { axes, profile };
+  latestResult = { axes, profile, answers: data.answers || answers };
+  latestResultId = resultId;
+  updateResultKeyDisplay(resultId);
+  if (resultId) {
+    setInlineMessage(
+      "result-key-message",
+      "Guarde esta chave para consultar seu resultado depois."
+    );
+  }
   hideDetailsPage();
+
+  // sincroniza respostas atuais caso tenha vindo de uma recuperação
+  if (data.answers) {
+    answers = data.answers;
+  }
 
   // exibir resultado simples
   const simpleSection = document.getElementById("simple-result-section");
@@ -763,6 +992,7 @@ function hideDetailsPage() {
 function resetQuiz() {
   answers = {};
   latestResult = null;
+  latestResultId = null;
   currentPageIndex = 0;
   hideDetailsPage();
   const simple = document.getElementById("simple-result-section");
@@ -785,6 +1015,10 @@ function resetQuiz() {
     radarChartInstance.destroy();
     radarChartInstance = null;
   }
+  updateResultKeyDisplay(null);
+  setInlineMessage("result-key-message", "");
+  const keyBlock = document.getElementById("result-key-block");
+  keyBlock?.classList.add("hidden");
   renderPage();
   scrollToQuizTop();
 }
