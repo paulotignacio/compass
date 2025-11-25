@@ -226,18 +226,6 @@ body {
   color-scheme: light dark;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --likert-surface: #f8fafc;
-    --likert-surface-strong: #e5e7eb;
-    --likert-border: #cbd5e1;
-    --likert-border-strong: #94a3b8;
-    --likert-text: #0f172a;
-    --likert-muted: #475569;
-    --likert-accent: #6366f1;
-  }
-}
-
 .likert-scale {
   display: flex;
   flex-direction: column;
