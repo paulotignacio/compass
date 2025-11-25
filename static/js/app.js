@@ -18,6 +18,15 @@ const AXIS_LABELS = {
   pragmatism: "Pragmatismo vs Idealismo",
 };
 
+// rótulos em múltiplas linhas para caber no radar em telas pequenas
+const RADAR_POINT_LABELS = {
+  economic: ["Economia"],
+  social: ["Costumes", "vs Liberdades"],
+  community: ["Comunidade", "vs Identidade"],
+  method: ["Método de", "mudança"],
+  pragmatism: ["Pragmatismo", "vs Idealismo"],
+};
+
 const AXIS_DESCRIPTIONS = {
   economic:
     "Este eixo avalia como você entende o papel do Estado e do mercado na organização econômica: impostos, regulação, serviços públicos e liberdade empresarial.",
@@ -779,12 +788,16 @@ function renderRadarChart(axes) {
 
   fallback?.classList.add("hidden");
 
-  const labels = axisOrder.map((axis) => AXIS_LABELS[axis] || axis);
+  const labels = axisOrder.map(
+    (axis) => RADAR_POINT_LABELS[axis] || AXIS_LABELS[axis] || axis
+  );
   const values = axisOrder.map((axis) => getAxisNumber(axes[axis]) ?? 0);
 
   const maxAbs = Math.max(...values.map((val) => Math.abs(val)), 10);
   const suggestedMax = Math.ceil((maxAbs + 2) / 5) * 5;
   const tickStep = Math.max(Math.round(suggestedMax / 4), 5);
+  const tooltipLabelForIndex = (index) =>
+    AXIS_LABELS[axisOrder[index]] || axisOrder[index];
 
   const ctx = canvas.getContext("2d");
   radarChartInstance = new Chart(ctx, {
@@ -823,6 +836,7 @@ function renderRadarChart(axes) {
           pointLabels: {
             color: "#e2e8f0",
             font: { size: 11 },
+            callback: (_, index) => labels[index],
           },
           ticks: {
             display: true,
@@ -838,7 +852,8 @@ function renderRadarChart(axes) {
         },
         tooltip: {
           callbacks: {
-            label: (ctx) => `${ctx.label}: ${ctx.formattedValue}`,
+            label: (ctx) =>
+              `${tooltipLabelForIndex(ctx.dataIndex)}: ${ctx.formattedValue}`,
           },
         },
       },
