@@ -327,10 +327,10 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-    font-size: 0.75rem;
-    color: var(--likert-muted);
-    opacity: 0.8;
-    padding: 0 0.1rem;
+    font-size: 0.82rem;
+    color: var(--likert-text);
+    opacity: 0.85;
+    padding: 0 0.2rem 0.1rem;
   }
 
   .likert-scale__legend-item {
@@ -347,20 +347,29 @@ body {
   }
 
   .likert-scale__options {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     align-items: center;
-    gap: 0.65rem;
-    max-width: 360px;
-    margin: 0.1rem auto 0;
+    gap: 0.55rem;
+    width: 100%;
+    padding: 0 0.2rem;
   }
 
   .likert-option {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     padding: 0;
     border-radius: 9999px;
     flex: 0 0 auto;
+    justify-self: center;
+  }
+
+  .likert-option:first-child {
+    justify-self: start;
+  }
+
+  .likert-option:last-child {
+    justify-self: end;
   }
 
   .likert-option .likert-scale__label-text,
