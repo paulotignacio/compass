@@ -6,6 +6,8 @@ from pathlib import Path
 from pydantic import BaseModel
 from typing import Dict, Any, Optional
 
+from app.db import get_connection
+
 from .logic import load_questions, load_profiles, compute_axes
 from .axis import classify_profile
 from .db import (
@@ -199,8 +201,49 @@ def get_result(result_id: str) -> Any:
 
 
 @app.get("/api/stats")
-def get_stats() -> Any:
-    """
-    Estatísticas agregadas simples para acompanhamento.
-    """
-    return get_stats_summary()
+def get_stats():
+    conn = get_connection()
+    cur = conn.cursor()
+
+    # total de testes registrados
+    cur.execute("SELECT COUNT(*) FROM results")
+    total = cur.fetchone()[0]
+
+    # distribuição de perfis
+    cur.execute("""
+        SELECT profile_key, COUNT(*) 
+        FROM results 
+        GROUP BY profile_key 
+        ORDER BY COUNT(*) DESC
+    """)
+    profiles = [
+        {"profile": row[0], "count": row[1]}
+        for row in cur.fetchall()
+    ]
+
+    # média dos eixos
+    cur.execute("""
+        SELECT 
+            AVG(CAST(json_extract(scores, '$.economic') AS FLOAT)),
+            AVG(CAST(json_extract(scores, '$.social') AS FLOAT)),
+            AVG(CAST(json_extract(scores, '$.community') AS FLOAT)),
+            AVG(CAST(json_extract(scores, '$.method') AS FLOAT)),
+            AVG(CAST(json_extract(scores, '$.pragmatism') AS FLOAT))
+        FROM results
+    """)
+    avg_scores_row = cur.fetchone()
+    avg_scores = {
+        "economic": avg_scores_row[0],
+        "social": avg_scores_row[1],
+        "community": avg_scores_row[2],
+        "method": avg_scores_row[3],
+        "pragmatism": avg_scores_row[4],
+    }
+
+    conn.close()
+
+    return {
+        "total_results": total,
+        "profile_distribution": profiles,
+        "average_scores": avg_scores
+    }

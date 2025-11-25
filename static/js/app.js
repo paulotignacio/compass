@@ -117,6 +117,7 @@ function createLikertControl(questionId, axis, currentValue, onChange) {
     optionNodes.forEach(({ label, input, value }) => {
       const active = value === newValue;
       label.dataset.selected = active ? "true" : "false";
+      label.classList.toggle("selected", active);
       input.checked = active;
     });
   };
@@ -124,9 +125,10 @@ function createLikertControl(questionId, axis, currentValue, onChange) {
   LIKERT_OPTIONS.forEach((opt) => {
     const optionId = `likert-${questionId}-${opt.value}`;
     const optionLabel = document.createElement("label");
-    optionLabel.className = "likert-scale__option";
+    optionLabel.className = "likert-option";
     optionLabel.dataset.value = opt.value;
     optionLabel.dataset.selected = currentValue === opt.value ? "true" : "false";
+    optionLabel.classList.toggle("selected", currentValue === opt.value);
     optionLabel.setAttribute("for", optionId);
 
     const input = document.createElement("input");
@@ -143,7 +145,7 @@ function createLikertControl(questionId, axis, currentValue, onChange) {
     });
 
     const textLabel = document.createElement("span");
-    textLabel.className = "likert-scale__label-text";
+    textLabel.className = "likert-scale__label-text likert-option__text";
     textLabel.textContent = opt.label;
 
     optionLabel.appendChild(input);
