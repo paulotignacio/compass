@@ -218,7 +218,7 @@ body {
 :root {
   --likert-surface: rgba(15, 23, 42, 0.65);
   --likert-surface-strong: rgba(15, 23, 42, 0.85);
-  --likert-border: #1f2937;
+  --likert-border: #94a3b8;
   --likert-border-strong: #334155;
   --likert-text: #e2e8f0;
   --likert-muted: #94a3b8;
@@ -258,7 +258,7 @@ body {
   width: 100%;
   padding: 0.9rem 1.05rem;
   border-radius: 9999px;
-  border: 1px solid var(--likert-border);
+  border: 2px solid var(--likert-border);
   background: var(--likert-surface);
   color: var(--likert-text);
   cursor: pointer;
@@ -344,8 +344,8 @@ body {
   }
 
   .likert-option {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     padding: 0;
     border-radius: 9999px;
     flex: 0 0 auto;
