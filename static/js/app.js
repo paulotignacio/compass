@@ -119,6 +119,19 @@ function createLikertControl(questionId, axis, currentValue, onChange) {
 
   const optionNodes = [];
 
+  const legend = document.createElement("div");
+  legend.className = "likert-scale__legend";
+  const legendLeft = document.createElement("span");
+  legendLeft.className = "likert-scale__legend-item legend-left";
+  legendLeft.textContent = "Discordo muito";
+  const legendCenter = document.createElement("span");
+  legendCenter.className = "likert-scale__legend-item legend-center";
+  legendCenter.textContent = "Neutro";
+  const legendRight = document.createElement("span");
+  legendRight.className = "likert-scale__legend-item legend-right";
+  legendRight.textContent = "Concordo muito";
+  legend.append(legendLeft, legendCenter, legendRight);
+
   const optionsRow = document.createElement("div");
   optionsRow.className = "likert-scale__options";
 
@@ -166,6 +179,7 @@ function createLikertControl(questionId, axis, currentValue, onChange) {
 
   syncSelection(currentValue ?? null);
 
+  container.appendChild(legend);
   container.appendChild(optionsRow);
   return container;
 }
