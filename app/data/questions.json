@@ -2,218 +2,225 @@
   "economic": [
     {
       "id": "EC1",
-      "text": "A ampliação do papel do governo na provisão de serviços públicos é uma forma adequada de responder a necessidades sociais.",
-      "axes": [{ "name": "economic", "direction": -1, "weight": 1.0 }]
+      "text": "Regulações mais detalhadas sobre empresas às vezes podem ser necessárias para garantir padrões mínimos de qualidade e segurança.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "EC2",
-      "text": "Regulações mais detalhadas sobre empresas podem ser necessárias para garantir padrões mínimos de qualidade e segurança.",
-      "axes": [{ "name": "economic", "direction": -1, "weight": 1.0 }]
+      "text": "É papel do governo atuar para reduzir desigualdades econômicas significativas.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "EC3",
-      "text": "Programas governamentais podem ser usados para reduzir desigualdades econômicas.",
-      "axes": [{ "name": "economic", "direction": -1, "weight": 1.0 }]
+      "text": "Menos regras econômicas podem estimular inovação e crescimento de forma mais eficiente que modelos fortemente regulados.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "EC4",
-      "text": "Reduções de impostos para empresas e indivíduos podem estimular a atividade econômica.",
-      "axes": [{ "name": "economic", "direction": 1, "weight": 1.0 }]
+      "text": "Quando o governo interfere menos no mercado, os preços e a competição tendem a funcionar melhor.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "EC5",
-      "text": "A gestão privada tende a operar serviços com maior eficiência do que estruturas públicas.",
-      "axes": [{ "name": "economic", "direction": 1, "weight": 1.0 }]
+      "text": "Incentivos de mercado costumam ser mais eficientes que programas públicos diretos para melhorar o bem-estar econômico.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "EC6",
-      "text": "Abertura comercial amplia oportunidades econômicas, mesmo que exija adaptação de setores locais.",
-      "axes": [{ "name": "economic", "direction": 1, "weight": 1.0 }]
+      "text": "Políticas estatais podem ser importantes para proteger grupos vulneráveis em períodos de crise econômica.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "EC7",
-      "text": "O governo deve manter empresas estatais estratégicas para influenciar diretamente o desenvolvimento econômico do país.",
-      "axes": [{ "name": "economic", "direction": -1, "weight": 1.0 }]
-    },
-    {
-      "id": "EC8",
-      "text": "Mesmo que existam desigualdades, permitir que o mercado funcione com pouca intervenção estatal tende a gerar melhores resultados no longo prazo.",
-      "axes": [{ "name": "economic", "direction": 1, "weight": 1.0 }]
+      "text": "A abertura comercial pode beneficiar o país desde que existam regras claras para evitar práticas desleais.",
+      "weight": 1,
+      "direction": 1
     }
-
   ],
 
   "social": [
     {
       "id": "SO1",
-      "text": "O Estado deve interferir o mínimo possível em comportamentos privados entre adultos.",
-      "axes": [{ "name": "social", "direction": -1, "weight": 1.0 }]
+      "text": "As pessoas devem ter ampla liberdade para conduzir sua vida pessoal desde que não prejudiquem terceiros.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "SO2",
-      "text": "A expressão de ideias deve ser amplamente permitida, inclusive quando gera desacordo social.",
-      "axes": [{ "name": "social", "direction": -1, "weight": 1.0 }]
+      "text": "A expressão de ideias deve ser amplamente permitida, mesmo quando gera desacordo na sociedade.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "SO3",
-      "text": "O governo pode limitar formas de expressão quando existirem indícios claros de riscos coletivos.",
-      "axes": [{ "name": "social", "direction": 1, "weight": 1.0 }]
+      "text": "O governo pode limitar formas de expressão quando houver indícios claros de risco para a coletividade.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "SO4",
-      "text": "Aumentar recursos e autoridade para as forças de segurança pode ser necessário para manter a ordem pública.",
-      "axes": [{ "name": "social", "direction": 1, "weight": 1.0 }]
+      "text": "Leis mais duras podem ser justificadas para proteger a segurança e a ordem pública.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "SO5",
-      "text": "O sistema de justiça deve priorizar mecanismos que reduzam reincidência de crimes.",
-      "axes": [{ "name": "social", "direction": -1, "weight": 1.0 }]
+      "text": "O Estado deve garantir igualdade de direitos independentemente de costumes, crenças ou identidades individuais.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "SO6",
-      "text": "Políticas mais restritivas podem ser usadas para controlar substâncias que gerem riscos sociais.",
-      "axes": [{ "name": "social", "direction": 1, "weight": 1.0 }]
+      "text": "A autoridade estatal pode ser necessária para lidar com comportamentos que ameacem a estabilidade social.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "SO7",
-      "text": "Em situações de crise, pode ser aceitável restringir temporariamente certas liberdades individuais para garantir segurança e estabilidade social.",
-      "axes": [{ "name": "social", "direction": 1, "weight": 1.0 }]
-    },
-    {
-      "id": "SO8",
-      "text": "Mesmo em cenários de crise, é importante preservar o máximo possível as liberdades civis e os direitos individuais.",
-      "axes": [{ "name": "social", "direction": -1, "weight": 1.0 }]
+      "text": "Decisões pessoais sobre família, estilo de vida ou relações afetivas devem ser respeitadas pelo Estado.",
+      "weight": 1,
+      "direction": -1
     }
   ],
 
   "community": [
     {
       "id": "CM1",
-      "text": "A convivência entre diferentes tradições culturais pode ampliar perspectivas individuais.",
-      "axes": [{ "name": "community", "direction": -1, "weight": 1.0 }]
+      "text": "Uma sociedade pode se beneficiar de maior abertura e cooperação com outros países.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "CM2",
-      "text": "Valores e obrigações comunitárias podem ter importância semelhante aos direitos individuais.",
-      "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
+      "text": "Valores e obrigações da comunidade podem ter importância semelhante aos direitos individuais.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "CM3",
-      "text": "Políticas de controle migratório mais rígidas podem ser justificadas em contextos de preservação cultural.",
-      "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
+      "text": "Políticas de controle migratório mais rígidas podem ser justificadas em alguns casos, em nome da preservação cultural.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "CM4",
-      "text": "Instituições internacionais podem desempenhar papel relevante em questões que ultrapassam fronteiras nacionais.",
-      "axes": [{ "name": "community", "direction": -1, "weight": 1.0 }]
+      "text": "Interações entre culturas diferentes tendem a enriquecer a sociedade.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "CM5",
-      "text": "Sentimentos de identificação nacional podem fortalecer vínculos sociais.",
-      "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
+      "text": "Um forte sentimento de pertencimento ao país pode fortalecer a coesão social.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "CM6",
-      "text": "É legítimo que o país priorize empresas e indústrias nacionais mesmo que isso reduza algumas vantagens da integração econômica internacional.",
-      "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
+      "text": "Em decisões importantes, a vontade nacional deve ter mais peso que recomendações de organismos internacionais.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "CM7",
-      "text": "Decisões importantes sobre o futuro do país devem depender mais da vontade nacional do que de recomendações de organismos internacionais.",
-      "axes": [{ "name": "community", "direction": 1, "weight": 1.0 }]
-    },
-    {
-      "id": "CM8",
-      "text": "Em certas questões globais, pode ser desejável que os países aceitem limitar parte de sua autonomia em acordos internacionais estáveis.",
-      "axes": [{ "name": "community", "direction": -1, "weight": 1.0 }]
+      "text": "A cooperação internacional pode ser essencial para enfrentar desafios que nenhum país resolve sozinho.",
+      "weight": 1,
+      "direction": -1
     }
   ],
 
   "method": [
     {
       "id": "ME1",
-      "text": "Projetos sociais podem ser conduzidos com base em orientações técnicas definidas por especialistas.",
-      "axes": [{ "name": "method", "direction": -1, "weight": 1.0 }]
+      "text": "Projetos sociais podem ser conduzidos com base em critérios técnicos definidos por especialistas.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "ME2",
-      "text": "Mudanças institucionais funcionam melhor quando começam em pequena escala e se expandem gradualmente.",
-      "axes": [{ "name": "method", "direction": 1, "weight": 1.0 }]
+      "text": "Mudanças planejadas de forma gradual podem funcionar melhor que grandes reformas de uma só vez.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "ME3",
-      "text": "Planejar transformações amplas pode ser adequado quando problemas exigem soluções rápidas.",
-      "axes": [{ "name": "method", "direction": -1, "weight": 1.0 }]
+      "text": "Decisões públicas devem considerar evidências e dados antes de fatores ideológicos.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "ME4",
-      "text": "Aperfeiçoamentos em serviços públicos devem levar em conta evidências práticas já observadas.",
-      "axes": [{ "name": "method", "direction": 1, "weight": 1.0 }]
+      "text": "Políticas públicas podem ser aprimoradas ao longo do tempo a partir de ajustes contínuos.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "ME5",
-      "text": "Limitações humanas tornam difícil prever os efeitos completos de reformas estruturais, o que reforça abordagens graduais.",
-      "axes": [{ "name": "method", "direction": 1, "weight": 1.0 }]
+      "text": "Limitações humanas tornam difícil prever todos os efeitos de reformas estruturais, o que reforça abordagens graduais.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "ME6",
-      "text": "Reformas sociais podem seguir princípios estruturados que não dependem integralmente de práticas anteriores.",
-      "axes": [{ "name": "method", "direction": -1, "weight": 1.0 }]
+      "text": "A implementação de políticas deve priorizar métodos comprovados ao invés de experimentações arriscadas.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "ME7",
-      "text": "Quando o país enfrenta desafios estruturais, planos nacionais de longo prazo coordenados pelo Estado podem ser mais eficazes do que ajustes pontuais.",
-      "axes": [ { "name": "method", "direction": -1, "weight": 1.0 }]
-    },
-    {
-      "id": "ME8",
-      "text": "Mesmo em grandes obras ou programas nacionais, é prudente testar soluções em menor escala antes de adotá-las em todo o país.",
-      "axes": [ { "name": "method", "direction": 1, "weight": 1.0 }]
+      "text": "Planos governamentais podem ser mais eficazes quando baseados em estudos técnicos detalhados.",
+      "weight": 1,
+      "direction": -1
     }
   ],
 
   "pragmatism": [
     {
       "id": "PR1",
-      "text": "Visões amplas de longo prazo podem orientar transformações sociais.",
-      "axes": [{ "name": "pragmatism", "direction": -1, "weight": 1.0 }]
+      "text": "Visões de longo prazo, mais amplas, podem orientar transformações sociais.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "PR2",
-      "text": "Resultados mensuráveis devem orientar decisões políticas.",
-      "axes": [{ "name": "pragmatism", "direction": 1, "weight": 1.0 }]
+      "text": "Resultados práticos podem ser mais importantes do que manter uma posição totalmente coerente com princípios abstratos.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "PR3",
       "text": "Avanços graduais e previsíveis podem ser preferíveis quando há incerteza sobre propostas mais ambiciosas.",
-      "axes": [{ "name": "pragmatism", "direction": 1, "weight": 1.0 }]
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "PR4",
-      "text": "Objetivos amplos podem servir como referência para orientar mudanças desejadas.",
-      "axes": [{ "name": "pragmatism", "direction": -1, "weight": 1.0 }]
+      "text": "Algumas metas sociais podem ser perseguidas mesmo quando sua eficácia imediata não está totalmente clara.",
+      "weight": 1,
+      "direction": -1
     },
     {
       "id": "PR5",
-      "text": "Algumas metas sociais devem ser perseguidas mesmo quando sua eficácia imediata não está totalmente clara.",
-      "axes": [{ "name": "pragmatism", "direction": -1, "weight": 1.0 }]
+      "text": "Concessões políticas podem ser necessárias para alcançar avanços possíveis no curto prazo.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "PR6",
-      "text": "Acordos práticos entre grupos diferentes podem oferecer soluções rápidas a problemas imediatos.",
-      "axes": [{ "name": "pragmatism", "direction": 1, "weight": 1.0 }]
+      "text": "A busca por resultados concretos pode exigir adaptações contínuas nas estratégias.",
+      "weight": 1,
+      "direction": 1
     },
     {
       "id": "PR7",
-      "text": "Se uma política gera resultados positivos comprovados, deve ser adotada mesmo que contrarie valores tradicionais de parte da sociedade.",
-      "axes": [ { "name": "pragmatism", "direction": 1, "weight": 1.0 }]
-    },
-    {
-      "id": "PR8",
-      "text": "Alguns princípios são tão fundamentais que não devem ser comprometidos, mesmo que isso dificulte soluções práticas para problemas imediatos.",
-      "axes": [{ "name": "pragmatism", "direction": -1, "weight": 1.0 }]
+      "text": "Mesmo diante de dificuldades, algumas ideias de longo prazo merecem ser defendidas pela sua importância simbólica ou moral.",
+      "weight": 1,
+      "direction": -1
     }
-
   ]
 }
-

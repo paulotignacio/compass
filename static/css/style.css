@@ -214,6 +214,11 @@ body {
   }
 }
 
+#axis-header:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 4px;
+}
+
 /* Likert textual */
 :root {
   --likert-surface: rgba(15, 23, 42, 0.65);

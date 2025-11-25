@@ -311,7 +311,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentPageIndex > 0) {
       currentPageIndex--;
       renderPage();
-      scrollToQuizTop();
     }
   });
 
@@ -319,7 +318,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentPageIndex < pages.length - 1) {
       currentPageIndex++;
       renderPage();
-      scrollToQuizTop();
     } else {
       // última página → enviar
       submitAnswers();
@@ -442,7 +440,6 @@ function renderPage() {
   const nextBtn = document.getElementById("next-btn");
   const prevBtn = document.getElementById("prev-btn");
   const quizMsg = document.getElementById("quiz-message");
-  const axisInfo = document.getElementById("axis-info");
 
   quizMsg.classList.add("hidden");
   quizMsg.textContent = "";
@@ -494,6 +491,9 @@ function renderPage() {
     wrapper.appendChild(likertControl);
     container.appendChild(wrapper);
   });
+
+  // garante foco e leitura da explicação do eixo ao trocar de página
+  requestAnimationFrame(scrollToQuizTop);
 }
 
 async function submitAnswers() {
@@ -648,14 +648,14 @@ function handleResult(data) {
   const taglineEl = document.getElementById("result-tagline");
   const shortEl = document.getElementById("result-short");
   const quizSection = document.getElementById("quiz-section");
-  const axisInfo = document.getElementById("axis-info");
+  const axisHeader = document.getElementById("axis-header");
 
   // troca a visualização: esconde questionário e mostra a página de resultado simples
   if (quizSection) {
     quizSection.classList.add("hidden");
   }
-  if (axisInfo) {
-    axisInfo.classList.add("hidden");
+  if (axisHeader) {
+    axisHeader.classList.add("hidden");
   }
   if (simpleSection) {
     simpleSection.classList.remove("hidden");
@@ -1028,15 +1028,15 @@ function resetQuiz() {
   hideDetailsPage();
   const simple = document.getElementById("simple-result-section");
   const quizSection = document.getElementById("quiz-section");
-  const axisInfo = document.getElementById("axis-info");
+  const axisHeader = document.getElementById("axis-header");
   if (simple) {
     simple.classList.add("hidden");
   }
   if (quizSection) {
     quizSection.classList.remove("hidden");
   }
-  if (axisInfo) {
-    axisInfo.classList.remove("hidden");
+  if (axisHeader) {
+    axisHeader.classList.remove("hidden");
   }
   if (chartInstance) {
     chartInstance.destroy();
@@ -1051,14 +1051,19 @@ function resetQuiz() {
   const keyBlock = document.getElementById("result-key-block");
   keyBlock?.classList.add("hidden");
   renderPage();
-  scrollToQuizTop();
 }
 
 function scrollToQuizTop() {
-  const quiz = document.getElementById("quiz-section");
-  if (quiz) {
-    quiz.scrollIntoView({ behavior: "smooth", block: "start" });
-  } else {
+  const header = document.getElementById("axis-header");
+  if (!header) {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  header.scrollIntoView({ behavior: "smooth", block: "start" });
+  try {
+    header.focus({ preventScroll: true });
+  } catch (err) {
+    header.focus();
   }
 }

@@ -73,7 +73,7 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "economic": +2,
         "social": -1,
         "community": 0,
-        "method": -6,
+        "method": -7,
         "pragmatism": +9,
     },
 
@@ -129,7 +129,7 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "economic": +3,
         "social": +9,
         "community": +9,
-        "method": +3,
+        "method": +4,
         "pragmatism": +5,
     },
 
@@ -172,7 +172,7 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
         "social": 0,
         "community": 0,
         "method": -4,
-        "pragmatism": -9,
+        "pragmatism": -10,
     },
 
     # Esquerda nacional-desenvolvimentista autoritária
@@ -193,11 +193,11 @@ PROFILE_TARGETS: Dict[str, Dict[str, float]] = {
 # ---------------------------------------------------------
 # Normalização: converte pontuação bruta (ex: -16..+16) para -10..+10
 # ---------------------------------------------------------
-def normalize_axes(axes_scores: Mapping[str, float], max_abs: float = 16.0) -> Dict[str, float]:
+def normalize_axes(axes_scores: Mapping[str, float], max_abs: float = 14.0) -> Dict[str, float]:
     """
     Normaliza as pontuações brutas dos eixos para a escala -10..10.
-    O valor máximo absoluto considerado é max_abs = 16,
-    correspondente a 8 perguntas * 2 pontos (Likert de -2 a +2).
+    O valor máximo absoluto considerado é max_abs = 14,
+    correspondente a 7 perguntas * 2 pontos (Likert de -2 a +2).
     
     Nota: valores acima ou abaixo desse limite são automaticamente
     'clamped' para evitar distorções na classificação.
