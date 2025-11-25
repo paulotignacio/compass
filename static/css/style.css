@@ -369,4 +369,18 @@ body {
   .likert-option .likert-option__text {
     display: none;
   }
+
+ @media (max-width: 640px) {
+  .likert-option.selected,
+  .likert-option[data-selected="true"],
+  .likert-option:has(input:checked) {
+    background: #3b82f6; /* azul exemplo */
+    border-color: #1d4ed8; /* borda */
+    color: #fff;
+  }
+}
+
+
+
+
 }
